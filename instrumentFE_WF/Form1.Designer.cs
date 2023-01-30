@@ -53,6 +53,7 @@
             this.textBox_DBIPaddress.Name = "textBox_DBIPaddress";
             this.textBox_DBIPaddress.Size = new System.Drawing.Size(100, 23);
             this.textBox_DBIPaddress.TabIndex = 1;
+            this.textBox_DBIPaddress.TextChanged += new System.EventHandler(this.textBox_DBIPaddress_TextChanged);
             // 
             // textBox2_TCPport
             // 
@@ -60,6 +61,7 @@
             this.textBox2_TCPport.Name = "textBox2_TCPport";
             this.textBox2_TCPport.Size = new System.Drawing.Size(50, 23);
             this.textBox2_TCPport.TabIndex = 2;
+            this.textBox2_TCPport.TextChanged += new System.EventHandler(this.textBox2_TCPport_TextChanged);
             // 
             // label2
             // 

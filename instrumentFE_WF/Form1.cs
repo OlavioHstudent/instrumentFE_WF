@@ -13,9 +13,10 @@ namespace instrumentFE_WF
             InitializeComponent();
         }
 
-
         private async void Form1_Load(object sender, EventArgs e)
         {
+            buttonConnect.Enabled = false;
+            buttonDisconnect.Enabled = false;
         }
         
 
@@ -30,36 +31,32 @@ namespace instrumentFE_WF
         
         private void buttonConnect_Click(object sender, EventArgs e)
         {
+            string in_DBIPaddress = textBox_DBIPaddress.Text;
+            int in_TCPport = Convert.ToInt32(textBox2_TCPport.Text);
+            
             try
             {
                 TcpClient client = new TcpClient();
-                client.Connect(textBox_DBIPaddress.Text, Convert.ToInt32(textBox2_TCPport.Text));
+                client.Connect(in_DBIPaddress, in_TCPport);
 
                 if (client.Connected)
                 {
-                    textBox_connectionFeedback.Text = "Connected";
-                }
-                else
-                {
-                    textBox_connectionFeedback.Text = "Not Connected";
-                }
+                    textBox_connectionFeedback.Text = $"> Connection established with {in_DBIPaddress} through port {in_TCPport}";
+                } 
             }
 
             catch  (System.Net.Sockets.SocketException)
             {
-                string check_input_ipAddress = textBox_DBIPaddress.Text;
-                int check_input_port = Convert.ToInt32(textBox2_TCPport.Text);
 
-                if (!System.Net.IPAddress.TryParse(check_input_ipAddress, out IPAddress ipAddress))
+                if (!System.Net.IPAddress.TryParse(in_DBIPaddress, out IPAddress ipAddress))
                 {
-                    Console.WriteLine("asf");
-                    connection_error_handling(check_input_ipAddress, "IP address");
+                    connection_error_handling(in_DBIPaddress, "IP address");
                     return;
                 }
                 
-                if (check_input_port < min_TCPport_value || max_TCPport_value > 65535)
+                if (in_TCPport < min_TCPport_value || in_TCPport > max_TCPport_value)
                 {
-                    connection_error_handling(Convert.ToString(check_input_port), "port");
+                    connection_error_handling(Convert.ToString(in_TCPport), "port");
                     return;
                 }
             }
@@ -71,6 +68,20 @@ namespace instrumentFE_WF
 
         }
 
+        private void textBox_DBIPaddress_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_DBIPaddress.Text.Length > 0 && textBox2_TCPport.Text.Length > 0)
+            {
+                buttonConnect.Enabled = true;
+            }
+        }
 
+        private void textBox2_TCPport_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_DBIPaddress.Text.Length > 0 && textBox2_TCPport.Text.Length > 0)
+            {
+                buttonConnect.Enabled = true;
+            }
+        }
     }
 }
