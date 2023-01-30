@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonDisconnect = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox_connectionFeedback = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -90,13 +90,13 @@
             this.buttonDisconnect.UseVisualStyleBackColor = true;
             this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
             // 
-            // richTextBox1
+            // textBox_connectionFeedback
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 65);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(349, 96);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.textBox_connectionFeedback.Location = new System.Drawing.Point(12, 65);
+            this.textBox_connectionFeedback.Name = "textBox_connectionFeedback";
+            this.textBox_connectionFeedback.Size = new System.Drawing.Size(349, 96);
+            this.textBox_connectionFeedback.TabIndex = 6;
+            this.textBox_connectionFeedback.Text = "";
             // 
             // Form1
             // 
@@ -104,7 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(385, 185);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBox_connectionFeedback);
             this.Controls.Add(this.buttonDisconnect);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.label2);
@@ -128,6 +128,6 @@
         private Label label2;
         private Button buttonConnect;
         private Button buttonDisconnect;
-        private RichTextBox richTextBox1;
+        private RichTextBox textBox_connectionFeedback;
     }
 }
