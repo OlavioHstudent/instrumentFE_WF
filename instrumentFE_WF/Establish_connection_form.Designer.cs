@@ -1,6 +1,6 @@
 ﻿namespace instrumentFE_WF
 {
-    partial class Form1
+    partial class Establish_connection_form
     {
         /// <summary>
         ///  Required designer variable.
@@ -99,8 +99,9 @@
             this.textBox_connectionFeedback.Size = new System.Drawing.Size(349, 96);
             this.textBox_connectionFeedback.TabIndex = 6;
             this.textBox_connectionFeedback.Text = "";
+            this.textBox_connectionFeedback.TextChanged += new System.EventHandler(this.textBox_connectionFeedback_TextChanged);
             // 
-            // Form1
+            // Establish_connection_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +115,7 @@
             this.Controls.Add(this.textBox_DBIPaddress);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form1";
+            this.Name = "Establish_connection_form";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

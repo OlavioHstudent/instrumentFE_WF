@@ -3,12 +3,12 @@ using System.Net.Sockets;
 
 namespace instrumentFE_WF
 {
-    public partial class Form1 : Form
+    public partial class Establish_connection_form : Form
     {
         int min_TCPport_value = 1;
         int max_TCPport_value = 65535;
         
-        public Form1()
+        public Establish_connection_form()
         {
             InitializeComponent();
         }
@@ -23,8 +23,8 @@ namespace instrumentFE_WF
         public String connection_error_handling(string user_input, string input_type)
         {
             textBox_connectionFeedback.Clear();
-            textBox_connectionFeedback.Text = $"{user_input} is an invalid {input_type}\n" +
-                                              $"Please enter a valid {input_type}.";
+            textBox_connectionFeedback.Text = $"> {user_input} is an invalid {input_type}\n" +
+                                              $"> Please enter a valid {input_type}.";
             return textBox_connectionFeedback.Text;
         }
         
@@ -42,6 +42,7 @@ namespace instrumentFE_WF
                 if (client.Connected)
                 {
                     textBox_connectionFeedback.Text = $"> Connection established with {in_DBIPaddress} through port {in_TCPport}";
+                    Form2 form2 = new Form2();
                 } 
             }
 
@@ -63,11 +64,13 @@ namespace instrumentFE_WF
              
         }
 
+        
         private void buttonDisconnect_Click(object sender, EventArgs e)
         {
 
         }
 
+        
         private void textBox_DBIPaddress_TextChanged(object sender, EventArgs e)
         {
             if (textBox_DBIPaddress.Text.Length > 0 && textBox2_TCPport.Text.Length > 0)
@@ -76,12 +79,19 @@ namespace instrumentFE_WF
             }
         }
 
+        
         private void textBox2_TCPport_TextChanged(object sender, EventArgs e)
         {
             if (textBox_DBIPaddress.Text.Length > 0 && textBox2_TCPport.Text.Length > 0)
             {
                 buttonConnect.Enabled = true;
             }
+        }
+
+        
+        private void textBox_connectionFeedback_TextChanged(object sender, EventArgs e)
+        {
+            textBox_connectionFeedback.ReadOnly = true;
         }
     }
 }
