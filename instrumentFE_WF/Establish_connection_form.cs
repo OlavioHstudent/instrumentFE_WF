@@ -8,7 +8,8 @@ namespace instrumentFE_WF {
         int min_TCPport_value = 1;
         int max_TCPport_value = 65535;
 
-       /* TcpClient client = new TcpClient(); */
+        int in_TCPport;
+        int CheckVarTypeInt;
 
         public Establish_connection_form() {
             InitializeComponent();
@@ -37,16 +38,21 @@ namespace instrumentFE_WF {
                 Console.SetCursorPosition(0, Console.CursorTop - xLines);   }
         }
 
-            public String connection_error_handling(string user_input, string input_type) {
+            public String connection_error_handling(string userInput = "Everything that is not numbers", string inputType = "") {
             textBox_connectionFeedback.Clear();
-            textBox_connectionFeedback.Text = $"> {user_input} is an invalid {input_type}\n" +
-                                              $"> Please enter a valid {input_type}.";
+            textBox_connectionFeedback.Text = $"> Invalid {inputType}\n" +
+                                              $"> Please enter a valid {inputType}.";
             return textBox_connectionFeedback.Text;
         }
 
         private void buttonConnect_Click(object sender, EventArgs e) {
             string in_DBIPaddress = textBox_DBIPaddress.Text;
-            int in_TCPport = Convert.ToInt32(textBox2_TCPport.Text);
+
+            if (Int32.TryParse(textBox2_TCPport.Text, out CheckVarTypeInt)) {
+                in_TCPport = Convert.ToInt32(textBox2_TCPport.Text);}
+            else {
+                textBox2_TCPport.ResetText();
+            }
 
             try {
                     TcpClient client = new TcpClient();
@@ -78,14 +84,13 @@ namespace instrumentFE_WF {
                 textBox2_TCPport.ResetText();
                 textBox_DBIPaddress.ResetText();
                 textBox_connectionFeedback.ResetText();
-                textBox_connectionFeedback.Text = "> Not Connected";
-
-            }
+                textBox_connectionFeedback.Text = "> Not Connected";    }
         }
         private void textBox_DBIPaddress_TextChanged(object sender, EventArgs e) {
                 if (textBox_DBIPaddress.Text.Length > 0 && textBox2_TCPport.Text.Length > 0) {
                     buttonConnect.Enabled = true;   }
             }
+                
         private void textBox2_TCPport_TextChanged(object sender, EventArgs e) {
                 if (textBox_DBIPaddress.Text.Length > 0 && textBox2_TCPport.Text.Length > 0) {
                     buttonConnect.Enabled = true;
