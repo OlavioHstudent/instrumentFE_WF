@@ -96,6 +96,7 @@
             // 
             this.textBox_connectionFeedback.Location = new System.Drawing.Point(12, 65);
             this.textBox_connectionFeedback.Name = "textBox_connectionFeedback";
+            this.textBox_connectionFeedback.ReadOnly = true;
             this.textBox_connectionFeedback.Size = new System.Drawing.Size(349, 96);
             this.textBox_connectionFeedback.TabIndex = 6;
             this.textBox_connectionFeedback.Text = "";
@@ -105,8 +106,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(385, 185);
+            this.ClientSize = new System.Drawing.Size(377, 183);
             this.Controls.Add(this.textBox_connectionFeedback);
             this.Controls.Add(this.buttonDisconnect);
             this.Controls.Add(this.buttonConnect);
@@ -116,6 +118,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Establish_connection_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
