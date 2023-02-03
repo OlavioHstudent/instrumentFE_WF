@@ -1,0 +1,777 @@
+﻿namespace instrumentFE_WF
+{
+    partial class MainForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.panel_TopBar = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button_Maximize = new System.Windows.Forms.Button();
+            this.button_ExitProgram = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.TopLogo = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel__Connection = new System.Windows.Forms.Panel();
+            this.button_Connection = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button_SensorData = new System.Windows.Forms.Button();
+            this.panel_SensorData = new System.Windows.Forms.Panel();
+            this.button_FromRadio = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton_Delete = new System.Windows.Forms.RadioButton();
+            this.radioButton_SaveChanges = new System.Windows.Forms.RadioButton();
+            this.radioButton_RegisterNew = new System.Windows.Forms.RadioButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label_Unit = new System.Windows.Forms.Label();
+            this.maskedTextBox_URV = new System.Windows.Forms.MaskedTextBox();
+            this.label_URV = new System.Windows.Forms.Label();
+            this.maskedTextBox_LRV = new System.Windows.Forms.MaskedTextBox();
+            this.label_LRV = new System.Windows.Forms.Label();
+            this.label_Comment = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label_Options = new System.Windows.Forms.Label();
+            this.comboBox_MeasureType = new System.Windows.Forms.ComboBox();
+            this.label_SignalType = new System.Windows.Forms.Label();
+            this.label_MeasureType = new System.Windows.Forms.Label();
+            this.comboBox_SignalType = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label_RegDate = new System.Windows.Forms.Label();
+            this.checkBox_Registered = new System.Windows.Forms.CheckBox();
+            this.label_Registered = new System.Windows.Forms.Label();
+            this.label_SerialNumber = new System.Windows.Forms.Label();
+            this.maskedTextBox_SerialNumber = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_SensorName = new System.Windows.Forms.MaskedTextBox();
+            this.label_SensorName = new System.Windows.Forms.Label();
+            this.button_Summary = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.richTextBox_Summary = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.panel_TopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel_SensorData.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox2.Location = new System.Drawing.Point(110, 192);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(278, 83);
+            this.richTextBox2.TabIndex = 8;
+            this.richTextBox2.Text = "";
+            // 
+            // panel_TopBar
+            // 
+            this.panel_TopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel_TopBar.Controls.Add(this.button3);
+            this.panel_TopBar.Controls.Add(this.flowLayoutPanel3);
+            this.panel_TopBar.Controls.Add(this.button_Maximize);
+            this.panel_TopBar.Controls.Add(this.button_ExitProgram);
+            this.panel_TopBar.Controls.Add(this.flowLayoutPanel2);
+            this.panel_TopBar.Controls.Add(this.tableLayoutPanel1);
+            this.panel_TopBar.Controls.Add(this.flowLayoutPanel1);
+            this.panel_TopBar.Controls.Add(this.TopLogo);
+            this.panel_TopBar.Location = new System.Drawing.Point(0, 0);
+            this.panel_TopBar.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_TopBar.Name = "panel_TopBar";
+            this.panel_TopBar.Size = new System.Drawing.Size(1022, 32);
+            this.panel_TopBar.TabIndex = 13;
+            this.panel_TopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SensorData_MouseDown);
+            this.panel_TopBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SensorData_MouseMove);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button3.Location = new System.Drawing.Point(926, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(32, 32);
+            this.button3.TabIndex = 41;
+            this.button3.Text = "—";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(150, 32);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1047, 27);
+            this.flowLayoutPanel3.TabIndex = 15;
+            // 
+            // button_Maximize
+            // 
+            this.button_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_Maximize.FlatAppearance.BorderSize = 0;
+            this.button_Maximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Maximize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_Maximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_Maximize.Location = new System.Drawing.Point(958, 0);
+            this.button_Maximize.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Maximize.Name = "button_Maximize";
+            this.button_Maximize.Size = new System.Drawing.Size(32, 32);
+            this.button_Maximize.TabIndex = 40;
+            this.button_Maximize.Text = "◻";
+            this.button_Maximize.UseVisualStyleBackColor = true;
+            this.button_Maximize.Click += new System.EventHandler(this.button_Maximize_Click);
+            // 
+            // button_ExitProgram
+            // 
+            this.button_ExitProgram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_ExitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_ExitProgram.FlatAppearance.BorderSize = 0;
+            this.button_ExitProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_ExitProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_ExitProgram.Location = new System.Drawing.Point(990, 0);
+            this.button_ExitProgram.Margin = new System.Windows.Forms.Padding(0);
+            this.button_ExitProgram.Name = "button_ExitProgram";
+            this.button_ExitProgram.Size = new System.Drawing.Size(32, 32);
+            this.button_ExitProgram.TabIndex = 39;
+            this.button_ExitProgram.Text = "X";
+            this.button_ExitProgram.UseVisualStyleBackColor = true;
+            this.button_ExitProgram.Click += new System.EventHandler(this.button_ExitProgram_Click);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(144, 32);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(739, 613);
+            this.flowLayoutPanel2.TabIndex = 15;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 35);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 14;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 38);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(128, 40);
+            this.flowLayoutPanel1.TabIndex = 14;
+            // 
+            // TopLogo
+            // 
+            this.TopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TopLogo.Image = global::instrumentFE_WF.Properties.Resources.app_icon;
+            this.TopLogo.Location = new System.Drawing.Point(479, 0);
+            this.TopLogo.Name = "TopLogo";
+            this.TopLogo.Size = new System.Drawing.Size(32, 32);
+            this.TopLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TopLogo.TabIndex = 17;
+            this.TopLogo.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel__Connection);
+            this.panel4.Controls.Add(this.button_Connection);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.button_SensorData);
+            this.panel4.Location = new System.Drawing.Point(0, 32);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1022, 28);
+            this.panel4.TabIndex = 14;
+            // 
+            // panel__Connection
+            // 
+            this.panel__Connection.Location = new System.Drawing.Point(1, 27);
+            this.panel__Connection.Margin = new System.Windows.Forms.Padding(0);
+            this.panel__Connection.Name = "panel__Connection";
+            this.panel__Connection.Size = new System.Drawing.Size(621, 375);
+            this.panel__Connection.TabIndex = 32;
+            this.panel__Connection.Visible = false;
+            // 
+            // button_Connection
+            // 
+            this.button_Connection.FlatAppearance.BorderSize = 0;
+            this.button_Connection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_Connection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Connection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_Connection.Location = new System.Drawing.Point(92, 0);
+            this.button_Connection.Name = "button_Connection";
+            this.button_Connection.Size = new System.Drawing.Size(86, 28);
+            this.button_Connection.TabIndex = 35;
+            this.button_Connection.Text = "Connection";
+            this.button_Connection.UseVisualStyleBackColor = true;
+            this.button_Connection.Click += new System.EventHandler(this.button_Connection_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(638, 27);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(184, 376);
+            this.panel7.TabIndex = 34;
+            // 
+            // button_SensorData
+            // 
+            this.button_SensorData.FlatAppearance.BorderSize = 0;
+            this.button_SensorData.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_SensorData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SensorData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_SensorData.Location = new System.Drawing.Point(0, 0);
+            this.button_SensorData.Name = "button_SensorData";
+            this.button_SensorData.Size = new System.Drawing.Size(86, 28);
+            this.button_SensorData.TabIndex = 15;
+            this.button_SensorData.Text = "Sensor Data";
+            this.button_SensorData.UseVisualStyleBackColor = true;
+            this.button_SensorData.Click += new System.EventHandler(this.SensorDataButton_Click);
+            // 
+            // panel_SensorData
+            // 
+            this.panel_SensorData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_SensorData.Controls.Add(this.button_FromRadio);
+            this.panel_SensorData.Controls.Add(this.panel2);
+            this.panel_SensorData.Controls.Add(this.panel6);
+            this.panel_SensorData.Controls.Add(this.label_Comment);
+            this.panel_SensorData.Controls.Add(this.richTextBox1);
+            this.panel_SensorData.Controls.Add(this.label_Options);
+            this.panel_SensorData.Controls.Add(this.comboBox_MeasureType);
+            this.panel_SensorData.Controls.Add(this.richTextBox2);
+            this.panel_SensorData.Controls.Add(this.label_SignalType);
+            this.panel_SensorData.Controls.Add(this.label_MeasureType);
+            this.panel_SensorData.Controls.Add(this.comboBox_SignalType);
+            this.panel_SensorData.Controls.Add(this.dateTimePicker1);
+            this.panel_SensorData.Controls.Add(this.label_RegDate);
+            this.panel_SensorData.Controls.Add(this.checkBox_Registered);
+            this.panel_SensorData.Controls.Add(this.label_Registered);
+            this.panel_SensorData.Controls.Add(this.label_SerialNumber);
+            this.panel_SensorData.Controls.Add(this.maskedTextBox_SerialNumber);
+            this.panel_SensorData.Controls.Add(this.maskedTextBox_SensorName);
+            this.panel_SensorData.Controls.Add(this.label_SensorName);
+            this.panel_SensorData.Location = new System.Drawing.Point(0, 60);
+            this.panel_SensorData.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_SensorData.Name = "panel_SensorData";
+            this.panel_SensorData.Size = new System.Drawing.Size(622, 376);
+            this.panel_SensorData.TabIndex = 15;
+            // 
+            // button_FromRadio
+            // 
+            this.button_FromRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_FromRadio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_FromRadio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_FromRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_FromRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_FromRadio.Location = new System.Drawing.Point(414, 282);
+            this.button_FromRadio.Name = "button_FromRadio";
+            this.button_FromRadio.Size = new System.Drawing.Size(195, 32);
+            this.button_FromRadio.TabIndex = 31;
+            this.button_FromRadio.Text = "Register New";
+            this.button_FromRadio.UseVisualStyleBackColor = true;
+            this.button_FromRadio.Click += new System.EventHandler(this.button_FromRadio_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.radioButton_Delete);
+            this.panel2.Controls.Add(this.radioButton_SaveChanges);
+            this.panel2.Controls.Add(this.radioButton_RegisterNew);
+            this.panel2.Location = new System.Drawing.Point(414, 163);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(195, 112);
+            this.panel2.TabIndex = 30;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // radioButton_Delete
+            // 
+            this.radioButton_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_Delete.AutoSize = true;
+            this.radioButton_Delete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.radioButton_Delete.Location = new System.Drawing.Point(41, 72);
+            this.radioButton_Delete.Name = "radioButton_Delete";
+            this.radioButton_Delete.Size = new System.Drawing.Size(66, 23);
+            this.radioButton_Delete.TabIndex = 33;
+            this.radioButton_Delete.TabStop = true;
+            this.radioButton_Delete.Text = "Delete";
+            this.radioButton_Delete.UseVisualStyleBackColor = true;
+            this.radioButton_Delete.CheckedChanged += new System.EventHandler(this.radioButton_Delete_CheckedChanged);
+            // 
+            // radioButton_SaveChanges
+            // 
+            this.radioButton_SaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_SaveChanges.AutoSize = true;
+            this.radioButton_SaveChanges.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton_SaveChanges.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.radioButton_SaveChanges.Location = new System.Drawing.Point(41, 43);
+            this.radioButton_SaveChanges.Name = "radioButton_SaveChanges";
+            this.radioButton_SaveChanges.Size = new System.Drawing.Size(112, 23);
+            this.radioButton_SaveChanges.TabIndex = 32;
+            this.radioButton_SaveChanges.TabStop = true;
+            this.radioButton_SaveChanges.Text = "Save Changes";
+            this.radioButton_SaveChanges.UseVisualStyleBackColor = true;
+            this.radioButton_SaveChanges.CheckedChanged += new System.EventHandler(this.radioButton_SaveChanges_CheckedChanged);
+            // 
+            // radioButton_RegisterNew
+            // 
+            this.radioButton_RegisterNew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_RegisterNew.AutoSize = true;
+            this.radioButton_RegisterNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton_RegisterNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.radioButton_RegisterNew.Location = new System.Drawing.Point(41, 14);
+            this.radioButton_RegisterNew.Name = "radioButton_RegisterNew";
+            this.radioButton_RegisterNew.Size = new System.Drawing.Size(107, 23);
+            this.radioButton_RegisterNew.TabIndex = 31;
+            this.radioButton_RegisterNew.TabStop = true;
+            this.radioButton_RegisterNew.Text = "Register New";
+            this.radioButton_RegisterNew.UseVisualStyleBackColor = true;
+            this.radioButton_RegisterNew.CheckedChanged += new System.EventHandler(this.radioButton_RegisterNew_CheckedChanged);
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.maskedTextBox3);
+            this.panel6.Controls.Add(this.label_Unit);
+            this.panel6.Controls.Add(this.maskedTextBox_URV);
+            this.panel6.Controls.Add(this.label_URV);
+            this.panel6.Controls.Add(this.maskedTextBox_LRV);
+            this.panel6.Controls.Add(this.label_LRV);
+            this.panel6.Location = new System.Drawing.Point(414, 21);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(195, 136);
+            this.panel6.TabIndex = 24;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.maskedTextBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBox3.Location = new System.Drawing.Point(53, 87);
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(126, 23);
+            this.maskedTextBox3.TabIndex = 28;
+            // 
+            // label_Unit
+            // 
+            this.label_Unit.AutoSize = true;
+            this.label_Unit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_Unit.Location = new System.Drawing.Point(11, 87);
+            this.label_Unit.Name = "label_Unit";
+            this.label_Unit.Size = new System.Drawing.Size(38, 19);
+            this.label_Unit.TabIndex = 29;
+            this.label_Unit.Text = "Unit:";
+            // 
+            // maskedTextBox_URV
+            // 
+            this.maskedTextBox_URV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.maskedTextBox_URV.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBox_URV.Location = new System.Drawing.Point(53, 58);
+            this.maskedTextBox_URV.Name = "maskedTextBox_URV";
+            this.maskedTextBox_URV.Size = new System.Drawing.Size(126, 23);
+            this.maskedTextBox_URV.TabIndex = 26;
+            // 
+            // label_URV
+            // 
+            this.label_URV.AutoSize = true;
+            this.label_URV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_URV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_URV.Location = new System.Drawing.Point(11, 58);
+            this.label_URV.Name = "label_URV";
+            this.label_URV.Size = new System.Drawing.Size(39, 19);
+            this.label_URV.TabIndex = 27;
+            this.label_URV.Text = "URV:";
+            // 
+            // maskedTextBox_LRV
+            // 
+            this.maskedTextBox_LRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.maskedTextBox_LRV.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBox_LRV.HidePromptOnLeave = true;
+            this.maskedTextBox_LRV.Location = new System.Drawing.Point(53, 31);
+            this.maskedTextBox_LRV.Name = "maskedTextBox_LRV";
+            this.maskedTextBox_LRV.Size = new System.Drawing.Size(126, 23);
+            this.maskedTextBox_LRV.TabIndex = 25;
+            // 
+            // label_LRV
+            // 
+            this.label_LRV.AutoSize = true;
+            this.label_LRV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_LRV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_LRV.Location = new System.Drawing.Point(11, 31);
+            this.label_LRV.Name = "label_LRV";
+            this.label_LRV.Size = new System.Drawing.Size(36, 19);
+            this.label_LRV.TabIndex = 25;
+            this.label_LRV.Text = "LRV:";
+            // 
+            // label_Comment
+            // 
+            this.label_Comment.AutoSize = true;
+            this.label_Comment.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Comment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_Comment.Location = new System.Drawing.Point(11, 282);
+            this.label_Comment.Name = "label_Comment";
+            this.label_Comment.Size = new System.Drawing.Size(73, 19);
+            this.label_Comment.TabIndex = 23;
+            this.label_Comment.Text = "Comment:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox1.Location = new System.Drawing.Point(110, 281);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(278, 83);
+            this.richTextBox1.TabIndex = 22;
+            this.richTextBox1.Text = "";
+            // 
+            // label_Options
+            // 
+            this.label_Options.AutoSize = true;
+            this.label_Options.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Options.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_Options.Location = new System.Drawing.Point(11, 193);
+            this.label_Options.Name = "label_Options";
+            this.label_Options.Size = new System.Drawing.Size(61, 19);
+            this.label_Options.TabIndex = 21;
+            this.label_Options.Text = "Options:";
+            // 
+            // comboBox_MeasureType
+            // 
+            this.comboBox_MeasureType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.comboBox_MeasureType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_MeasureType.FormattingEnabled = true;
+            this.comboBox_MeasureType.Items.AddRange(new object[] {
+            "Analog ",
+            "Digital ",
+            "Fieldbus"});
+            this.comboBox_MeasureType.Location = new System.Drawing.Point(110, 163);
+            this.comboBox_MeasureType.Name = "comboBox_MeasureType";
+            this.comboBox_MeasureType.Size = new System.Drawing.Size(278, 23);
+            this.comboBox_MeasureType.TabIndex = 20;
+            // 
+            // label_SignalType
+            // 
+            this.label_SignalType.AutoSize = true;
+            this.label_SignalType.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_SignalType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_SignalType.Location = new System.Drawing.Point(11, 135);
+            this.label_SignalType.Name = "label_SignalType";
+            this.label_SignalType.Size = new System.Drawing.Size(80, 19);
+            this.label_SignalType.TabIndex = 19;
+            this.label_SignalType.Text = "Signal Type:";
+            // 
+            // label_MeasureType
+            // 
+            this.label_MeasureType.AutoSize = true;
+            this.label_MeasureType.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_MeasureType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_MeasureType.Location = new System.Drawing.Point(11, 163);
+            this.label_MeasureType.Name = "label_MeasureType";
+            this.label_MeasureType.Size = new System.Drawing.Size(97, 19);
+            this.label_MeasureType.TabIndex = 18;
+            this.label_MeasureType.Text = "Measure Type:";
+            // 
+            // comboBox_SignalType
+            // 
+            this.comboBox_SignalType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.comboBox_SignalType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_SignalType.FormattingEnabled = true;
+            this.comboBox_SignalType.Items.AddRange(new object[] {
+            "Analog",
+            "Digital",
+            "Fieldbus"});
+            this.comboBox_SignalType.Location = new System.Drawing.Point(110, 134);
+            this.comboBox_SignalType.Name = "comboBox_SignalType";
+            this.comboBox_SignalType.Size = new System.Drawing.Size(278, 23);
+            this.comboBox_SignalType.TabIndex = 17;
+            this.comboBox_SignalType.SelectedIndexChanged += new System.EventHandler(this.comboBox_SignalType_SelectedIndexChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dateTimePicker1.Location = new System.Drawing.Point(110, 105);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // label_RegDate
+            // 
+            this.label_RegDate.AutoSize = true;
+            this.label_RegDate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_RegDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_RegDate.Location = new System.Drawing.Point(11, 105);
+            this.label_RegDate.Name = "label_RegDate";
+            this.label_RegDate.Size = new System.Drawing.Size(71, 19);
+            this.label_RegDate.TabIndex = 14;
+            this.label_RegDate.Text = "Reg. Date:";
+            // 
+            // checkBox_Registered
+            // 
+            this.checkBox_Registered.AutoSize = true;
+            this.checkBox_Registered.Location = new System.Drawing.Point(110, 81);
+            this.checkBox_Registered.Name = "checkBox_Registered";
+            this.checkBox_Registered.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Registered.TabIndex = 13;
+            this.checkBox_Registered.UseVisualStyleBackColor = true;
+            // 
+            // label_Registered
+            // 
+            this.label_Registered.AutoSize = true;
+            this.label_Registered.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Registered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_Registered.Location = new System.Drawing.Point(11, 78);
+            this.label_Registered.Name = "label_Registered";
+            this.label_Registered.Size = new System.Drawing.Size(76, 19);
+            this.label_Registered.TabIndex = 12;
+            this.label_Registered.Text = "Registered:";
+            // 
+            // label_SerialNumber
+            // 
+            this.label_SerialNumber.AutoSize = true;
+            this.label_SerialNumber.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_SerialNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_SerialNumber.Location = new System.Drawing.Point(11, 50);
+            this.label_SerialNumber.Name = "label_SerialNumber";
+            this.label_SerialNumber.Size = new System.Drawing.Size(98, 19);
+            this.label_SerialNumber.TabIndex = 11;
+            this.label_SerialNumber.Text = "Serial Number:";
+            // 
+            // maskedTextBox_SerialNumber
+            // 
+            this.maskedTextBox_SerialNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.maskedTextBox_SerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox_SerialNumber.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBox_SerialNumber.Location = new System.Drawing.Point(110, 23);
+            this.maskedTextBox_SerialNumber.Name = "maskedTextBox_SerialNumber";
+            this.maskedTextBox_SerialNumber.Size = new System.Drawing.Size(278, 16);
+            this.maskedTextBox_SerialNumber.TabIndex = 10;
+            // 
+            // maskedTextBox_SensorName
+            // 
+            this.maskedTextBox_SensorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.maskedTextBox_SensorName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox_SensorName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBox_SensorName.Location = new System.Drawing.Point(110, 53);
+            this.maskedTextBox_SensorName.Name = "maskedTextBox_SensorName";
+            this.maskedTextBox_SensorName.Size = new System.Drawing.Size(278, 16);
+            this.maskedTextBox_SensorName.TabIndex = 9;
+            // 
+            // label_SensorName
+            // 
+            this.label_SensorName.AutoSize = true;
+            this.label_SensorName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_SensorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_SensorName.Location = new System.Drawing.Point(11, 21);
+            this.label_SensorName.Name = "label_SensorName";
+            this.label_SensorName.Size = new System.Drawing.Size(93, 19);
+            this.label_SensorName.TabIndex = 0;
+            this.label_SensorName.Text = "Sensor Name:";
+            this.label_SensorName.Click += new System.EventHandler(this.label_SensorName_Click);
+            // 
+            // button_Summary
+            // 
+            this.button_Summary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_Summary.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Summary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_Summary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_Summary.Location = new System.Drawing.Point(638, 387);
+            this.button_Summary.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.button_Summary.Name = "button_Summary";
+            this.button_Summary.Size = new System.Drawing.Size(173, 32);
+            this.button_Summary.TabIndex = 32;
+            this.button_Summary.Text = "Summary";
+            this.button_Summary.UseVisualStyleBackColor = true;
+            this.button_Summary.Click += new System.EventHandler(this.button_Summary_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 15);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "TOOLTIP + STATUS WHATEVER";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.panel10.Controls.Add(this.label1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 458);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1027, 31);
+            this.panel10.TabIndex = 38;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+            // 
+            // richTextBox_Summary
+            // 
+            this.richTextBox_Summary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.richTextBox_Summary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_Summary.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox_Summary.Location = new System.Drawing.Point(638, 65);
+            this.richTextBox_Summary.Name = "richTextBox_Summary";
+            this.richTextBox_Summary.Size = new System.Drawing.Size(173, 313);
+            this.richTextBox_Summary.TabIndex = 32;
+            this.richTextBox_Summary.Text = "";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox4.Location = new System.Drawing.Point(837, 65);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(173, 313);
+            this.richTextBox4.TabIndex = 39;
+            this.richTextBox4.Text = "";
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.ClientSize = new System.Drawing.Size(1027, 489);
+            this.Controls.Add(this.richTextBox4);
+            this.Controls.Add(this.richTextBox_Summary);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.button_Summary);
+            this.Controls.Add(this.panel_SensorData);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel_TopBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SensorData";
+            this.Load += new System.EventHandler(this.SensorData_Load);
+            this.panel_TopBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel_SensorData.ResumeLayout(false);
+            this.panel_SensorData.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private RichTextBox richTextBox2;
+        private Panel panel_TopBar;
+        private PictureBox TopLogo;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel3;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private Panel panel2;
+        private Panel panel3;
+        private Label label_SensorName;
+        private Panel panel4;
+        private Button button_SensorData;
+        private Panel panel_SensorData;
+        private MaskedTextBox maskedTextBox_SerialNumber;
+        private Label label_SerialNumber;
+        private Label label_Registered;
+        private CheckBox checkBox_Registered;
+        private Label label_Options;
+        private ComboBox comboBox_MeasureType;
+        private Label label_SignalType;
+        private Label label_MeasureType;
+        private ComboBox comboBox_SignalType;
+        private DateTimePicker dateTimePicker1;
+        private Label label_RegDate;
+        private Label label_Comment;
+        private RichTextBox richTextBox1;
+        private Panel panel6;
+        private MaskedTextBox maskedTextBox3;
+        private Label label_Unit;
+        private MaskedTextBox maskedTextBox_URV;
+        private Label label_URV;
+        private MaskedTextBox maskedTextBox_LRV;
+        private Label label_LRV;
+        private RadioButton radioButton_Delete;
+        private RadioButton radioButton_SaveChanges;
+        private RadioButton radioButton_RegisterNew;
+        private Panel panel7;
+        private Button button_FromRadio;
+        private Button button_Summary;
+        private MaskedTextBox maskedTextBox_SensorName;
+        private Label label1;
+        private Panel panel10;
+        private Button button3;
+        private Button button_Maximize;
+        private Button button_ExitProgram;
+        private Button button_Connection;
+        private Panel panel__Connection;
+        private RichTextBox richTextBox_Summary;
+        private RichTextBox richTextBox4;
+    }
+}

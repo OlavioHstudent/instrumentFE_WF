@@ -8,7 +8,7 @@ namespace instrumentFE_WF {
         int min_TCPport_value = 1;
         int max_TCPport_value = 65535;
 
-        int in_TCPport;
+        int inputTCPport;
         int CheckVarTypeInt;
 
         public Establish_connection_form() {
@@ -19,6 +19,9 @@ namespace instrumentFE_WF {
             buttonConnect.Enabled = false;
             buttonDisconnect.Enabled = false;
             textBox_connectionFeedback.Text = "> Not connected";
+
+            MainForm sensorDataForm = new MainForm();
+            sensorDataForm.Show();
         }
 
         static void ClearLine(string text, int MoveBack, int xLines = 0) {
@@ -34,7 +37,7 @@ namespace instrumentFE_WF {
 
                 for (int i = 0; i < xLines; i++) {
                     Console.WriteLine(new string(' ', Console.BufferWidth));}
-
+                
                 Console.SetCursorPosition(0, Console.CursorTop - xLines);   }
         }
 
@@ -49,30 +52,35 @@ namespace instrumentFE_WF {
             string in_DBIPaddress = textBox_DBIPaddress.Text;
 
             if (Int32.TryParse(textBox2_TCPport.Text, out CheckVarTypeInt)) {
-                in_TCPport = Convert.ToInt32(textBox2_TCPport.Text);}
+                inputTCPport = Convert.ToInt32(textBox2_TCPport.Text);}
             else {
                 textBox2_TCPport.ResetText();
             }
 
-            try {
-                    TcpClient client = new TcpClient();
-                client.Connect(in_DBIPaddress, in_TCPport);
-                if (client.Connected) {
+            try
+            {
+                TcpClient client = new TcpClient();
+                client.Connect(in_DBIPaddress, inputTCPport);
+                if (client.Connected)
+                {
                     buttonConnect.Enabled = false;
                     buttonDisconnect.Enabled = true;
                     textBox_connectionFeedback.Text = $"> Connection established\n" +
                                                       $"IP address: {in_DBIPaddress}\n" +
-                                                      $"TCP port:   {in_TCPport}\n";
-                    Form2 form2 = new Form2();}
-            }
-            catch (System.Net.Sockets.SocketException) {
-                if (!System.Net.IPAddress.TryParse(in_DBIPaddress, out IPAddress ipAddress)) {
+                                                      $"TCP port:   {inputTCPport}\n";   }}
+            catch (System.Net.Sockets.SocketException)
+            {
+                if (!System.Net.IPAddress.TryParse(in_DBIPaddress, out IPAddress ipAddress))
+                {
                     connection_error_handling(in_DBIPaddress, "IP address");
                     return;
                 }
-                if (in_TCPport < min_TCPport_value || in_TCPport > max_TCPport_value) {
-                    connection_error_handling(Convert.ToString(in_TCPport), "port");
-                    return; }}
+                if (inputTCPport < min_TCPport_value || inputTCPport > max_TCPport_value)
+                {
+                    connection_error_handling(Convert.ToString(inputTCPport), "port");
+                    return;
+                }
+            }
         }
 
         private void buttonDisconnect_Click(object sender, EventArgs e) {
