@@ -129,7 +129,6 @@ namespace instrumentFE_WF
 
         private void button_FromRadio_Click(object sender, EventArgs e)
         {
-
         }
 
         private void radioButton_RegisterNew_CheckedChanged(object sender, EventArgs e)
@@ -161,6 +160,11 @@ namespace instrumentFE_WF
                 this.WindowState = FormWindowState.Normal;
             else
                 this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void label_Unit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

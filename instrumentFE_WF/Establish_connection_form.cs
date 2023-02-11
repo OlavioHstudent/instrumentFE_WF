@@ -1,5 +1,7 @@
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 namespace instrumentFE_WF {
 
@@ -54,38 +56,40 @@ namespace instrumentFE_WF {
             if (Int32.TryParse(textBox2_TCPport.Text, out CheckVarTypeInt)) {
                 inputTCPport = Convert.ToInt32(textBox2_TCPport.Text);}
             else {
-                textBox2_TCPport.ResetText();
-            }
+                textBox2_TCPport.ResetText();}
 
-            try
-            {
+            try{
                 TcpClient client = new TcpClient();
                 client.Connect(in_DBIPaddress, inputTCPport);
-                if (client.Connected)
-                {
+                
+                if (client.Connected){
                     buttonConnect.Enabled = false;
                     buttonDisconnect.Enabled = true;
+                    // Send data to the server
                     textBox_connectionFeedback.Text = $"> Connection established\n" +
                                                       $"IP address: {in_DBIPaddress}\n" +
-                                                      $"TCP port:   {inputTCPport}\n";   }}
-            catch (System.Net.Sockets.SocketException)
-            {
-                if (!System.Net.IPAddress.TryParse(in_DBIPaddress, out IPAddress ipAddress))
-                {
-                    connection_error_handling(in_DBIPaddress, "IP address");
-                    return;
-                }
-                if (inputTCPport < min_TCPport_value || inputTCPport > max_TCPport_value)
-                {
-                    connection_error_handling(Convert.ToString(inputTCPport), "port");
-                    return;
+                                                      $"TCP port:   {inputTCPport}\n";
+
+                    NetworkStream stream = client.GetStream();
+                    string message = "Hello server";
+                    byte[] messageBytes = Encoding.ASCII.GetBytes(message);
+                    stream.Write(messageBytes, 0, messageBytes.Length);
                 }
             }
-        }
+            catch (System.Net.Sockets.SocketException){
+                
+                if (!System.Net.IPAddress.TryParse(in_DBIPaddress, out IPAddress ipAddress)){
+                    connection_error_handling(in_DBIPaddress, "IP address");
+                    return;}
+                
+                if (inputTCPport < min_TCPport_value || inputTCPport > max_TCPport_value){
+                    connection_error_handling(Convert.ToString(inputTCPport), "port");
+                    return;}}}
 
         private void buttonDisconnect_Click(object sender, EventArgs e) {
             buttonDisconnect.Enabled = false;
             DialogResult DisconnectYesNo = MessageBox.Show("Are you sure you want to disconnect?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
             if (DisconnectYesNo == DialogResult.Yes) {
                 TcpClient client = new TcpClient();
                 client.Close();
@@ -109,6 +113,11 @@ namespace instrumentFE_WF {
                     AcceptButton = buttonConnect;   }
             }
         private void textBox_connectionFeedback_TextChanged(object sender, EventArgs e) {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

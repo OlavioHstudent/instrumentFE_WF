@@ -41,15 +41,19 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button_ExitProgram = new System.Windows.Forms.Button();
             this.button_Maximize = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(12, 43);
+            this.label1.Location = new System.Drawing.Point(8, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 0;
@@ -58,22 +62,22 @@
             // textBox_DBIPaddress
             // 
             this.textBox_DBIPaddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_DBIPaddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_DBIPaddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_DBIPaddress.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_DBIPaddress.Location = new System.Drawing.Point(99, 40);
+            this.textBox_DBIPaddress.Location = new System.Drawing.Point(96, 8);
             this.textBox_DBIPaddress.Name = "textBox_DBIPaddress";
-            this.textBox_DBIPaddress.Size = new System.Drawing.Size(100, 23);
+            this.textBox_DBIPaddress.Size = new System.Drawing.Size(100, 16);
             this.textBox_DBIPaddress.TabIndex = 1;
             this.textBox_DBIPaddress.TextChanged += new System.EventHandler(this.textBox_DBIPaddress_TextChanged);
             // 
             // textBox2_TCPport
             // 
             this.textBox2_TCPport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox2_TCPport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2_TCPport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2_TCPport.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2_TCPport.Location = new System.Drawing.Point(266, 40);
+            this.textBox2_TCPport.Location = new System.Drawing.Point(264, 8);
             this.textBox2_TCPport.Name = "textBox2_TCPport";
-            this.textBox2_TCPport.Size = new System.Drawing.Size(50, 23);
+            this.textBox2_TCPport.Size = new System.Drawing.Size(50, 16);
             this.textBox2_TCPport.TabIndex = 2;
             this.textBox2_TCPport.TextChanged += new System.EventHandler(this.textBox2_TCPport_TextChanged);
             // 
@@ -81,11 +85,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(205, 43);
+            this.label2.Location = new System.Drawing.Point(208, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "TCP Port:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonConnect
             // 
@@ -94,9 +99,9 @@
             this.buttonConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.buttonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.buttonConnect.Location = new System.Drawing.Point(12, 70);
+            this.buttonConnect.Location = new System.Drawing.Point(16, 8);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(75, 23);
+            this.buttonConnect.Size = new System.Drawing.Size(80, 23);
             this.buttonConnect.TabIndex = 4;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = false;
@@ -109,9 +114,9 @@
             this.buttonDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.buttonDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDisconnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.buttonDisconnect.Location = new System.Drawing.Point(93, 70);
+            this.buttonDisconnect.Location = new System.Drawing.Point(104, 8);
             this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.buttonDisconnect.Size = new System.Drawing.Size(80, 23);
             this.buttonDisconnect.TabIndex = 5;
             this.buttonDisconnect.Text = "Disconnect";
             this.buttonDisconnect.UseVisualStyleBackColor = false;
@@ -120,11 +125,12 @@
             // textBox_connectionFeedback
             // 
             this.textBox_connectionFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox_connectionFeedback.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_connectionFeedback.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_connectionFeedback.Location = new System.Drawing.Point(12, 99);
+            this.textBox_connectionFeedback.Location = new System.Drawing.Point(16, 40);
             this.textBox_connectionFeedback.Name = "textBox_connectionFeedback";
             this.textBox_connectionFeedback.ReadOnly = true;
-            this.textBox_connectionFeedback.Size = new System.Drawing.Size(349, 96);
+            this.textBox_connectionFeedback.Size = new System.Drawing.Size(288, 96);
             this.textBox_connectionFeedback.TabIndex = 6;
             this.textBox_connectionFeedback.Text = "";
             this.textBox_connectionFeedback.TextChanged += new System.EventHandler(this.textBox_connectionFeedback_TextChanged);
@@ -138,14 +144,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(376, 32);
+            this.panel1.Size = new System.Drawing.Size(338, 32);
             this.panel1.TabIndex = 7;
             // 
             // TopLogo
             // 
             this.TopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TopLogo.Image = global::instrumentFE_WF.Properties.Resources.app_icon;
-            this.TopLogo.Location = new System.Drawing.Point(12, -3);
+            this.TopLogo.Location = new System.Drawing.Point(8, 0);
             this.TopLogo.Name = "TopLogo";
             this.TopLogo.Size = new System.Drawing.Size(32, 32);
             this.TopLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +167,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button3.Location = new System.Drawing.Point(284, 0);
+            this.button3.Location = new System.Drawing.Point(246, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(32, 32);
@@ -178,7 +184,7 @@
             this.button_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_ExitProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_ExitProgram.Location = new System.Drawing.Point(348, 0);
+            this.button_ExitProgram.Location = new System.Drawing.Point(310, 0);
             this.button_ExitProgram.Margin = new System.Windows.Forms.Padding(0);
             this.button_ExitProgram.Name = "button_ExitProgram";
             this.button_ExitProgram.Size = new System.Drawing.Size(32, 32);
@@ -195,7 +201,7 @@
             this.button_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Maximize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Maximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_Maximize.Location = new System.Drawing.Point(316, 0);
+            this.button_Maximize.Location = new System.Drawing.Point(278, 0);
             this.button_Maximize.Margin = new System.Windows.Forms.Padding(0);
             this.button_Maximize.Name = "button_Maximize";
             this.button_Maximize.Size = new System.Drawing.Size(32, 32);
@@ -203,21 +209,39 @@
             this.button_Maximize.Text = "◻";
             this.button_Maximize.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel2.Controls.Add(this.textBox_connectionFeedback);
+            this.panel2.Controls.Add(this.buttonDisconnect);
+            this.panel2.Controls.Add(this.buttonConnect);
+            this.panel2.Location = new System.Drawing.Point(8, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(320, 152);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.textBox_DBIPaddress);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.textBox2_TCPport);
+            this.panel3.Location = new System.Drawing.Point(8, 40);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(320, 32);
+            this.panel3.TabIndex = 9;
+            // 
             // Establish_connection_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(376, 218);
+            this.ClientSize = new System.Drawing.Size(338, 243);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox_connectionFeedback);
-            this.Controls.Add(this.buttonDisconnect);
-            this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2_TCPport);
-            this.Controls.Add(this.textBox_DBIPaddress);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Establish_connection_form";
@@ -226,8 +250,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -245,5 +271,7 @@
         private Button button3;
         private Button button_ExitProgram;
         private Button button_Maximize;
+        private Panel panel2;
+        private Panel panel3;
     }
 }
