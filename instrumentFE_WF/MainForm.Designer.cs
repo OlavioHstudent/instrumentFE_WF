@@ -33,18 +33,28 @@
             this.button3 = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Maximize = new System.Windows.Forms.Button();
+            this.button_ExitProgram = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TopLogo = new System.Windows.Forms.PictureBox();
-            this.button_ExitProgram = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Lists = new System.Windows.Forms.Button();
             this.panel__Connection = new System.Windows.Forms.Panel();
             this.button_Connection = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button_SensorData = new System.Windows.Forms.Button();
             this.panel_SensorData = new System.Windows.Forms.Panel();
+            this.panel_Connection = new System.Windows.Forms.Panel();
+            this.panel_InoConnection = new System.Windows.Forms.Panel();
+            this.textBox_InoConnectionFeedback = new System.Windows.Forms.RichTextBox();
+            this.buttonInoDisconnect = new System.Windows.Forms.Button();
+            this.buttonInoConnect = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label_BaudRate = new System.Windows.Forms.Label();
+            this.textBox_InoBaudRate = new System.Windows.Forms.TextBox();
+            this.label_ComPort = new System.Windows.Forms.Label();
+            this.textBox_InoComPort = new System.Windows.Forms.TextBox();
             this.button_FromRadio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton_Delete = new System.Windows.Forms.RadioButton();
@@ -82,6 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel_SensorData.SuspendLayout();
+            this.panel_Connection.SuspendLayout();
+            this.panel_InoConnection.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -162,6 +175,24 @@
             this.button_Maximize.UseVisualStyleBackColor = true;
             this.button_Maximize.Click += new System.EventHandler(this.button_Maximize_Click);
             // 
+            // button_ExitProgram
+            // 
+            this.button_ExitProgram.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_ExitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_ExitProgram.FlatAppearance.BorderSize = 0;
+            this.button_ExitProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_ExitProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_ExitProgram.Location = new System.Drawing.Point(1008, 0);
+            this.button_ExitProgram.Margin = new System.Windows.Forms.Padding(0);
+            this.button_ExitProgram.Name = "button_ExitProgram";
+            this.button_ExitProgram.Size = new System.Drawing.Size(32, 32);
+            this.button_ExitProgram.TabIndex = 39;
+            this.button_ExitProgram.Text = "X";
+            this.button_ExitProgram.UseVisualStyleBackColor = true;
+            this.button_ExitProgram.Click += new System.EventHandler(this.button_ExitProgram_Click);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -201,28 +232,10 @@
             this.TopLogo.TabIndex = 17;
             this.TopLogo.TabStop = false;
             // 
-            // button_ExitProgram
-            // 
-            this.button_ExitProgram.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_ExitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_ExitProgram.FlatAppearance.BorderSize = 0;
-            this.button_ExitProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_ExitProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_ExitProgram.Location = new System.Drawing.Point(1008, 0);
-            this.button_ExitProgram.Margin = new System.Windows.Forms.Padding(0);
-            this.button_ExitProgram.Name = "button_ExitProgram";
-            this.button_ExitProgram.Size = new System.Drawing.Size(32, 32);
-            this.button_ExitProgram.TabIndex = 39;
-            this.button_ExitProgram.Text = "X";
-            this.button_ExitProgram.UseVisualStyleBackColor = true;
-            this.button_ExitProgram.Click += new System.EventHandler(this.button_ExitProgram_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.button_Lists);
             this.panel4.Controls.Add(this.panel__Connection);
             this.panel4.Controls.Add(this.button_Connection);
             this.panel4.Controls.Add(this.panel7);
@@ -233,18 +246,19 @@
             this.panel4.Size = new System.Drawing.Size(1040, 27);
             this.panel4.TabIndex = 14;
             // 
-            // button1
+            // button_Lists
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button1.Location = new System.Drawing.Point(176, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 28);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Lists";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Lists.FlatAppearance.BorderSize = 0;
+            this.button_Lists.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_Lists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Lists.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_Lists.Location = new System.Drawing.Point(176, 0);
+            this.button_Lists.Name = "button_Lists";
+            this.button_Lists.Size = new System.Drawing.Size(89, 28);
+            this.button_Lists.TabIndex = 36;
+            this.button_Lists.Text = "Lists";
+            this.button_Lists.UseVisualStyleBackColor = true;
+            this.button_Lists.Click += new System.EventHandler(this.button_Lists_Click);
             // 
             // panel__Connection
             // 
@@ -295,6 +309,7 @@
             // panel_SensorData
             // 
             this.panel_SensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_SensorData.Controls.Add(this.panel_Connection);
             this.panel_SensorData.Controls.Add(this.button_FromRadio);
             this.panel_SensorData.Controls.Add(this.panel2);
             this.panel_SensorData.Controls.Add(this.panel6);
@@ -319,6 +334,118 @@
             this.panel_SensorData.Name = "panel_SensorData";
             this.panel_SensorData.Size = new System.Drawing.Size(622, 376);
             this.panel_SensorData.TabIndex = 15;
+            // 
+            // panel_Connection
+            // 
+            this.panel_Connection.Controls.Add(this.panel_InoConnection);
+            this.panel_Connection.Controls.Add(this.panel8);
+            this.panel_Connection.Location = new System.Drawing.Point(0, 0);
+            this.panel_Connection.Name = "panel_Connection";
+            this.panel_Connection.Size = new System.Drawing.Size(624, 376);
+            this.panel_Connection.TabIndex = 32;
+            // 
+            // panel_InoConnection
+            // 
+            this.panel_InoConnection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_InoConnection.Controls.Add(this.textBox_InoConnectionFeedback);
+            this.panel_InoConnection.Controls.Add(this.buttonInoDisconnect);
+            this.panel_InoConnection.Controls.Add(this.buttonInoConnect);
+            this.panel_InoConnection.Location = new System.Drawing.Point(8, 48);
+            this.panel_InoConnection.Name = "panel_InoConnection";
+            this.panel_InoConnection.Size = new System.Drawing.Size(320, 152);
+            this.panel_InoConnection.TabIndex = 10;
+            // 
+            // textBox_InoConnectionFeedback
+            // 
+            this.textBox_InoConnectionFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox_InoConnectionFeedback.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_InoConnectionFeedback.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_InoConnectionFeedback.Location = new System.Drawing.Point(16, 40);
+            this.textBox_InoConnectionFeedback.Name = "textBox_InoConnectionFeedback";
+            this.textBox_InoConnectionFeedback.ReadOnly = true;
+            this.textBox_InoConnectionFeedback.Size = new System.Drawing.Size(288, 96);
+            this.textBox_InoConnectionFeedback.TabIndex = 6;
+            this.textBox_InoConnectionFeedback.Text = "";
+            // 
+            // buttonInoDisconnect
+            // 
+            this.buttonInoDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.buttonInoDisconnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonInoDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonInoDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInoDisconnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.buttonInoDisconnect.Location = new System.Drawing.Point(104, 8);
+            this.buttonInoDisconnect.Name = "buttonInoDisconnect";
+            this.buttonInoDisconnect.Size = new System.Drawing.Size(80, 23);
+            this.buttonInoDisconnect.TabIndex = 5;
+            this.buttonInoDisconnect.Text = "Disconnect";
+            this.buttonInoDisconnect.UseVisualStyleBackColor = false;
+            // 
+            // buttonInoConnect
+            // 
+            this.buttonInoConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.buttonInoConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonInoConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonInoConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInoConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.buttonInoConnect.Location = new System.Drawing.Point(16, 8);
+            this.buttonInoConnect.Name = "buttonInoConnect";
+            this.buttonInoConnect.Size = new System.Drawing.Size(80, 23);
+            this.buttonInoConnect.TabIndex = 4;
+            this.buttonInoConnect.Text = "Connect";
+            this.buttonInoConnect.UseVisualStyleBackColor = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel8.Controls.Add(this.label_BaudRate);
+            this.panel8.Controls.Add(this.textBox_InoBaudRate);
+            this.panel8.Controls.Add(this.label_ComPort);
+            this.panel8.Controls.Add(this.textBox_InoComPort);
+            this.panel8.Location = new System.Drawing.Point(8, 8);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(320, 32);
+            this.panel8.TabIndex = 11;
+            // 
+            // label_BaudRate
+            // 
+            this.label_BaudRate.AutoSize = true;
+            this.label_BaudRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_BaudRate.Location = new System.Drawing.Point(8, 8);
+            this.label_BaudRate.Name = "label_BaudRate";
+            this.label_BaudRate.Size = new System.Drawing.Size(44, 15);
+            this.label_BaudRate.TabIndex = 0;
+            this.label_BaudRate.Text = "Bitrate:";
+            // 
+            // textBox_InoBaudRate
+            // 
+            this.textBox_InoBaudRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox_InoBaudRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_InoBaudRate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_InoBaudRate.Location = new System.Drawing.Point(96, 8);
+            this.textBox_InoBaudRate.Name = "textBox_InoBaudRate";
+            this.textBox_InoBaudRate.Size = new System.Drawing.Size(100, 16);
+            this.textBox_InoBaudRate.TabIndex = 1;
+            // 
+            // label_ComPort
+            // 
+            this.label_ComPort.AutoSize = true;
+            this.label_ComPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_ComPort.Location = new System.Drawing.Point(208, 8);
+            this.label_ComPort.Name = "label_ComPort";
+            this.label_ComPort.Size = new System.Drawing.Size(63, 15);
+            this.label_ComPort.TabIndex = 3;
+            this.label_ComPort.Text = "COM Port:";
+            // 
+            // textBox_InoComPort
+            // 
+            this.textBox_InoComPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox_InoComPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_InoComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_InoComPort.Location = new System.Drawing.Point(264, 8);
+            this.textBox_InoComPort.Name = "textBox_InoComPort";
+            this.textBox_InoComPort.Size = new System.Drawing.Size(50, 16);
+            this.textBox_InoComPort.TabIndex = 2;
             // 
             // button_FromRadio
             // 
@@ -726,8 +853,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(1040, 495);
-            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel_SensorData);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel_TopBar);
             this.Controls.Add(this.panel1);
@@ -741,6 +868,10 @@
             this.panel4.ResumeLayout(false);
             this.panel_SensorData.ResumeLayout(false);
             this.panel_SensorData.PerformLayout();
+            this.panel_Connection.ResumeLayout(false);
+            this.panel_InoConnection.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -761,7 +892,6 @@
         private FlowLayoutPanel flowLayoutPanel3;
         private FlowLayoutPanel flowLayoutPanel2;
         private Panel panel2;
-        private Panel panel3;
         private Label label_SensorName;
         private Panel panel4;
         private Button button_SensorData;
@@ -802,7 +932,17 @@
         private Panel panel__Connection;
         private RichTextBox richTextBox_Summary;
         private RichTextBox richTextBox4;
-        private Button button1;
+        private Button button_Lists;
         private Panel panel1;
+        private Panel panel_Connection;
+        private Panel panel_InoConnection;
+        private RichTextBox textBox_InoConnectionFeedback;
+        private Button buttonInoDisconnect;
+        private Button buttonInoConnect;
+        private Panel panel8;
+        private Label label_BaudRate;
+        private TextBox textBox_InoBaudRate;
+        private Label label_ComPort;
+        private TextBox textBox_InoComPort;
     }
 }

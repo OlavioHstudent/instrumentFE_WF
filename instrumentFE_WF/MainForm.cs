@@ -29,7 +29,8 @@ namespace instrumentFE_WF
 
         private void SensorData_Load(object sender, EventArgs e)
         {
-            panel_SensorData.Visible = true;
+            panel_Connection.Visible = true;
+            panel_SensorData.Visible = false;
             startTime = DateTime.Now;
             maskedTextBox_LRV.Enabled = false;
             maskedTextBox_URV.Enabled = false;
@@ -39,9 +40,16 @@ namespace instrumentFE_WF
 
         private void button_SensorData_Click(object sender, EventArgs e)
         {
+            //Hide highlight and panel of other tabs
+            button_Connection.BackColor = Color.FromArgb(31, 31, 31);
+            button_Lists.BackColor = Color.FromArgb(31, 31, 31);
+
+            panel_Connection.Visible = false;
+            //panel_Lists.Visible = false;
+            //Highlight this tab and show panel
             panel_SensorData.Visible = true;
-            
-            
+            button_SensorData.BackColor = Color.FromArgb(56, 56, 56);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,7 +95,11 @@ namespace instrumentFE_WF
 
         private void SensorDataButton_Click(object sender, EventArgs e)
         {
-            panel_SensorData.Visible = true;
+        }
+
+        private void button_Lists_Click(object sender, EventArgs e)
+        {
+            button_SensorData.BackColor = Color.FromArgb(56, 56, 56);
         }
 
         private void button_ExitProgram_Click(object sender, EventArgs e)
@@ -100,7 +112,9 @@ namespace instrumentFE_WF
         private void button_Connection_Click(object sender, EventArgs e)
         {
             panel_SensorData.Visible = false;
-            panel__Connection.Visible = true;
+            panel_Connection.Visible = true;
+            button_Connection.BackColor = Color.FromArgb(56, 56, 56);
+
         }
 
         Point startPos;
@@ -163,6 +177,11 @@ namespace instrumentFE_WF
         }
 
         private void label_Unit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
