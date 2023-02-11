@@ -27,107 +27,103 @@ namespace instrumentFE_WF
             InitializeComponent();
         }
 
-        private void SensorData_Load(object sender, EventArgs e)
+//Shit to do on load
+        private void app_Load(object sender, EventArgs e)
         {
-            panel_Connection.Visible = true;
+            panel_tabConnections.Visible = true;
             panel_SensorData.Visible = false;
+
             startTime = DateTime.Now;
             maskedTextBox_LRV.Enabled = false;
             maskedTextBox_URV.Enabled = false;
 
+            buttonConnect_Ino.Enabled = false;
+            buttonDisconnect_Ino.Enabled = false;
+            textBox_connectionFeedback_Ino.Text = "Not connected to any instrument yet";
         }
-
-
-        private void button_SensorData_Click(object sender, EventArgs e)
-        {
-            //Hide highlight and panel of other tabs
-            button_Connection.BackColor = Color.FromArgb(31, 31, 31);
-            button_Lists.BackColor = Color.FromArgb(31, 31, 31);
-
-            panel_Connection.Visible = false;
-            //panel_Lists.Visible = false;
-            //Highlight this tab and show panel
-            panel_SensorData.Visible = true;
-            button_SensorData.BackColor = Color.FromArgb(56, 56, 56);
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SensorData_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_SensorName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SensorDataButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button_Lists_Click(object sender, EventArgs e)
-        {
-            button_SensorData.BackColor = Color.FromArgb(56, 56, 56);
-        }
-
-        private void button_ExitProgram_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Program", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes){
-                Application.Exit();}
-        }
-
-        private void button_Connection_Click(object sender, EventArgs e)
-        {
-            panel_SensorData.Visible = false;
-            panel_Connection.Visible = true;
-            button_Connection.BackColor = Color.FromArgb(56, 56, 56);
-
-        }
-
+//Main window funcitonality
         Point startPos;
-        private void SensorData_MouseDown(object sender, MouseEventArgs e){
+        private void appWindow_MouseDown(object sender, MouseEventArgs e)
+        {
             startPos = new Point(e.X, e.Y);
         }
-        private void SensorData_MouseMove(object sender, MouseEventArgs e){
+        private void appWindow_MouseMove(object sender, MouseEventArgs e)
+        {
             if (e.Button == MouseButtons.Left)
             {
                 Point diff = new Point(e.X - startPos.X, e.Y - startPos.Y);
                 this.Location = new Point(this.Location.X + diff.X, this.Location.Y + diff.Y);
             }
         }
+        private void button_Maximize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+        private void button_Minimize_Click(object sender, EventArgs e)
+        {
+                this.WindowState = FormWindowState.Minimized;
+        }
+
+        //Exit
+        private void button_ExitProgram_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Program", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+        //Tabs
+        //SensorData
+        private void button_sensorData_Click(object sender, EventArgs e)
+        {
+            //Hide highlight and panel of other tabs
+            button_InoConnection.BackColor = Color.FromArgb(31, 31, 31);
+            button_Lists.BackColor = Color.FromArgb(31, 31, 31);
+
+            panel_tabConnections.Visible = false;
+            //panel_Lists.Visible = false;
+
+            //Highlight this tab and show panel
+            panel_SensorData.Visible = true;
+            button_sensorData.BackColor = Color.FromArgb(56, 56, 56);
+        }
+
+        //Lists
+        private void button_Lists_Click(object sender, EventArgs e)
+        {
+            //Hide highlight and panel of other tabs
+            button_InoConnection.BackColor = Color.FromArgb(31, 31, 31);
+            button_sensorData.BackColor = Color.FromArgb(31, 31, 31);
+
+            panel_tabConnections.Visible = false;
+            panel_SensorData.Visible = false;
+
+            //Highlight this tab and show panel
+            //panel_lists.Visible = true;
+            button_Lists.BackColor = Color.FromArgb(56, 56, 56);
+        }
+
+        //Connections
+        private void button_InoConnection_Click(object sender, EventArgs e)
+        {
+            //Hide highlight and panel of other tabs
+            button_Lists.BackColor = Color.FromArgb(31, 31, 31);
+            button_sensorData.BackColor = Color.FromArgb(31, 31, 31);
+
+            //panel_lists.Visible = false;
+            panel_SensorData.Visible = false;
+
+            //Highlight this tab and show panel
+            panel_tabConnections.Visible = true;
+            button_InoConnection.BackColor = Color.FromArgb(56, 56, 56);
+        }
+
+
 
         private void maskedTextBox_LRV_Click(object sender, MaskInputRejectedEventArgs e)
         {
@@ -168,22 +164,21 @@ namespace instrumentFE_WF
             }
         }
 
-        private void button_Maximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-                this.WindowState = FormWindowState.Normal;
-            else
-                this.WindowState = FormWindowState.Maximized;
-        }
-
         private void label_Unit_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void buttonConnect_Ino_Click(object sender, EventArgs e)
         {
-
+            if (Int32.TryParse(textBox2_TCPport.Text, out CheckVarTypeInt))
+            {
+                inputTCPport = Convert.ToInt32(textBox2_TCPport.Text);
+            }
+            else
+            {
+                textBox2_TCPport.ResetText();
+            }
         }
     }
 }

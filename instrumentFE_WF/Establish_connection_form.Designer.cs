@@ -13,11 +13,9 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
+            if (disposing && (components != null)){
                 components.Dispose();
-                
-            }
+      }
             base.Dispose(disposing);
         }
 
@@ -36,17 +34,17 @@
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.textBox_connectionFeedback = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.TopLogo = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button_ExitProgram = new System.Windows.Forms.Button();
-            this.button_Maximize = new System.Windows.Forms.Button();
+            this.button_MinimizedCon = new System.Windows.Forms.Button();
+            this.button_ExitProgramCon = new System.Windows.Forms.Button();
+            this.button_MaximizeCon = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.TopPanel_cnct = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.TopPanel_cnct.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -55,9 +53,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.label1.Location = new System.Drawing.Point(8, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "BE IP address:";
+            this.label1.Text = "DB IP address:";
             // 
             // textBox_DBIPaddress
             // 
@@ -94,7 +92,7 @@
             // 
             // buttonConnect
             // 
-            this.buttonConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.buttonConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.buttonConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.buttonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,7 +107,7 @@
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.buttonDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.buttonDisconnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.buttonDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -135,79 +133,70 @@
             this.textBox_connectionFeedback.Text = "";
             this.textBox_connectionFeedback.TextChanged += new System.EventHandler(this.textBox_connectionFeedback_TextChanged);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.TopLogo);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button_ExitProgram);
-            this.panel1.Controls.Add(this.button_Maximize);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 32);
-            this.panel1.TabIndex = 7;
-            // 
             // TopLogo
             // 
             this.TopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TopLogo.Image = global::instrumentFE_WF.Properties.Resources.app_icon;
-            this.TopLogo.Location = new System.Drawing.Point(8, 0);
+            this.TopLogo.Location = new System.Drawing.Point(2, 0);
             this.TopLogo.Name = "TopLogo";
             this.TopLogo.Size = new System.Drawing.Size(32, 32);
             this.TopLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TopLogo.TabIndex = 42;
             this.TopLogo.TabStop = false;
             // 
-            // button3
+            // button_MinimizedCon
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button3.Location = new System.Drawing.Point(246, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 32);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "—";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_MinimizedCon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_MinimizedCon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_MinimizedCon.FlatAppearance.BorderSize = 0;
+            this.button_MinimizedCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_MinimizedCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_MinimizedCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_MinimizedCon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_MinimizedCon.Location = new System.Drawing.Point(240, 0);
+            this.button_MinimizedCon.Margin = new System.Windows.Forms.Padding(0);
+            this.button_MinimizedCon.Name = "button_MinimizedCon";
+            this.button_MinimizedCon.Size = new System.Drawing.Size(32, 32);
+            this.button_MinimizedCon.TabIndex = 45;
+            this.button_MinimizedCon.Text = "—";
+            this.button_MinimizedCon.UseVisualStyleBackColor = true;
+            this.button_MinimizedCon.Click += new System.EventHandler(this.button_MinimizedCon_Click);
             // 
-            // button_ExitProgram
+            // button_ExitProgramCon
             // 
-            this.button_ExitProgram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ExitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_ExitProgram.FlatAppearance.BorderSize = 0;
-            this.button_ExitProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_ExitProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_ExitProgram.Location = new System.Drawing.Point(310, 0);
-            this.button_ExitProgram.Margin = new System.Windows.Forms.Padding(0);
-            this.button_ExitProgram.Name = "button_ExitProgram";
-            this.button_ExitProgram.Size = new System.Drawing.Size(32, 32);
-            this.button_ExitProgram.TabIndex = 43;
-            this.button_ExitProgram.Text = "X";
-            this.button_ExitProgram.UseVisualStyleBackColor = true;
+            this.button_ExitProgramCon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_ExitProgramCon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_ExitProgramCon.FlatAppearance.BorderSize = 0;
+            this.button_ExitProgramCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_ExitProgramCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ExitProgramCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_ExitProgramCon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_ExitProgramCon.Location = new System.Drawing.Point(304, 0);
+            this.button_ExitProgramCon.Margin = new System.Windows.Forms.Padding(0);
+            this.button_ExitProgramCon.Name = "button_ExitProgramCon";
+            this.button_ExitProgramCon.Size = new System.Drawing.Size(32, 32);
+            this.button_ExitProgramCon.TabIndex = 43;
+            this.button_ExitProgramCon.Text = "X";
+            this.button_ExitProgramCon.UseVisualStyleBackColor = true;
+            this.button_ExitProgramCon.Click += new System.EventHandler(this.button_ExitProgramCon_Click);
             // 
-            // button_Maximize
+            // button_MaximizeCon
             // 
-            this.button_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_Maximize.FlatAppearance.BorderSize = 0;
-            this.button_Maximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Maximize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Maximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_Maximize.Location = new System.Drawing.Point(278, 0);
-            this.button_Maximize.Margin = new System.Windows.Forms.Padding(0);
-            this.button_Maximize.Name = "button_Maximize";
-            this.button_Maximize.Size = new System.Drawing.Size(32, 32);
-            this.button_Maximize.TabIndex = 44;
-            this.button_Maximize.Text = "◻";
-            this.button_Maximize.UseVisualStyleBackColor = true;
+            this.button_MaximizeCon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_MaximizeCon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_MaximizeCon.FlatAppearance.BorderSize = 0;
+            this.button_MaximizeCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_MaximizeCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_MaximizeCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_MaximizeCon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_MaximizeCon.Location = new System.Drawing.Point(272, 0);
+            this.button_MaximizeCon.Margin = new System.Windows.Forms.Padding(0);
+            this.button_MaximizeCon.Name = "button_MaximizeCon";
+            this.button_MaximizeCon.Size = new System.Drawing.Size(32, 32);
+            this.button_MaximizeCon.TabIndex = 44;
+            this.button_MaximizeCon.Text = "◻";
+            this.button_MaximizeCon.UseVisualStyleBackColor = true;
+            this.button_MaximizeCon.Click += new System.EventHandler(this.button_MaximizeCon_Click);
             // 
             // panel2
             // 
@@ -232,6 +221,19 @@
             this.panel3.Size = new System.Drawing.Size(320, 32);
             this.panel3.TabIndex = 9;
             // 
+            // TopPanel_cnct
+            // 
+            this.TopPanel_cnct.Controls.Add(this.TopLogo);
+            this.TopPanel_cnct.Controls.Add(this.button_ExitProgramCon);
+            this.TopPanel_cnct.Controls.Add(this.button_MaximizeCon);
+            this.TopPanel_cnct.Controls.Add(this.button_MinimizedCon);
+            this.TopPanel_cnct.Location = new System.Drawing.Point(0, 0);
+            this.TopPanel_cnct.Name = "TopPanel_cnct";
+            this.TopPanel_cnct.Size = new System.Drawing.Size(336, 32);
+            this.TopPanel_cnct.TabIndex = 10;
+            this.TopPanel_cnct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Topcnct_MouseDown);
+            this.TopPanel_cnct.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Topcnct_MouseMove);
+            // 
             // Establish_connection_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -239,7 +241,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(338, 243);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.TopPanel_cnct);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -248,11 +250,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.TopPanel_cnct.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -266,12 +268,12 @@
         private Button buttonConnect;
         private Button buttonDisconnect;
         private RichTextBox textBox_connectionFeedback;
-        private Panel panel1;
         private PictureBox TopLogo;
-        private Button button3;
-        private Button button_ExitProgram;
-        private Button button_Maximize;
+        private Button button_MinimizedCon;
+        private Button button_ExitProgramCon;
+        private Button button_MaximizeCon;
         private Panel panel2;
         private Panel panel3;
+        private Panel TopPanel_cnct;
     }
 }
