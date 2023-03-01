@@ -1,6 +1,6 @@
 ﻿namespace instrumentFE_WF
 {
-    partial class Establish_connection_form
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.

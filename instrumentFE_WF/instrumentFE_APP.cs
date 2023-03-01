@@ -11,7 +11,7 @@ namespace instrumentFE_WF
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Establish_connection_form());
+            Application.Run(new Form1());
         }
     }
 }

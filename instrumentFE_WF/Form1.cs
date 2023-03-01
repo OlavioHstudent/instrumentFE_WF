@@ -6,39 +6,33 @@ using System.Text;
 namespace instrumentFE_WF {
 
 
-    public partial class Establish_connection_form : Form {
+    public partial class Form1 : Form {
         int min_TCPport_value = 1;
         int max_TCPport_value = 65535;
-
         int inputTCPport;
         int CheckVarTypeInt;
 
-        public Establish_connection_form() {
+        public Form1() {
             InitializeComponent();
         }
+
 //Shit to do on load
         private async void Form1_Load(object sender, EventArgs e) {
             buttonConnect.Enabled = false;
             buttonDisconnect.Enabled = false;
             textBox_connectionFeedback.Text = "> Not connected to any database";
-
-            MainForm sensorDataForm = new MainForm();
-            sensorDataForm.Show();
         }
 
         //Main window funcitonality
-        private void panel_Topcnct_MouseDown(object sender, MouseEventArgs e)
-        {
+        private void panel_Topcnct_MouseDown(object sender, MouseEventArgs e){
             startPos = new Point(e.X, e.Y);
         }
-        private void panel_Topcnct_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
+        private void panel_Topcnct_MouseMove(object sender, MouseEventArgs e){
+            if (e.Button == MouseButtons.Left){
                 Point diff = new Point(e.X - startPos.X, e.Y - startPos.Y);
-                this.Location = new Point(this.Location.X + diff.X, this.Location.Y + diff.Y);
-            }
+                this.Location = new Point(this.Location.X + diff.X, this.Location.Y + diff.Y);}
         }
+
         private void button_MinimizedCon_Click(object sender, EventArgs e){
             this.WindowState = FormWindowState.Minimized;
         }
@@ -47,7 +41,7 @@ namespace instrumentFE_WF {
             if (this.WindowState == FormWindowState.Maximized)
                 this.WindowState = FormWindowState.Normal;
             else
-                this.WindowState = FormWindowState.Maximized;
+                this.WindowState = FormWindowState.Normal;
         }
 
         private void button_ExitProgramCon_Click(object sender, EventArgs e){
@@ -58,22 +52,17 @@ namespace instrumentFE_WF {
         }
 
         Point startPos;
-
 //Textbox functionality
         static void ClearLine(string text, int MoveBack, int xLines = 0) {
-
             if (MoveBack == 0) {
                 Console.SetCursorPosition(0, Console.CursorTop);
                 Console.Write(new string(' ', Console.WindowWidth));
                 Console.SetCursorPosition(0, Console.CursorTop);
                 Console.WriteLine(text);    }
-
             if (MoveBack == 1) {
                 Console.SetCursorPosition(0, Console.CursorTop - xLines);
-
                 for (int i = 0; i < xLines; i++) {
                     Console.WriteLine(new string(' ', Console.BufferWidth));}
-                
                 Console.SetCursorPosition(0, Console.CursorTop - xLines);   }
         }
 
@@ -87,16 +76,13 @@ namespace instrumentFE_WF {
 //Buttons
         private void buttonConnect_Click(object sender, EventArgs e) {
             string in_DBIPaddress = textBox_DBIPaddress.Text;
-
             if (Int32.TryParse(textBox2_TCPport.Text, out CheckVarTypeInt)) {
                 inputTCPport = Convert.ToInt32(textBox2_TCPport.Text);}
             else {
                 textBox2_TCPport.ResetText();}
-
             try{
                 TcpClient client = new TcpClient();
-                client.Connect(in_DBIPaddress, inputTCPport);
-                
+                client.Connect(in_DBIPaddress, inputTCPport); 
                 if (client.Connected){
                     buttonConnect.Enabled = false;
                     buttonDisconnect.Enabled = true;
@@ -104,11 +90,19 @@ namespace instrumentFE_WF {
                     textBox_connectionFeedback.Text = $"> Connection established\n" +
                                                       $"IP address: {in_DBIPaddress}\n" +
                                                       $"TCP port:   {inputTCPport}\n";
-
                     NetworkStream stream = client.GetStream();
                     string message = "Hello server";
                     byte[] messageBytes = Encoding.ASCII.GetBytes(message);
                     stream.Write(messageBytes, 0, messageBytes.Length);
+
+                    string mess = "Hello server2";
+                    byte[] asdf = Encoding.ASCII.GetBytes(mess);
+                    stream.Write(asdf, 0, asdf.Length);
+
+                    System.Threading.Thread.Sleep(500);
+                    MainForm MainForm = new MainForm(stream);
+                    MainForm.Show();
+                    this.Hide();
                 }
             }
             catch (System.Net.Sockets.SocketException){
@@ -119,7 +113,8 @@ namespace instrumentFE_WF {
                 
                 if (inputTCPport < min_TCPport_value || inputTCPport > max_TCPport_value){
                     connection_error_handling(Convert.ToString(inputTCPport), "port");
-                    return;}}}
+                    return;}}
+        }
 
         private void buttonDisconnect_Click(object sender, EventArgs e) {
             buttonDisconnect.Enabled = false;
