@@ -39,7 +39,7 @@ namespace instrumentFE_WF
         string selectedBitRate;
         string availableComPorts;
         string fetchedSensorData;
-        double[] ReadSensorDataY = new double[0];
+        double[] ReadSensorDataY = new double[1];
         double[] ReadSensorDataX = Array.Empty<double>();
         int[] datax = new int[0];
 
@@ -411,7 +411,7 @@ namespace instrumentFE_WF
         private void timer1_Tick(object sender, EventArgs e) {
             dataTransfer.SendMessage("readscaled");
             fetchedSensorData = dataTransfer.ReceiveMessage().Substring(11);
-            ReadSensorDataY[ReadSensorDataY.Length] = float.Parse(fetchedSensorData);
+            ReadSensorDataY[ReadSensorDataY.Length - 1] = float.Parse(fetchedSensorData);
             Array.Resize(ref ReadSensorDataY, ReadSensorDataY.Length + 1);
             datax = Enumerable.Range(0, ReadSensorDataY.Length).ToArray();
             ReadSensorDataX = datax.Select(i => (double)i).ToArray();
