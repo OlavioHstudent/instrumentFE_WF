@@ -137,7 +137,7 @@
             // 
             this.TopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TopLogo.Image = global::instrumentFE_WF.Properties.Resources.app_icon;
-            this.TopLogo.Location = new System.Drawing.Point(2, 0);
+            this.TopLogo.Location = new System.Drawing.Point(208, 0);
             this.TopLogo.Name = "TopLogo";
             this.TopLogo.Size = new System.Drawing.Size(32, 32);
             this.TopLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +234,7 @@
             this.TopPanel_cnct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Topcnct_MouseDown);
             this.TopPanel_cnct.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Topcnct_MouseMove);
             // 
-            // Establish_connection_form
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,7 +246,7 @@
             this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Establish_connection_form";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
