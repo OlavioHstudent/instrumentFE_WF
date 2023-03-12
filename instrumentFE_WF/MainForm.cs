@@ -305,7 +305,7 @@ namespace instrumentFE_WF
             using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.Read)) {
                 using (StreamWriter sw = new StreamWriter(fs)) {
                     for (int i = 0; i < data.Length; i++) {
-                        sw.WriteLine($"Element {i * 5}s: {data[i]}");
+                        sw.WriteLine($"{i * 5}s: {data[i]} lx");
                     }
                 }
                 fs.Close();
@@ -512,6 +512,7 @@ namespace instrumentFE_WF
 
         private void button_StopReadscaled_Click(object sender, EventArgs e) {
             timer_readData.Stop();
+            WriteSensorDataToLogFile(ReadSensorDataY);
         }
 
         private void maskedTextBox_writePassword_TextChanged(object sender, EventArgs e) {
