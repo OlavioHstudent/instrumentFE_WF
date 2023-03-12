@@ -49,9 +49,9 @@
             this.label_chooseinstrument = new System.Windows.Forms.Label();
             this.comboBox_InstrumentList = new System.Windows.Forms.ComboBox();
             this.panel_SensorData = new System.Windows.Forms.Panel();
+            this.richTextBox_options = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_comments = new System.Windows.Forms.RichTextBox();
             this.label_instrumentpanel = new System.Windows.Forms.Label();
-            this.listBox_Comment = new System.Windows.Forms.ListBox();
-            this.listBox_Options = new System.Windows.Forms.ListBox();
             this.button_FromRadio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton_Delete = new System.Windows.Forms.RadioButton();
@@ -389,9 +389,9 @@
             // panel_SensorData
             // 
             this.panel_SensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_SensorData.Controls.Add(this.richTextBox_options);
+            this.panel_SensorData.Controls.Add(this.richTextBox_comments);
             this.panel_SensorData.Controls.Add(this.label_instrumentpanel);
-            this.panel_SensorData.Controls.Add(this.listBox_Comment);
-            this.panel_SensorData.Controls.Add(this.listBox_Options);
             this.panel_SensorData.Controls.Add(this.button_FromRadio);
             this.panel_SensorData.Controls.Add(this.panel2);
             this.panel_SensorData.Controls.Add(this.label_Comment);
@@ -414,6 +414,30 @@
             this.panel_SensorData.Size = new System.Drawing.Size(624, 392);
             this.panel_SensorData.TabIndex = 15;
             // 
+            // richTextBox_options
+            // 
+            this.richTextBox_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.richTextBox_options.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_options.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox_options.Location = new System.Drawing.Point(120, 240);
+            this.richTextBox_options.Name = "richTextBox_options";
+            this.richTextBox_options.ReadOnly = true;
+            this.richTextBox_options.Size = new System.Drawing.Size(280, 56);
+            this.richTextBox_options.TabIndex = 37;
+            this.richTextBox_options.Text = "";
+            // 
+            // richTextBox_comments
+            // 
+            this.richTextBox_comments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.richTextBox_comments.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_comments.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox_comments.Location = new System.Drawing.Point(120, 304);
+            this.richTextBox_comments.Name = "richTextBox_comments";
+            this.richTextBox_comments.ReadOnly = true;
+            this.richTextBox_comments.Size = new System.Drawing.Size(280, 56);
+            this.richTextBox_comments.TabIndex = 36;
+            this.richTextBox_comments.Text = "";
+            // 
             // label_instrumentpanel
             // 
             this.label_instrumentpanel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -425,30 +449,6 @@
             this.label_instrumentpanel.Size = new System.Drawing.Size(245, 28);
             this.label_instrumentpanel.TabIndex = 34;
             this.label_instrumentpanel.Text = "Instrument Management:";
-            // 
-            // listBox_Comment
-            // 
-            this.listBox_Comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.listBox_Comment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox_Comment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.listBox_Comment.FormattingEnabled = true;
-            this.listBox_Comment.ItemHeight = 15;
-            this.listBox_Comment.Location = new System.Drawing.Point(120, 312);
-            this.listBox_Comment.Name = "listBox_Comment";
-            this.listBox_Comment.Size = new System.Drawing.Size(280, 60);
-            this.listBox_Comment.TabIndex = 33;
-            // 
-            // listBox_Options
-            // 
-            this.listBox_Options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.listBox_Options.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox_Options.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.listBox_Options.FormattingEnabled = true;
-            this.listBox_Options.ItemHeight = 15;
-            this.listBox_Options.Location = new System.Drawing.Point(120, 240);
-            this.listBox_Options.Name = "listBox_Options";
-            this.listBox_Options.Size = new System.Drawing.Size(280, 60);
-            this.listBox_Options.TabIndex = 32;
             // 
             // button_FromRadio
             // 
@@ -836,7 +836,7 @@
             this.label_currentReading.Name = "label_currentReading";
             this.label_currentReading.Size = new System.Drawing.Size(109, 19);
             this.label_currentReading.TabIndex = 44;
-            this.label_currentReading.Text = "Highest reading:";
+            this.label_currentReading.Text = "Current reading:";
             // 
             // maskedTextBox_currentReading
             // 
@@ -1325,9 +1325,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_TopBar);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel_SensorData);
             this.Controls.Add(this.panel_dataVis);
             this.Controls.Add(this.panel_TabsConnections);
+            this.Controls.Add(this.panel_SensorData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1398,8 +1398,6 @@
         private Panel panel1;
         private Button button_InoConnection;
         private Button button_sensorData;
-        private ListBox listBox_Options;
-        private ListBox listBox_Comment;
         private Button button_Help;
         private Panel panel3;
         private Button button_File;
@@ -1458,5 +1456,7 @@
         private Label label_currentReading;
         private MaskedTextBox maskedTextBox_currentReading;
         private Button button_selectInstrument;
+        private RichTextBox richTextBox_options;
+        private RichTextBox richTextBox_comments;
     }
 }

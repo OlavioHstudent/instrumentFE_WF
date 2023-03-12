@@ -16,12 +16,22 @@ namespace instrumentFE_WF {
         public Form1() {
             InitializeComponent();
         }
-        
+
         //Shit to do on load
         private async void Form1_Load(object sender, EventArgs e) {
             buttonConnect.Enabled = false;
             buttonDisconnect.Enabled = false;
             textBox_connectionFeedback.Text = "> Not connected to any database";
+
+            IPAddress[] addresses = Dns.GetHostAddresses(Dns.GetHostName());
+
+            string ipAddressesText = "";
+            foreach (IPAddress address in addresses) {
+                if (address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) {
+                    ipAddressesText += address.ToString() + Environment.NewLine;
+                }
+            }
+            textBox_connectionFeedback.Text = $"> Not connected to any database:\nHere is a list of all available IPs:\n{ipAddressesText}127.0.0.1";
         }
 
         //Main window funcitonality

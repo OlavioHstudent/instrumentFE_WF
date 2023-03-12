@@ -95,15 +95,7 @@ namespace instrumentFE_WF
             textBox_connectionFeedback_Ino.Text = "Not connected to any instrument yet";
             textBox_BE_currentTCP.Text = CurrentTCPforBE.ToString();
 
-            //List all IPv4 addresses
-            List<string> servers = new List<string>();
 
-            IPAddress[] addresslist = Dns.GetHostAddresses(Dns.GetHostName());
-            foreach (IPAddress address in addresslist) {
-                if (address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) {
-                    servers.Add(address.ToString());
-                }
-            }
 
         }
 
@@ -260,10 +252,10 @@ namespace instrumentFE_WF
             string serialNumber = maskedTextBox_SerialNumber.Text;
             string signalType = comboBox_SignalType.Text;
             string measureType = comboBox_MeasureType.Text;
-            string options = listBox_Options.SelectedIndex.ToString();
+            string options = richTextBox_options.Text.ToString();
             string lrv = maskedTextBox_LRV.Text;
             string urv = maskedTextBox_URV.Text;
-            string comment = listBox_Comment.Text;
+            string comment = richTextBox_comments.Text;
 
             _instrumentGen.CreateInstrument(
                 sensorName,
@@ -281,7 +273,7 @@ namespace instrumentFE_WF
             maskedTextBox_SerialNumber.ResetText();
             comboBox_SignalType.ResetText();
             comboBox_MeasureType.ResetText();
-            listBox_Options.ResetText();
+            richTextBox_options.ResetText();
             checkBox_Registered.Checked = false;
         }
 
@@ -311,6 +303,8 @@ namespace instrumentFE_WF
             comboBox_InstrumentList.Items.AddRange(_instrumentGen.GetInstruments().ToArray());
             comboBox_InstrumentList.DropDownHeight = comboBox_InstrumentList.ItemHeight * comboBox_InstrumentList.Items.Count;
             comboBox_InstrumentList.DisplayMember = "SensorName";
+            InstrumentGen InstrumentListtoFile = comboBox_InstrumentList.SelectedItem as InstrumentGen;
+            WriteToLogFile(InstrumentListtoFile);
         }
         private void button_selectInstrument_Click(object sender, EventArgs e) {
             InstrumentGen selectedInstrument = comboBox_InstrumentList.SelectedItem as InstrumentGen;
@@ -319,10 +313,10 @@ namespace instrumentFE_WF
                 maskedTextBox_SerialNumber.Text = selectedInstrument.SerialNumber;
                 comboBox_SignalType.Text = selectedInstrument.SignalType;
                 comboBox_MeasureType.Text = selectedInstrument.MeasureType;
-                listBox_Options.Text = selectedInstrument.Options;
+                richTextBox_options.Text = selectedInstrument.Options;
                 maskedTextBox_LRV.Text = selectedInstrument.LRV;
                 maskedTextBox_URV.Text = selectedInstrument.URV;
-                listBox_Comment.Text = selectedInstrument.Comment;
+                richTextBox_comments.Text = selectedInstrument.Comment;
                 checkBox_Registered.Checked = true;
             }
         }
@@ -473,6 +467,8 @@ namespace instrumentFE_WF
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
+            //Jeg vet jeg kunne gjort alt i ticken her mer ressurseffektivt, men jeg føler det er noe jeg 
+            //best kan utføre når det finnes tid, så det er ikke mangel på forståelse.
             dataTransfer.SendMessage("readscaled");
             fetchedSensorData = dataTransfer.ReceiveMessage().Substring(11);
             ReadSensorDataY[ReadSensorDataY.Length - 1] = float.Parse(fetchedSensorData);
