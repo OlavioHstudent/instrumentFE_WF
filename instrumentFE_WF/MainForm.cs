@@ -16,6 +16,8 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using ScottPlot;
+using static ScottPlot.Plottable.PopulationPlot;
+using System.Reflection.Emit;
 
 namespace instrumentFE_WF
 {
@@ -42,7 +44,9 @@ namespace instrumentFE_WF
         double[] ReadSensorDataY = new double[1];
         double[] ReadSensorDataX = Array.Empty<double>();
         int[] datax = new int[0];
-
+        string checkConnectionINO = "";
+        string password = "";
+        
         public string SensorName { get; set; }
         public string SerialNumber { get; set; }
         public string SignalType { get; set; }
@@ -73,6 +77,7 @@ namespace instrumentFE_WF
             foreach (string AvailablePort in listAvailComPorts) {
                 comboBox_COMport.Items.Add(AvailablePort.Substring(3, 1));
             }
+
 
             textBox_currentCOM.Text = "No";
             panel_TabsConnections.Visible = true;
@@ -133,6 +138,7 @@ namespace instrumentFE_WF
             DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Program", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes) {
+                dataTransfer.SendMessage("EXIT");
                 Application.Exit();
             }
         }
@@ -201,11 +207,11 @@ namespace instrumentFE_WF
             if (textBox_InoBitRate.Text.Length > 1) {
                 try {
                     dataTransfer.SendMessage($"COMcon {selectedComPort} + {selectedBitRate}");
-                    string checkConnectionINO = dataTransfer.ReceiveMessage();
+                    checkConnectionINO = dataTransfer.ReceiveMessage();
                     if (checkConnectionINO == "Connection success") {
                         buttonConnect_Ino.Enabled = false;
                         button_readconf.Enabled = true;
-                        button_writeconf.Enabled = true;
+
                         button_readscaled.Enabled = true;
                         button_readstatus.Enabled = true;
                         textBox_currentCOM.Text = "Yes";
@@ -270,6 +276,34 @@ namespace instrumentFE_WF
                 comment
                 );
             updatecomboBox_InstrumentList();
+
+            maskedTextBox_SensorName.ResetText();
+            maskedTextBox_SerialNumber.ResetText();
+            comboBox_SignalType.ResetText();
+            comboBox_MeasureType.ResetText();
+            listBox_Options.ResetText();
+            checkBox_Registered.Checked = false;
+        }
+
+        private static void WriteToLogFile(InstrumentGen instrumentToLog) {
+            string fileName = "InstrumentList.txt";
+            string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
+            // Open the file for writing
+            using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.Read)) {
+                using (StreamWriter sw = new StreamWriter(fs)) {
+                    sw.WriteLine($"Registered at FUNCTIONALITY NOT IMPLEMENTED YET\n"+
+                        $"Sensor Name = {instrumentToLog.SensorName}\n" +
+                        $"Serial Number = {instrumentToLog.SerialNumber}\n" +
+                        $"SignalType = {instrumentToLog.SignalType}\n" +
+                        $"MeasureType = {instrumentToLog.MeasureType}\n" +
+                        $"Options = {instrumentToLog.Options}\n" +
+                        $"LRV = {instrumentToLog.LRV}\n" +
+                        $"URV = {instrumentToLog.URV}\n" +
+                        $"Comment = {instrumentToLog.Comment}\n" +
+                        $"\r\n");
+                }
+                fs.Close();
+            }
         }
 
         private void updatecomboBox_InstrumentList() {
@@ -277,6 +311,25 @@ namespace instrumentFE_WF
             comboBox_InstrumentList.Items.AddRange(_instrumentGen.GetInstruments().ToArray());
             comboBox_InstrumentList.DropDownHeight = comboBox_InstrumentList.ItemHeight * comboBox_InstrumentList.Items.Count;
             comboBox_InstrumentList.DisplayMember = "SensorName";
+        }
+        private void button_selectInstrument_Click(object sender, EventArgs e) {
+            InstrumentGen selectedInstrument = comboBox_InstrumentList.SelectedItem as InstrumentGen;
+            if (selectedInstrument != null ) {
+                maskedTextBox_SensorName.Text = selectedInstrument.SensorName;
+                maskedTextBox_SerialNumber.Text = selectedInstrument.SerialNumber;
+                comboBox_SignalType.Text = selectedInstrument.SignalType;
+                comboBox_MeasureType.Text = selectedInstrument.MeasureType;
+                listBox_Options.Text = selectedInstrument.Options;
+                maskedTextBox_LRV.Text = selectedInstrument.LRV;
+                maskedTextBox_URV.Text = selectedInstrument.URV;
+                listBox_Comment.Text = selectedInstrument.Comment;
+                checkBox_Registered.Checked = true;
+            }
+        }
+
+        private void label_selectSensor_Click(object sender, EventArgs e) {
+            {
+            }
         }
 
         private void radioButton_RegisterNew_CheckedChanged(object sender, EventArgs e) {
@@ -389,10 +442,15 @@ namespace instrumentFE_WF
             string urv = Convert.ToString(maskedTextBox_URV.Text);
             string alarml = Convert.ToString(maskedTextBox_alarml.Text);
             string alarmh = Convert.ToString(maskedTextBox_alarmh.Text);
-            string password = maskedTextBox_writePassword.Text;
+            password = maskedTextBox_writePassword.Text;
             string writeconf = $">{password}>{name};{lrv};{urv};{alarml};{alarmh}";
+            if (password == "") {
+                password = "abcdef";
+            }
             dataTransfer.SendMessage(writeconf);
-            maskedTextBox_readwriteFeedback.Text = dataTransfer.ReceiveMessage();
+            string writeconfFeedback = dataTransfer.ReceiveMessage();
+            if (writeconfFeedback.Substring(0, 8) == "You failed! Try again...?")
+                maskedTextBox_readwriteFeedback.Text = "Wrong password. Please try again.";
         }
 
         private void button_readstatus_Click(object sender, EventArgs e) {
@@ -405,23 +463,62 @@ namespace instrumentFE_WF
         }
 
         private void button_readscaled_Click(object sender, EventArgs e) {
+            if (1 == 1) { //Modify to match instrument/sensor
+                formsPlot1.Plot.XLabel("Time (s)");
+                formsPlot1.Plot.YLabel("Lux (lx)");
+                formsPlot1.Plot.SetAxisLimits(null, null, 0, 500);
+            }
             timer_readData.Start();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
             dataTransfer.SendMessage("readscaled");
             fetchedSensorData = dataTransfer.ReceiveMessage().Substring(11);
             ReadSensorDataY[ReadSensorDataY.Length - 1] = float.Parse(fetchedSensorData);
+            maskedTextBox_currentReading.Text = fetchedSensorData;
             Array.Resize(ref ReadSensorDataY, ReadSensorDataY.Length + 1);
             datax = Enumerable.Range(0, ReadSensorDataY.Length).ToArray();
-            ReadSensorDataX = datax.Select(i => (double)i).ToArray();
+            ReadSensorDataX = datax.Select(i => (double)i * 5).ToArray();
             formsPlot1.Plot.AddScatter(ReadSensorDataX, ReadSensorDataY);
+            maskedTextBox_HighestReading.Text = ReadSensorDataY.Max().ToString("F2");
+            maskedTextBox_LowestReading.Text = ReadSensorDataY.Min().ToString("F2");
+            maskedTextBox_AverageReading.Text = ReadSensorDataY.Average().ToString("F2");
+            formsPlot1.Plot.SetOuterViewLimits(0, (ReadSensorDataY.Length - 1) * 5, 0, 500);
+            formsPlot1.Plot.AxisAutoX();
             formsPlot1.Refresh();
+
         }
 
         private void button_StopReadscaled_Click(object sender, EventArgs e) {
             timer_readData.Stop();
         }
+
+        private void maskedTextBox_writePassword_TextChanged(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(maskedTextBox_devicename.Text) ||
+                string.IsNullOrEmpty(maskedTextBox_LRV.Text) ||
+                string.IsNullOrEmpty(maskedTextBox_URV.Text) ||
+                string.IsNullOrEmpty(maskedTextBox_alarml.Text) ||
+                string.IsNullOrEmpty(maskedTextBox_alarmh.Text)) {
+
+                maskedTextBox_readwriteFeedback.Text = "Please fill in all the fields";
+            }
+            else if (!string.IsNullOrEmpty(maskedTextBox_devicename.Text) &&
+                     float.TryParse(maskedTextBox_LRV.Text, out _) &&
+                     float.TryParse(maskedTextBox_URV.Text, out _) &&
+                     int.TryParse(maskedTextBox_alarml.Text, out _) &&
+                     int.TryParse(maskedTextBox_alarmh.Text, out _) &&
+                     checkConnectionINO == "Connection success") {
+                button_writeconf.Enabled = true;
+
+            }
+        }
+
+        private void button_writeconf_MouseHover(object sender, EventArgs e) {
+            if (!button_writeconf.Enabled) {
+                maskedTextBox_readwriteFeedback.Text = "Writeconfig requires a password";}}
+
+
     }
 
 }

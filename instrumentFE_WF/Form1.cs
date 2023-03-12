@@ -16,7 +16,7 @@ namespace instrumentFE_WF {
         public Form1() {
             InitializeComponent();
         }
-
+        
         //Shit to do on load
         private async void Form1_Load(object sender, EventArgs e) {
             buttonConnect.Enabled = false;

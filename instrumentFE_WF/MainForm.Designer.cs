@@ -45,8 +45,8 @@
             this.panel5_Help = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button_selectInstrument = new System.Windows.Forms.Button();
             this.label_chooseinstrument = new System.Windows.Forms.Label();
-            this.label_selectSensor = new System.Windows.Forms.Label();
             this.comboBox_InstrumentList = new System.Windows.Forms.ComboBox();
             this.panel_SensorData = new System.Windows.Forms.Panel();
             this.label_instrumentpanel = new System.Windows.Forms.Label();
@@ -81,6 +81,8 @@
             this.buttonDisconnect_Ino = new System.Windows.Forms.Button();
             this.label_InoBitRate = new System.Windows.Forms.Label();
             this.panel_dataVis = new System.Windows.Forms.Panel();
+            this.label_currentReading = new System.Windows.Forms.Label();
+            this.maskedTextBox_currentReading = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox_AverageReading = new System.Windows.Forms.MaskedTextBox();
             this.label_AverageReading = new System.Windows.Forms.Label();
             this.label_LowestReading = new System.Windows.Forms.Label();
@@ -337,14 +339,29 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.button_selectInstrument);
             this.panel7.Controls.Add(this.label_chooseinstrument);
-            this.panel7.Controls.Add(this.label_selectSensor);
             this.panel7.Controls.Add(this.comboBox_InstrumentList);
             this.panel7.Location = new System.Drawing.Point(656, 120);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(368, 112);
             this.panel7.TabIndex = 34;
+            // 
+            // button_selectInstrument
+            // 
+            this.button_selectInstrument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.button_selectInstrument.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_selectInstrument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_selectInstrument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_selectInstrument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.button_selectInstrument.Location = new System.Drawing.Point(128, 80);
+            this.button_selectInstrument.Name = "button_selectInstrument";
+            this.button_selectInstrument.Size = new System.Drawing.Size(120, 23);
+            this.button_selectInstrument.TabIndex = 39;
+            this.button_selectInstrument.Text = "Select";
+            this.button_selectInstrument.UseVisualStyleBackColor = false;
+            this.button_selectInstrument.Click += new System.EventHandler(this.button_selectInstrument_Click);
             // 
             // label_chooseinstrument
             // 
@@ -357,17 +374,6 @@
             this.label_chooseinstrument.Size = new System.Drawing.Size(295, 28);
             this.label_chooseinstrument.TabIndex = 36;
             this.label_chooseinstrument.Text = "Select from saved Instruments:";
-            // 
-            // label_selectSensor
-            // 
-            this.label_selectSensor.AutoSize = true;
-            this.label_selectSensor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_selectSensor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_selectSensor.Location = new System.Drawing.Point(144, 80);
-            this.label_selectSensor.Name = "label_selectSensor";
-            this.label_selectSensor.Size = new System.Drawing.Size(88, 19);
-            this.label_selectSensor.TabIndex = 35;
-            this.label_selectSensor.Text = "Select sensor";
             // 
             // comboBox_InstrumentList
             // 
@@ -805,6 +811,8 @@
             // 
             // panel_dataVis
             // 
+            this.panel_dataVis.Controls.Add(this.label_currentReading);
+            this.panel_dataVis.Controls.Add(this.maskedTextBox_currentReading);
             this.panel_dataVis.Controls.Add(this.maskedTextBox_AverageReading);
             this.panel_dataVis.Controls.Add(this.label_AverageReading);
             this.panel_dataVis.Controls.Add(this.label_LowestReading);
@@ -819,11 +827,31 @@
             this.panel_dataVis.Size = new System.Drawing.Size(624, 392);
             this.panel_dataVis.TabIndex = 38;
             // 
+            // label_currentReading
+            // 
+            this.label_currentReading.AutoSize = true;
+            this.label_currentReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_currentReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.label_currentReading.Location = new System.Drawing.Point(272, 320);
+            this.label_currentReading.Name = "label_currentReading";
+            this.label_currentReading.Size = new System.Drawing.Size(109, 19);
+            this.label_currentReading.TabIndex = 44;
+            this.label_currentReading.Text = "Highest reading:";
+            // 
+            // maskedTextBox_currentReading
+            // 
+            this.maskedTextBox_currentReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.maskedTextBox_currentReading.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBox_currentReading.Location = new System.Drawing.Point(384, 320);
+            this.maskedTextBox_currentReading.Name = "maskedTextBox_currentReading";
+            this.maskedTextBox_currentReading.Size = new System.Drawing.Size(96, 23);
+            this.maskedTextBox_currentReading.TabIndex = 45;
+            // 
             // maskedTextBox_AverageReading
             // 
             this.maskedTextBox_AverageReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_AverageReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_AverageReading.Location = new System.Drawing.Point(120, 360);
+            this.maskedTextBox_AverageReading.Location = new System.Drawing.Point(128, 368);
             this.maskedTextBox_AverageReading.Name = "maskedTextBox_AverageReading";
             this.maskedTextBox_AverageReading.Size = new System.Drawing.Size(96, 23);
             this.maskedTextBox_AverageReading.TabIndex = 43;
@@ -833,7 +861,7 @@
             this.label_AverageReading.AutoSize = true;
             this.label_AverageReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_AverageReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_AverageReading.Location = new System.Drawing.Point(8, 360);
+            this.label_AverageReading.Location = new System.Drawing.Point(16, 368);
             this.label_AverageReading.Name = "label_AverageReading";
             this.label_AverageReading.Size = new System.Drawing.Size(112, 19);
             this.label_AverageReading.TabIndex = 42;
@@ -844,7 +872,7 @@
             this.label_LowestReading.AutoSize = true;
             this.label_LowestReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_LowestReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_LowestReading.Location = new System.Drawing.Point(8, 336);
+            this.label_LowestReading.Location = new System.Drawing.Point(16, 344);
             this.label_LowestReading.Name = "label_LowestReading";
             this.label_LowestReading.Size = new System.Drawing.Size(105, 19);
             this.label_LowestReading.TabIndex = 40;
@@ -854,7 +882,7 @@
             // 
             this.maskedTextBox_LowestReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_LowestReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_LowestReading.Location = new System.Drawing.Point(120, 336);
+            this.maskedTextBox_LowestReading.Location = new System.Drawing.Point(128, 344);
             this.maskedTextBox_LowestReading.Name = "maskedTextBox_LowestReading";
             this.maskedTextBox_LowestReading.Size = new System.Drawing.Size(96, 23);
             this.maskedTextBox_LowestReading.TabIndex = 41;
@@ -864,7 +892,7 @@
             this.label_HighestReading.AutoSize = true;
             this.label_HighestReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_HighestReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_HighestReading.Location = new System.Drawing.Point(8, 312);
+            this.label_HighestReading.Location = new System.Drawing.Point(16, 320);
             this.label_HighestReading.Name = "label_HighestReading";
             this.label_HighestReading.Size = new System.Drawing.Size(109, 19);
             this.label_HighestReading.TabIndex = 39;
@@ -874,7 +902,7 @@
             // 
             this.maskedTextBox_HighestReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_HighestReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_HighestReading.Location = new System.Drawing.Point(120, 312);
+            this.maskedTextBox_HighestReading.Location = new System.Drawing.Point(128, 320);
             this.maskedTextBox_HighestReading.Name = "maskedTextBox_HighestReading";
             this.maskedTextBox_HighestReading.Size = new System.Drawing.Size(96, 23);
             this.maskedTextBox_HighestReading.TabIndex = 39;
@@ -886,7 +914,7 @@
             this.button_StopReadscaled.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_StopReadscaled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_StopReadscaled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_StopReadscaled.Location = new System.Drawing.Point(464, 56);
+            this.button_StopReadscaled.Location = new System.Drawing.Point(488, 56);
             this.button_StopReadscaled.Name = "button_StopReadscaled";
             this.button_StopReadscaled.Size = new System.Drawing.Size(128, 40);
             this.button_StopReadscaled.TabIndex = 8;
@@ -898,11 +926,12 @@
             // 
             this.formsPlot1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.formsPlot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.formsPlot1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.formsPlot1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.formsPlot1.Location = new System.Drawing.Point(8, 8);
-            this.formsPlot1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.formsPlot1.Location = new System.Drawing.Point(13, 15);
+            this.formsPlot1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(448, 264);
+            this.formsPlot1.Size = new System.Drawing.Size(467, 297);
             this.formsPlot1.TabIndex = 0;
             // 
             // button_readscaled
@@ -912,7 +941,7 @@
             this.button_readscaled.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_readscaled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_readscaled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_readscaled.Location = new System.Drawing.Point(464, 16);
+            this.button_readscaled.Location = new System.Drawing.Point(488, 16);
             this.button_readscaled.Name = "button_readscaled";
             this.button_readscaled.Size = new System.Drawing.Size(128, 40);
             this.button_readscaled.TabIndex = 7;
@@ -1040,6 +1069,7 @@
             this.maskedTextBox_writePassword.Size = new System.Drawing.Size(96, 23);
             this.maskedTextBox_writePassword.TabIndex = 36;
             this.maskedTextBox_writePassword.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.maskedTextBox_writePassword.TextChanged += new System.EventHandler(this.maskedTextBox_writePassword_TextChanged);
             // 
             // button_readstatus
             // 
@@ -1092,6 +1122,7 @@
             this.button_writeconf.Text = "Write config";
             this.button_writeconf.UseVisualStyleBackColor = false;
             this.button_writeconf.Click += new System.EventHandler(this.button_writeconf_Click);
+            this.button_writeconf.MouseHover += new System.EventHandler(this.button_writeconf_MouseHover);
             // 
             // label_alarmh
             // 
@@ -1188,7 +1219,7 @@
             this.panel5.Controls.Add(this.label_BE_currentCOM);
             this.panel5.Controls.Add(this.textBox_BE_currentTCP);
             this.panel5.Controls.Add(this.label_BE_currentTCP);
-            this.panel5.Location = new System.Drawing.Point(0, 528);
+            this.panel5.Location = new System.Drawing.Point(0, 544);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1040, 32);
             this.panel5.TabIndex = 45;
@@ -1287,16 +1318,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(1040, 561);
+            this.ClientSize = new System.Drawing.Size(1040, 579);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_TopBar);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel_SensorData);
             this.Controls.Add(this.panel_dataVis);
             this.Controls.Add(this.panel_TabsConnections);
-            this.Controls.Add(this.panel_SensorData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1424,5 +1455,8 @@
         private Label label_HighestReading;
         private MaskedTextBox maskedTextBox_HighestReading;
         private Button button_StopReadscaled;
+        private Label label_currentReading;
+        private MaskedTextBox maskedTextBox_currentReading;
+        private Button button_selectInstrument;
     }
 }
