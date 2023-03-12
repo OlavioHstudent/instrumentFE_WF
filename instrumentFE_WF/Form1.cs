@@ -104,7 +104,6 @@ namespace instrumentFE_WF {
                 if (client.Connected) {
                     buttonConnect.Enabled = false;
                     buttonDisconnect.Enabled = true;
-                    // Send data to the server
                     textBox_connectionFeedback.Text = $"> Connection established\n" +
                                                       $"IP address: {in_DBIPaddress}\n" +
                                                       $"TCP port:   {inputTCPport}\n";

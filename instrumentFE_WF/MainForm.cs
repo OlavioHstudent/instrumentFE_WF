@@ -92,6 +92,7 @@ namespace instrumentFE_WF
             buttonConnect_Ino.Enabled = false;
             buttonDisconnect_Ino.Enabled = false;
             panel_dataVis.Visible = false;
+            button_FromRadio.Enabled = false;
             textBox_connectionFeedback_Ino.Text = "Not connected to any instrument yet";
             textBox_BE_currentTCP.Text = CurrentTCPforBE.ToString();
 
@@ -275,6 +276,7 @@ namespace instrumentFE_WF
             comboBox_MeasureType.ResetText();
             richTextBox_options.ResetText();
             checkBox_Registered.Checked = false;
+            
         }
 
         private static void WriteToLogFile(InstrumentGen instrumentToLog) {
@@ -297,14 +299,26 @@ namespace instrumentFE_WF
                 fs.Close();
             }
         }
-
+        private static void WriteSensorDataToLogFile(double[] data) {
+            string fileName = "SensorData.txt";
+            string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
+            using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.Read)) {
+                using (StreamWriter sw = new StreamWriter(fs)) {
+                    for (int i = 0; i < data.Length; i++) {
+                        sw.WriteLine($"Element {i * 5}s: {data[i]}");
+                    }
+                }
+                fs.Close();
+            }
+        }
         private void updatecomboBox_InstrumentList() {
             comboBox_InstrumentList.Items.Clear();
             comboBox_InstrumentList.Items.AddRange(_instrumentGen.GetInstruments().ToArray());
             comboBox_InstrumentList.DropDownHeight = comboBox_InstrumentList.ItemHeight * comboBox_InstrumentList.Items.Count;
             comboBox_InstrumentList.DisplayMember = "SensorName";
-            InstrumentGen InstrumentListtoFile = comboBox_InstrumentList.SelectedItem as InstrumentGen;
-            WriteToLogFile(InstrumentListtoFile);
+            InstrumentGen instrumentToLog = comboBox_InstrumentList.Items[comboBox_InstrumentList.Items.Count - 1] as InstrumentGen;
+            WriteToLogFile(instrumentToLog);
+            maskedTextBox_readwriteFeedback.Text = $"instrument {instrumentToLog.SensorName} has been saved to file";
         }
         private void button_selectInstrument_Click(object sender, EventArgs e) {
             InstrumentGen selectedInstrument = comboBox_InstrumentList.SelectedItem as InstrumentGen;
@@ -328,6 +342,16 @@ namespace instrumentFE_WF
 
         private void radioButton_RegisterNew_CheckedChanged(object sender, EventArgs e) {
             button_FromRadio.Text = "Register New";
+            if (maskedTextBox_SensorName.Text != "" &&
+                maskedTextBox_SerialNumber.Text != "" &&
+                comboBox_SignalType.Text != "" &&
+                comboBox_MeasureType.Text != "" &&
+                richTextBox_options.Text != "" &&
+                maskedTextBox_LRV.Text != "" &&
+                maskedTextBox_URV.Text != "") {
+                button_FromRadio.Enabled= true;
+
+            }
         }
 
         private void radioButton_SaveChanges_CheckedChanged(object sender, EventArgs e) {

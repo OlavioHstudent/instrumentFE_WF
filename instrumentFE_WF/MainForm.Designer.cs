@@ -345,7 +345,7 @@
             this.panel7.Location = new System.Drawing.Point(656, 120);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(368, 112);
+            this.panel7.Size = new System.Drawing.Size(368, 120);
             this.panel7.TabIndex = 34;
             // 
             // button_selectInstrument
@@ -355,7 +355,7 @@
             this.button_selectInstrument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_selectInstrument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_selectInstrument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_selectInstrument.Location = new System.Drawing.Point(128, 80);
+            this.button_selectInstrument.Location = new System.Drawing.Point(128, 88);
             this.button_selectInstrument.Name = "button_selectInstrument";
             this.button_selectInstrument.Size = new System.Drawing.Size(120, 23);
             this.button_selectInstrument.TabIndex = 39;
@@ -369,7 +369,7 @@
             this.label_chooseinstrument.AutoSize = true;
             this.label_chooseinstrument.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_chooseinstrument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_chooseinstrument.Location = new System.Drawing.Point(40, 8);
+            this.label_chooseinstrument.Location = new System.Drawing.Point(40, 12);
             this.label_chooseinstrument.Name = "label_chooseinstrument";
             this.label_chooseinstrument.Size = new System.Drawing.Size(295, 28);
             this.label_chooseinstrument.TabIndex = 36;
@@ -398,11 +398,15 @@
             this.panel_SensorData.Controls.Add(this.label_Options);
             this.panel_SensorData.Controls.Add(this.comboBox_MeasureType);
             this.panel_SensorData.Controls.Add(this.label_SignalType);
+            this.panel_SensorData.Controls.Add(this.label_LRV);
             this.panel_SensorData.Controls.Add(this.label_MeasureType);
             this.panel_SensorData.Controls.Add(this.comboBox_SignalType);
+            this.panel_SensorData.Controls.Add(this.maskedTextBox_LRV);
             this.panel_SensorData.Controls.Add(this.dateTimePicker1);
             this.panel_SensorData.Controls.Add(this.label_RegDate);
+            this.panel_SensorData.Controls.Add(this.label_URV);
             this.panel_SensorData.Controls.Add(this.checkBox_Registered);
+            this.panel_SensorData.Controls.Add(this.maskedTextBox_URV);
             this.panel_SensorData.Controls.Add(this.label_Registered);
             this.panel_SensorData.Controls.Add(this.label_SerialNumber);
             this.panel_SensorData.Controls.Add(this.maskedTextBox_SerialNumber);
@@ -417,26 +421,27 @@
             // richTextBox_options
             // 
             this.richTextBox_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.richTextBox_options.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_options.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_options.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.richTextBox_options.Location = new System.Drawing.Point(120, 240);
             this.richTextBox_options.Name = "richTextBox_options";
             this.richTextBox_options.ReadOnly = true;
             this.richTextBox_options.Size = new System.Drawing.Size(280, 56);
             this.richTextBox_options.TabIndex = 37;
-            this.richTextBox_options.Text = "";
+            this.richTextBox_options.Text = "Hva skal være her? Står ingen ting i arbeidskravet, men var en del av en av timen" +
+    "e";
             // 
             // richTextBox_comments
             // 
             this.richTextBox_comments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.richTextBox_comments.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_comments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_comments.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.richTextBox_comments.Location = new System.Drawing.Point(120, 304);
             this.richTextBox_comments.Name = "richTextBox_comments";
             this.richTextBox_comments.ReadOnly = true;
             this.richTextBox_comments.Size = new System.Drawing.Size(280, 56);
             this.richTextBox_comments.TabIndex = 36;
-            this.richTextBox_comments.Text = "";
+            this.richTextBox_comments.Text = "Samme her også...?\'";
             // 
             // label_instrumentpanel
             // 
@@ -457,7 +462,7 @@
             this.button_FromRadio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_FromRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_FromRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_FromRadio.Location = new System.Drawing.Point(416, 184);
+            this.button_FromRadio.Location = new System.Drawing.Point(416, 328);
             this.button_FromRadio.Name = "button_FromRadio";
             this.button_FromRadio.Size = new System.Drawing.Size(195, 32);
             this.button_FromRadio.TabIndex = 31;
@@ -471,7 +476,7 @@
             this.panel2.Controls.Add(this.radioButton_Delete);
             this.panel2.Controls.Add(this.radioButton_SaveChanges);
             this.panel2.Controls.Add(this.radioButton_RegisterNew);
-            this.panel2.Location = new System.Drawing.Point(416, 56);
+            this.panel2.Location = new System.Drawing.Point(416, 200);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(195, 112);
@@ -660,21 +665,21 @@
             // maskedTextBox_SerialNumber
             // 
             this.maskedTextBox_SerialNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_SerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox_SerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextBox_SerialNumber.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.maskedTextBox_SerialNumber.Location = new System.Drawing.Point(120, 88);
             this.maskedTextBox_SerialNumber.Name = "maskedTextBox_SerialNumber";
-            this.maskedTextBox_SerialNumber.Size = new System.Drawing.Size(280, 16);
+            this.maskedTextBox_SerialNumber.Size = new System.Drawing.Size(280, 23);
             this.maskedTextBox_SerialNumber.TabIndex = 10;
             // 
             // maskedTextBox_SensorName
             // 
             this.maskedTextBox_SensorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_SensorName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox_SensorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextBox_SensorName.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.maskedTextBox_SensorName.Location = new System.Drawing.Point(120, 56);
             this.maskedTextBox_SensorName.Name = "maskedTextBox_SensorName";
-            this.maskedTextBox_SensorName.Size = new System.Drawing.Size(280, 16);
+            this.maskedTextBox_SensorName.Size = new System.Drawing.Size(280, 23);
             this.maskedTextBox_SensorName.TabIndex = 9;
             // 
             // label_SensorName
@@ -953,7 +958,7 @@
             // 
             this.maskedTextBox_devicename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_devicename.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_devicename.Location = new System.Drawing.Point(240, 40);
+            this.maskedTextBox_devicename.Location = new System.Drawing.Point(240, 56);
             this.maskedTextBox_devicename.Name = "maskedTextBox_devicename";
             this.maskedTextBox_devicename.Size = new System.Drawing.Size(88, 23);
             this.maskedTextBox_devicename.TabIndex = 28;
@@ -964,7 +969,7 @@
             this.label_Unit.AutoSize = true;
             this.label_Unit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_Unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_Unit.Location = new System.Drawing.Point(184, 40);
+            this.label_Unit.Location = new System.Drawing.Point(184, 56);
             this.label_Unit.Name = "label_Unit";
             this.label_Unit.Size = new System.Drawing.Size(48, 19);
             this.label_Unit.TabIndex = 29;
@@ -975,7 +980,7 @@
             // 
             this.maskedTextBox_URV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_URV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_URV.Location = new System.Drawing.Point(240, 104);
+            this.maskedTextBox_URV.Location = new System.Drawing.Point(456, 88);
             this.maskedTextBox_URV.Name = "maskedTextBox_URV";
             this.maskedTextBox_URV.Size = new System.Drawing.Size(88, 23);
             this.maskedTextBox_URV.TabIndex = 26;
@@ -986,7 +991,7 @@
             this.label_URV.AutoSize = true;
             this.label_URV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_URV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_URV.Location = new System.Drawing.Point(184, 104);
+            this.label_URV.Location = new System.Drawing.Point(417, 89);
             this.label_URV.Name = "label_URV";
             this.label_URV.Size = new System.Drawing.Size(39, 19);
             this.label_URV.TabIndex = 27;
@@ -997,7 +1002,7 @@
             this.maskedTextBox_LRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_LRV.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.maskedTextBox_LRV.HidePromptOnLeave = true;
-            this.maskedTextBox_LRV.Location = new System.Drawing.Point(240, 72);
+            this.maskedTextBox_LRV.Location = new System.Drawing.Point(456, 56);
             this.maskedTextBox_LRV.Name = "maskedTextBox_LRV";
             this.maskedTextBox_LRV.Size = new System.Drawing.Size(88, 23);
             this.maskedTextBox_LRV.TabIndex = 25;
@@ -1007,7 +1012,7 @@
             this.label_LRV.AutoSize = true;
             this.label_LRV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_LRV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_LRV.Location = new System.Drawing.Point(184, 72);
+            this.label_LRV.Location = new System.Drawing.Point(417, 57);
             this.label_LRV.Name = "label_LRV";
             this.label_LRV.Size = new System.Drawing.Size(36, 19);
             this.label_LRV.TabIndex = 25;
@@ -1026,24 +1031,20 @@
             this.panel1.Controls.Add(this.button_writeconf);
             this.panel1.Controls.Add(this.label_alarmh);
             this.panel1.Controls.Add(this.button_readconf);
-            this.panel1.Controls.Add(this.label_LRV);
             this.panel1.Controls.Add(this.maskedTextBox_alarml);
-            this.panel1.Controls.Add(this.maskedTextBox_LRV);
             this.panel1.Controls.Add(this.label_alarml);
-            this.panel1.Controls.Add(this.label_URV);
             this.panel1.Controls.Add(this.maskedTextBox_devicename);
-            this.panel1.Controls.Add(this.maskedTextBox_URV);
             this.panel1.Controls.Add(this.label_Unit);
-            this.panel1.Location = new System.Drawing.Point(656, 248);
+            this.panel1.Location = new System.Drawing.Point(656, 256);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 264);
+            this.panel1.Size = new System.Drawing.Size(368, 256);
             this.panel1.TabIndex = 40;
             // 
             // maskedTextBox_readwriteFeedback
             // 
             this.maskedTextBox_readwriteFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_readwriteFeedback.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_readwriteFeedback.Location = new System.Drawing.Point(8, 232);
+            this.maskedTextBox_readwriteFeedback.Location = new System.Drawing.Point(8, 224);
             this.maskedTextBox_readwriteFeedback.Name = "maskedTextBox_readwriteFeedback";
             this.maskedTextBox_readwriteFeedback.Size = new System.Drawing.Size(352, 23);
             this.maskedTextBox_readwriteFeedback.TabIndex = 38;
@@ -1053,7 +1054,7 @@
             this.label_writePassword.AutoSize = true;
             this.label_writePassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_writePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_writePassword.Location = new System.Drawing.Point(80, 144);
+            this.label_writePassword.Location = new System.Drawing.Point(144, 160);
             this.label_writePassword.Name = "label_writePassword";
             this.label_writePassword.Size = new System.Drawing.Size(70, 19);
             this.label_writePassword.TabIndex = 37;
@@ -1063,7 +1064,7 @@
             // 
             this.maskedTextBox_writePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_writePassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_writePassword.Location = new System.Drawing.Point(64, 168);
+            this.maskedTextBox_writePassword.Location = new System.Drawing.Point(128, 184);
             this.maskedTextBox_writePassword.Name = "maskedTextBox_writePassword";
             this.maskedTextBox_writePassword.PasswordChar = '*';
             this.maskedTextBox_writePassword.Size = new System.Drawing.Size(96, 23);
@@ -1078,7 +1079,7 @@
             this.button_readstatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_readstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_readstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_readstatus.Location = new System.Drawing.Point(56, 104);
+            this.button_readstatus.Location = new System.Drawing.Point(56, 120);
             this.button_readstatus.Name = "button_readstatus";
             this.button_readstatus.Size = new System.Drawing.Size(120, 23);
             this.button_readstatus.TabIndex = 8;
@@ -1092,7 +1093,7 @@
             this.label_readwrite.AutoSize = true;
             this.label_readwrite.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_readwrite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_readwrite.Location = new System.Drawing.Point(72, 0);
+            this.label_readwrite.Location = new System.Drawing.Point(72, 12);
             this.label_readwrite.Name = "label_readwrite";
             this.label_readwrite.Size = new System.Drawing.Size(244, 28);
             this.label_readwrite.TabIndex = 35;
@@ -1103,7 +1104,7 @@
             // 
             this.maskedTextBox_alarmh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_alarmh.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_alarmh.Location = new System.Drawing.Point(240, 168);
+            this.maskedTextBox_alarmh.Location = new System.Drawing.Point(240, 120);
             this.maskedTextBox_alarmh.Name = "maskedTextBox_alarmh";
             this.maskedTextBox_alarmh.Size = new System.Drawing.Size(88, 23);
             this.maskedTextBox_alarmh.TabIndex = 32;
@@ -1115,7 +1116,7 @@
             this.button_writeconf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_writeconf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_writeconf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_writeconf.Location = new System.Drawing.Point(56, 72);
+            this.button_writeconf.Location = new System.Drawing.Point(56, 88);
             this.button_writeconf.Name = "button_writeconf";
             this.button_writeconf.Size = new System.Drawing.Size(120, 23);
             this.button_writeconf.TabIndex = 6;
@@ -1129,7 +1130,7 @@
             this.label_alarmh.AutoSize = true;
             this.label_alarmh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_alarmh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_alarmh.Location = new System.Drawing.Point(184, 168);
+            this.label_alarmh.Location = new System.Drawing.Point(184, 120);
             this.label_alarmh.Name = "label_alarmh";
             this.label_alarmh.Size = new System.Drawing.Size(56, 19);
             this.label_alarmh.TabIndex = 33;
@@ -1142,7 +1143,7 @@
             this.button_readconf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_readconf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_readconf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_readconf.Location = new System.Drawing.Point(56, 40);
+            this.button_readconf.Location = new System.Drawing.Point(56, 56);
             this.button_readconf.Name = "button_readconf";
             this.button_readconf.Size = new System.Drawing.Size(120, 23);
             this.button_readconf.TabIndex = 5;
@@ -1154,7 +1155,7 @@
             // 
             this.maskedTextBox_alarml.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.maskedTextBox_alarml.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_alarml.Location = new System.Drawing.Point(240, 136);
+            this.maskedTextBox_alarml.Location = new System.Drawing.Point(240, 88);
             this.maskedTextBox_alarml.Name = "maskedTextBox_alarml";
             this.maskedTextBox_alarml.Size = new System.Drawing.Size(88, 23);
             this.maskedTextBox_alarml.TabIndex = 30;
@@ -1164,7 +1165,7 @@
             this.label_alarml.AutoSize = true;
             this.label_alarml.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_alarml.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_alarml.Location = new System.Drawing.Point(184, 136);
+            this.label_alarml.Location = new System.Drawing.Point(184, 88);
             this.label_alarml.Name = "label_alarml";
             this.label_alarml.Size = new System.Drawing.Size(51, 19);
             this.label_alarml.TabIndex = 31;
@@ -1325,9 +1326,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_TopBar);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel_SensorData);
             this.Controls.Add(this.panel_dataVis);
             this.Controls.Add(this.panel_TabsConnections);
-            this.Controls.Add(this.panel_SensorData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
