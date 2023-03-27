@@ -28,1334 +28,1314 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.panel_TopBar = new System.Windows.Forms.Panel();
-            this.button_Minimize = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button_Maximize = new System.Windows.Forms.Button();
-            this.button_ExitProgram = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.TopLogo = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button_dataChart = new System.Windows.Forms.Button();
-            this.button_sensorData = new System.Windows.Forms.Button();
-            this.button_InoConnection = new System.Windows.Forms.Button();
-            this.panel5_Help = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button_selectInstrument = new System.Windows.Forms.Button();
-            this.label_chooseinstrument = new System.Windows.Forms.Label();
-            this.comboBox_InstrumentList = new System.Windows.Forms.ComboBox();
-            this.panel_SensorData = new System.Windows.Forms.Panel();
-            this.richTextBox_options = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_comments = new System.Windows.Forms.RichTextBox();
-            this.label_instrumentpanel = new System.Windows.Forms.Label();
-            this.button_FromRadio = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton_Delete = new System.Windows.Forms.RadioButton();
-            this.radioButton_SaveChanges = new System.Windows.Forms.RadioButton();
-            this.radioButton_RegisterNew = new System.Windows.Forms.RadioButton();
-            this.label_Comment = new System.Windows.Forms.Label();
-            this.label_Options = new System.Windows.Forms.Label();
-            this.comboBox_MeasureType = new System.Windows.Forms.ComboBox();
-            this.label_SignalType = new System.Windows.Forms.Label();
-            this.label_MeasureType = new System.Windows.Forms.Label();
-            this.comboBox_SignalType = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label_RegDate = new System.Windows.Forms.Label();
-            this.checkBox_Registered = new System.Windows.Forms.CheckBox();
-            this.label_Registered = new System.Windows.Forms.Label();
-            this.label_SerialNumber = new System.Windows.Forms.Label();
-            this.maskedTextBox_SerialNumber = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_SensorName = new System.Windows.Forms.MaskedTextBox();
-            this.label_SensorName = new System.Windows.Forms.Label();
-            this.panel_TabsConnections = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox_COMport = new System.Windows.Forms.ComboBox();
-            this.buttonConnect_Ino = new System.Windows.Forms.Button();
-            this.label_InoComPort = new System.Windows.Forms.Label();
-            this.textBox_InoBitRate = new System.Windows.Forms.TextBox();
-            this.textBox_connectionFeedback_Ino = new System.Windows.Forms.RichTextBox();
-            this.buttonDisconnect_Ino = new System.Windows.Forms.Button();
-            this.label_InoBitRate = new System.Windows.Forms.Label();
-            this.panel_dataVis = new System.Windows.Forms.Panel();
-            this.label_currentReading = new System.Windows.Forms.Label();
-            this.maskedTextBox_currentReading = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_AverageReading = new System.Windows.Forms.MaskedTextBox();
-            this.label_AverageReading = new System.Windows.Forms.Label();
-            this.label_LowestReading = new System.Windows.Forms.Label();
-            this.maskedTextBox_LowestReading = new System.Windows.Forms.MaskedTextBox();
-            this.label_HighestReading = new System.Windows.Forms.Label();
-            this.maskedTextBox_HighestReading = new System.Windows.Forms.MaskedTextBox();
-            this.button_StopReadscaled = new System.Windows.Forms.Button();
-            this.formsPlot1 = new ScottPlot.FormsPlot();
-            this.button_readscaled = new System.Windows.Forms.Button();
-            this.maskedTextBox_devicename = new System.Windows.Forms.MaskedTextBox();
-            this.label_Unit = new System.Windows.Forms.Label();
-            this.maskedTextBox_URV = new System.Windows.Forms.MaskedTextBox();
-            this.label_URV = new System.Windows.Forms.Label();
-            this.maskedTextBox_LRV = new System.Windows.Forms.MaskedTextBox();
-            this.label_LRV = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.maskedTextBox_readwriteFeedback = new System.Windows.Forms.MaskedTextBox();
-            this.label_writePassword = new System.Windows.Forms.Label();
-            this.maskedTextBox_writePassword = new System.Windows.Forms.MaskedTextBox();
-            this.button_readstatus = new System.Windows.Forms.Button();
-            this.label_readwrite = new System.Windows.Forms.Label();
-            this.maskedTextBox_alarmh = new System.Windows.Forms.MaskedTextBox();
-            this.button_writeconf = new System.Windows.Forms.Button();
-            this.label_alarmh = new System.Windows.Forms.Label();
-            this.button_readconf = new System.Windows.Forms.Button();
-            this.maskedTextBox_alarml = new System.Windows.Forms.MaskedTextBox();
-            this.label_alarml = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button_Help = new System.Windows.Forms.Button();
-            this.button_File = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox_currentbitrate = new System.Windows.Forms.TextBox();
-            this.label_currentbitrate = new System.Windows.Forms.Label();
-            this.textBox1_currentBEcom = new System.Windows.Forms.TextBox();
-            this.label_currentCOM = new System.Windows.Forms.Label();
-            this.textBox_currentCOM = new System.Windows.Forms.TextBox();
-            this.label_BE_currentCOM = new System.Windows.Forms.Label();
-            this.textBox_BE_currentTCP = new System.Windows.Forms.TextBox();
-            this.label_BE_currentTCP = new System.Windows.Forms.Label();
-            this.timer_readData = new System.Windows.Forms.Timer(this.components);
-            this.panel_TopBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel5_Help.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel_SensorData.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel_TabsConnections.SuspendLayout();
-            this.panel_dataVis.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            panel_TopBar = new Panel();
+            button_Minimize = new Button();
+            flowLayoutPanel3 = new FlowLayoutPanel();
+            button_Maximize = new Button();
+            button_ExitProgram = new Button();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            TopLogo = new PictureBox();
+            panel4 = new Panel();
+            button_dataChart = new Button();
+            button_sensorData = new Button();
+            button_InoConnection = new Button();
+            panel5_Help = new Panel();
+            button1 = new Button();
+            panel7 = new Panel();
+            button_selectInstrument = new Button();
+            label_chooseinstrument = new Label();
+            comboBox_InstrumentList = new ComboBox();
+            panel_SensorData = new Panel();
+            richTextBox_options = new RichTextBox();
+            richTextBox_comments = new RichTextBox();
+            label_instrumentpanel = new Label();
+            button_FromRadio = new Button();
+            panel2 = new Panel();
+            radioButton_Delete = new RadioButton();
+            radioButton_SaveChanges = new RadioButton();
+            radioButton_RegisterNew = new RadioButton();
+            label_Comment = new Label();
+            label_Options = new Label();
+            comboBox_MeasureType = new ComboBox();
+            label_SignalType = new Label();
+            label_LRV = new Label();
+            label_MeasureType = new Label();
+            comboBox_SignalType = new ComboBox();
+            maskedTextBox_LRV = new MaskedTextBox();
+            dateTimePicker1 = new DateTimePicker();
+            label_RegDate = new Label();
+            label_URV = new Label();
+            checkBox_Registered = new CheckBox();
+            maskedTextBox_URV = new MaskedTextBox();
+            label_Registered = new Label();
+            label_SerialNumber = new Label();
+            maskedTextBox_SerialNumber = new MaskedTextBox();
+            maskedTextBox_SensorName = new MaskedTextBox();
+            label_SensorName = new Label();
+            panel_TabsConnections = new Panel();
+            label1 = new Label();
+            comboBox_COMport = new ComboBox();
+            buttonConnect_Ino = new Button();
+            label_InoComPort = new Label();
+            textBox_InoBitRate = new TextBox();
+            textBox_connectionFeedback_Ino = new RichTextBox();
+            buttonDisconnect_Ino = new Button();
+            label_InoBitRate = new Label();
+            panel_dataVis = new Panel();
+            label_currentReading = new Label();
+            maskedTextBox_currentReading = new MaskedTextBox();
+            maskedTextBox_AverageReading = new MaskedTextBox();
+            label_AverageReading = new Label();
+            label_LowestReading = new Label();
+            maskedTextBox_LowestReading = new MaskedTextBox();
+            label_HighestReading = new Label();
+            maskedTextBox_HighestReading = new MaskedTextBox();
+            button_StopReadscaled = new Button();
+            formsPlot1 = new ScottPlot.FormsPlot();
+            button_readscaled = new Button();
+            maskedTextBox_devicename = new MaskedTextBox();
+            label_Unit = new Label();
+            panel1 = new Panel();
+            maskedTextBox_readwriteFeedback = new MaskedTextBox();
+            label_writePassword = new Label();
+            maskedTextBox_writePassword = new MaskedTextBox();
+            button_readstatus = new Button();
+            label_readwrite = new Label();
+            maskedTextBox_alarmh = new MaskedTextBox();
+            button_writeconf = new Button();
+            label_alarmh = new Label();
+            button_readconf = new Button();
+            maskedTextBox_alarml = new MaskedTextBox();
+            label_alarml = new Label();
+            panel3 = new Panel();
+            button_Help = new Button();
+            button_File = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            bindingSource1 = new BindingSource(components);
+            panel5 = new Panel();
+            textBox_currentbitrate = new TextBox();
+            label_currentbitrate = new Label();
+            textBox1_currentBEcom = new TextBox();
+            label_currentCOM = new Label();
+            textBox_currentCOM = new TextBox();
+            label_BE_currentCOM = new Label();
+            textBox_BE_currentTCP = new TextBox();
+            label_BE_currentTCP = new Label();
+            timer_readData = new System.Windows.Forms.Timer(components);
+            panel_TopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)TopLogo).BeginInit();
+            panel4.SuspendLayout();
+            panel5_Help.SuspendLayout();
+            panel7.SuspendLayout();
+            panel_SensorData.SuspendLayout();
+            panel2.SuspendLayout();
+            panel_TabsConnections.SuspendLayout();
+            panel_dataVis.SuspendLayout();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            panel5.SuspendLayout();
+            SuspendLayout();
             // 
             // panel_TopBar
             // 
-            this.panel_TopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel_TopBar.Controls.Add(this.button_Minimize);
-            this.panel_TopBar.Controls.Add(this.flowLayoutPanel3);
-            this.panel_TopBar.Controls.Add(this.button_Maximize);
-            this.panel_TopBar.Controls.Add(this.button_ExitProgram);
-            this.panel_TopBar.Controls.Add(this.flowLayoutPanel2);
-            this.panel_TopBar.Controls.Add(this.tableLayoutPanel1);
-            this.panel_TopBar.Controls.Add(this.flowLayoutPanel1);
-            this.panel_TopBar.Controls.Add(this.TopLogo);
-            this.panel_TopBar.Location = new System.Drawing.Point(0, 0);
-            this.panel_TopBar.Margin = new System.Windows.Forms.Padding(0);
-            this.panel_TopBar.Name = "panel_TopBar";
-            this.panel_TopBar.Size = new System.Drawing.Size(1040, 32);
-            this.panel_TopBar.TabIndex = 13;
-            this.panel_TopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.appWindow_MouseDown);
-            this.panel_TopBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.appWindow_MouseMove);
+            panel_TopBar.BackColor = Color.FromArgb(38, 38, 38);
+            panel_TopBar.Controls.Add(button_Minimize);
+            panel_TopBar.Controls.Add(flowLayoutPanel3);
+            panel_TopBar.Controls.Add(button_Maximize);
+            panel_TopBar.Controls.Add(button_ExitProgram);
+            panel_TopBar.Controls.Add(flowLayoutPanel2);
+            panel_TopBar.Controls.Add(tableLayoutPanel1);
+            panel_TopBar.Controls.Add(flowLayoutPanel1);
+            panel_TopBar.Controls.Add(TopLogo);
+            panel_TopBar.Location = new Point(0, 0);
+            panel_TopBar.Margin = new Padding(0);
+            panel_TopBar.Name = "panel_TopBar";
+            panel_TopBar.Size = new Size(1040, 32);
+            panel_TopBar.TabIndex = 13;
+            panel_TopBar.MouseDown += appWindow_MouseDown;
+            panel_TopBar.MouseMove += appWindow_MouseMove;
             // 
             // button_Minimize
             // 
-            this.button_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_Minimize.FlatAppearance.BorderSize = 0;
-            this.button_Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Minimize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_Minimize.Location = new System.Drawing.Point(944, 0);
-            this.button_Minimize.Margin = new System.Windows.Forms.Padding(0);
-            this.button_Minimize.Name = "button_Minimize";
-            this.button_Minimize.Size = new System.Drawing.Size(32, 32);
-            this.button_Minimize.TabIndex = 41;
-            this.button_Minimize.Text = "—";
-            this.button_Minimize.UseVisualStyleBackColor = true;
-            this.button_Minimize.Click += new System.EventHandler(this.button_Minimize_Click);
+            button_Minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button_Minimize.BackgroundImageLayout = ImageLayout.None;
+            button_Minimize.FlatAppearance.BorderSize = 0;
+            button_Minimize.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_Minimize.FlatStyle = FlatStyle.Flat;
+            button_Minimize.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button_Minimize.ForeColor = Color.FromArgb(214, 214, 214);
+            button_Minimize.Location = new Point(944, 0);
+            button_Minimize.Margin = new Padding(0);
+            button_Minimize.Name = "button_Minimize";
+            button_Minimize.Size = new Size(32, 32);
+            button_Minimize.TabIndex = 41;
+            button_Minimize.Text = "—";
+            button_Minimize.UseVisualStyleBackColor = true;
+            button_Minimize.Click += button_Minimize_Click;
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(150, 32);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1047, 27);
-            this.flowLayoutPanel3.TabIndex = 15;
+            flowLayoutPanel3.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel3.Location = new Point(150, 32);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new Size(1047, 27);
+            flowLayoutPanel3.TabIndex = 15;
             // 
             // button_Maximize
             // 
-            this.button_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_Maximize.FlatAppearance.BorderSize = 0;
-            this.button_Maximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Maximize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Maximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_Maximize.Location = new System.Drawing.Point(976, 0);
-            this.button_Maximize.Margin = new System.Windows.Forms.Padding(0);
-            this.button_Maximize.Name = "button_Maximize";
-            this.button_Maximize.Size = new System.Drawing.Size(32, 32);
-            this.button_Maximize.TabIndex = 40;
-            this.button_Maximize.Text = "◻";
-            this.button_Maximize.UseVisualStyleBackColor = true;
-            this.button_Maximize.Click += new System.EventHandler(this.button_Maximize_Click);
+            button_Maximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button_Maximize.BackgroundImageLayout = ImageLayout.None;
+            button_Maximize.FlatAppearance.BorderSize = 0;
+            button_Maximize.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_Maximize.FlatStyle = FlatStyle.Flat;
+            button_Maximize.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button_Maximize.ForeColor = Color.FromArgb(214, 214, 214);
+            button_Maximize.Location = new Point(976, 0);
+            button_Maximize.Margin = new Padding(0);
+            button_Maximize.Name = "button_Maximize";
+            button_Maximize.Size = new Size(32, 32);
+            button_Maximize.TabIndex = 40;
+            button_Maximize.Text = "◻";
+            button_Maximize.UseVisualStyleBackColor = true;
+            button_Maximize.Click += button_Maximize_Click;
             // 
             // button_ExitProgram
             // 
-            this.button_ExitProgram.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_ExitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_ExitProgram.FlatAppearance.BorderSize = 0;
-            this.button_ExitProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ExitProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_ExitProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_ExitProgram.Location = new System.Drawing.Point(1008, 0);
-            this.button_ExitProgram.Margin = new System.Windows.Forms.Padding(0);
-            this.button_ExitProgram.Name = "button_ExitProgram";
-            this.button_ExitProgram.Size = new System.Drawing.Size(32, 32);
-            this.button_ExitProgram.TabIndex = 39;
-            this.button_ExitProgram.Text = "X";
-            this.button_ExitProgram.UseVisualStyleBackColor = true;
-            this.button_ExitProgram.Click += new System.EventHandler(this.button_ExitProgram_Click);
+            button_ExitProgram.Anchor = AnchorStyles.None;
+            button_ExitProgram.BackgroundImageLayout = ImageLayout.None;
+            button_ExitProgram.FlatAppearance.BorderSize = 0;
+            button_ExitProgram.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_ExitProgram.FlatStyle = FlatStyle.Flat;
+            button_ExitProgram.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button_ExitProgram.ForeColor = Color.FromArgb(214, 214, 214);
+            button_ExitProgram.Location = new Point(1008, 0);
+            button_ExitProgram.Margin = new Padding(0);
+            button_ExitProgram.Name = "button_ExitProgram";
+            button_ExitProgram.Size = new Size(32, 32);
+            button_ExitProgram.TabIndex = 39;
+            button_ExitProgram.Text = "X";
+            button_ExitProgram.UseVisualStyleBackColor = true;
+            button_ExitProgram.Click += button_ExitProgram_Click;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(144, 32);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(739, 613);
-            this.flowLayoutPanel2.TabIndex = 15;
+            flowLayoutPanel2.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel2.Location = new Point(144, 32);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(739, 613);
+            flowLayoutPanel2.TabIndex = 15;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 35);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 14;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Location = new Point(21, 35);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(200, 100);
+            tableLayoutPanel1.TabIndex = 14;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 38);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(128, 40);
-            this.flowLayoutPanel1.TabIndex = 14;
+            flowLayoutPanel1.Location = new Point(0, 38);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(128, 40);
+            flowLayoutPanel1.TabIndex = 14;
             // 
             // TopLogo
             // 
-            this.TopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TopLogo.Image = global::instrumentFE_WF.Properties.Resources.app_icon;
-            this.TopLogo.Location = new System.Drawing.Point(472, 0);
-            this.TopLogo.Name = "TopLogo";
-            this.TopLogo.Size = new System.Drawing.Size(32, 32);
-            this.TopLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.TopLogo.TabIndex = 17;
-            this.TopLogo.TabStop = false;
+            TopLogo.BackgroundImageLayout = ImageLayout.None;
+            TopLogo.Image = Properties.Resources.app_icon;
+            TopLogo.Location = new Point(472, 0);
+            TopLogo.Name = "TopLogo";
+            TopLogo.Size = new Size(32, 32);
+            TopLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            TopLogo.TabIndex = 17;
+            TopLogo.TabStop = false;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel4.Controls.Add(this.button_dataChart);
-            this.panel4.Controls.Add(this.button_sensorData);
-            this.panel4.Controls.Add(this.button_InoConnection);
-            this.panel4.Location = new System.Drawing.Point(0, 64);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1040, 40);
-            this.panel4.TabIndex = 14;
+            panel4.BackColor = Color.FromArgb(38, 38, 38);
+            panel4.Controls.Add(button_dataChart);
+            panel4.Controls.Add(button_sensorData);
+            panel4.Controls.Add(button_InoConnection);
+            panel4.Location = new Point(0, 64);
+            panel4.Margin = new Padding(0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1040, 40);
+            panel4.TabIndex = 14;
             // 
             // button_dataChart
             // 
-            this.button_dataChart.FlatAppearance.BorderSize = 0;
-            this.button_dataChart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_dataChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_dataChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_dataChart.Location = new System.Drawing.Point(176, 0);
-            this.button_dataChart.Name = "button_dataChart";
-            this.button_dataChart.Size = new System.Drawing.Size(89, 40);
-            this.button_dataChart.TabIndex = 39;
-            this.button_dataChart.Text = "Data chart";
-            this.button_dataChart.UseVisualStyleBackColor = true;
-            this.button_dataChart.Click += new System.EventHandler(this.button_dataChart_Click);
+            button_dataChart.FlatAppearance.BorderSize = 0;
+            button_dataChart.FlatAppearance.MouseDownBackColor = Color.FromArgb(56, 56, 56);
+            button_dataChart.FlatStyle = FlatStyle.Flat;
+            button_dataChart.ForeColor = Color.FromArgb(214, 214, 214);
+            button_dataChart.Location = new Point(176, 0);
+            button_dataChart.Name = "button_dataChart";
+            button_dataChart.Size = new Size(89, 40);
+            button_dataChart.TabIndex = 39;
+            button_dataChart.Text = "Data chart";
+            button_dataChart.UseVisualStyleBackColor = true;
+            button_dataChart.Click += button_dataChart_Click;
             // 
             // button_sensorData
             // 
-            this.button_sensorData.FlatAppearance.BorderSize = 0;
-            this.button_sensorData.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_sensorData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_sensorData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_sensorData.Location = new System.Drawing.Point(0, 0);
-            this.button_sensorData.Name = "button_sensorData";
-            this.button_sensorData.Size = new System.Drawing.Size(89, 40);
-            this.button_sensorData.TabIndex = 38;
-            this.button_sensorData.Text = "Config";
-            this.button_sensorData.UseVisualStyleBackColor = true;
-            this.button_sensorData.Click += new System.EventHandler(this.button_sensorData_Click);
+            button_sensorData.FlatAppearance.BorderSize = 0;
+            button_sensorData.FlatAppearance.MouseDownBackColor = Color.FromArgb(56, 56, 56);
+            button_sensorData.FlatStyle = FlatStyle.Flat;
+            button_sensorData.ForeColor = Color.FromArgb(214, 214, 214);
+            button_sensorData.Location = new Point(0, 0);
+            button_sensorData.Name = "button_sensorData";
+            button_sensorData.Size = new Size(89, 40);
+            button_sensorData.TabIndex = 38;
+            button_sensorData.Text = "Config";
+            button_sensorData.UseVisualStyleBackColor = true;
+            button_sensorData.Click += button_sensorData_Click;
             // 
             // button_InoConnection
             // 
-            this.button_InoConnection.FlatAppearance.BorderSize = 0;
-            this.button_InoConnection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_InoConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_InoConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_InoConnection.Location = new System.Drawing.Point(88, 0);
-            this.button_InoConnection.Name = "button_InoConnection";
-            this.button_InoConnection.Size = new System.Drawing.Size(89, 40);
-            this.button_InoConnection.TabIndex = 37;
-            this.button_InoConnection.Text = "Connections";
-            this.button_InoConnection.UseVisualStyleBackColor = true;
-            this.button_InoConnection.Click += new System.EventHandler(this.button_InoConnection_Click);
+            button_InoConnection.FlatAppearance.BorderSize = 0;
+            button_InoConnection.FlatAppearance.MouseDownBackColor = Color.FromArgb(56, 56, 56);
+            button_InoConnection.FlatStyle = FlatStyle.Flat;
+            button_InoConnection.ForeColor = Color.FromArgb(214, 214, 214);
+            button_InoConnection.Location = new Point(88, 0);
+            button_InoConnection.Name = "button_InoConnection";
+            button_InoConnection.Size = new Size(89, 40);
+            button_InoConnection.TabIndex = 37;
+            button_InoConnection.Text = "Connections";
+            button_InoConnection.UseVisualStyleBackColor = true;
+            button_InoConnection.Click += button_InoConnection_Click;
             // 
             // panel5_Help
             // 
-            this.panel5_Help.Controls.Add(this.button1);
-            this.panel5_Help.Location = new System.Drawing.Point(40, 32);
-            this.panel5_Help.Name = "panel5_Help";
-            this.panel5_Help.Size = new System.Drawing.Size(200, 100);
-            this.panel5_Help.TabIndex = 44;
-            this.panel5_Help.Visible = false;
+            panel5_Help.Controls.Add(button1);
+            panel5_Help.Location = new Point(40, 32);
+            panel5_Help.Name = "panel5_Help";
+            panel5_Help.Size = new Size(200, 100);
+            panel5_Help.TabIndex = 44;
+            panel5_Help.Visible = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.FromArgb(33, 33, 33);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.WhiteSmoke;
+            button1.Location = new Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 32);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.button_selectInstrument);
-            this.panel7.Controls.Add(this.label_chooseinstrument);
-            this.panel7.Controls.Add(this.comboBox_InstrumentList);
-            this.panel7.Location = new System.Drawing.Point(656, 120);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(368, 120);
-            this.panel7.TabIndex = 34;
+            panel7.BackColor = Color.FromArgb(38, 38, 38);
+            panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(button_selectInstrument);
+            panel7.Controls.Add(label_chooseinstrument);
+            panel7.Controls.Add(comboBox_InstrumentList);
+            panel7.Location = new Point(656, 120);
+            panel7.Margin = new Padding(0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(368, 120);
+            panel7.TabIndex = 34;
             // 
             // button_selectInstrument
             // 
-            this.button_selectInstrument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button_selectInstrument.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_selectInstrument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_selectInstrument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_selectInstrument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_selectInstrument.Location = new System.Drawing.Point(128, 88);
-            this.button_selectInstrument.Name = "button_selectInstrument";
-            this.button_selectInstrument.Size = new System.Drawing.Size(120, 23);
-            this.button_selectInstrument.TabIndex = 39;
-            this.button_selectInstrument.Text = "Select";
-            this.button_selectInstrument.UseVisualStyleBackColor = false;
-            this.button_selectInstrument.Click += new System.EventHandler(this.button_selectInstrument_Click);
+            button_selectInstrument.BackColor = Color.FromArgb(38, 38, 38);
+            button_selectInstrument.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_selectInstrument.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_selectInstrument.FlatStyle = FlatStyle.Flat;
+            button_selectInstrument.ForeColor = Color.FromArgb(214, 214, 214);
+            button_selectInstrument.Location = new Point(128, 88);
+            button_selectInstrument.Name = "button_selectInstrument";
+            button_selectInstrument.Size = new Size(120, 23);
+            button_selectInstrument.TabIndex = 39;
+            button_selectInstrument.Text = "Select";
+            button_selectInstrument.UseVisualStyleBackColor = false;
+            button_selectInstrument.Click += button_selectInstrument_Click;
             // 
             // label_chooseinstrument
             // 
-            this.label_chooseinstrument.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_chooseinstrument.AutoSize = true;
-            this.label_chooseinstrument.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_chooseinstrument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_chooseinstrument.Location = new System.Drawing.Point(40, 12);
-            this.label_chooseinstrument.Name = "label_chooseinstrument";
-            this.label_chooseinstrument.Size = new System.Drawing.Size(295, 28);
-            this.label_chooseinstrument.TabIndex = 36;
-            this.label_chooseinstrument.Text = "Select from saved Instruments:";
+            label_chooseinstrument.Anchor = AnchorStyles.None;
+            label_chooseinstrument.AutoSize = true;
+            label_chooseinstrument.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label_chooseinstrument.ForeColor = Color.FromArgb(214, 214, 214);
+            label_chooseinstrument.Location = new Point(40, 12);
+            label_chooseinstrument.Name = "label_chooseinstrument";
+            label_chooseinstrument.Size = new Size(295, 28);
+            label_chooseinstrument.TabIndex = 36;
+            label_chooseinstrument.Text = "Select from saved Instruments:";
             // 
             // comboBox_InstrumentList
             // 
-            this.comboBox_InstrumentList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.comboBox_InstrumentList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_InstrumentList.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_InstrumentList.FormattingEnabled = true;
-            this.comboBox_InstrumentList.Location = new System.Drawing.Point(47, 47);
-            this.comboBox_InstrumentList.Name = "comboBox_InstrumentList";
-            this.comboBox_InstrumentList.Size = new System.Drawing.Size(280, 23);
-            this.comboBox_InstrumentList.TabIndex = 34;
+            comboBox_InstrumentList.BackColor = Color.FromArgb(56, 56, 56);
+            comboBox_InstrumentList.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_InstrumentList.ForeColor = Color.WhiteSmoke;
+            comboBox_InstrumentList.FormattingEnabled = true;
+            comboBox_InstrumentList.Location = new Point(47, 47);
+            comboBox_InstrumentList.Name = "comboBox_InstrumentList";
+            comboBox_InstrumentList.Size = new Size(280, 23);
+            comboBox_InstrumentList.TabIndex = 34;
+            comboBox_InstrumentList.SelectedIndexChanged += comboBox_InstrumentList_SelectedIndexChanged;
             // 
             // panel_SensorData
             // 
-            this.panel_SensorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel_SensorData.Controls.Add(this.richTextBox_options);
-            this.panel_SensorData.Controls.Add(this.richTextBox_comments);
-            this.panel_SensorData.Controls.Add(this.label_instrumentpanel);
-            this.panel_SensorData.Controls.Add(this.button_FromRadio);
-            this.panel_SensorData.Controls.Add(this.panel2);
-            this.panel_SensorData.Controls.Add(this.label_Comment);
-            this.panel_SensorData.Controls.Add(this.label_Options);
-            this.panel_SensorData.Controls.Add(this.comboBox_MeasureType);
-            this.panel_SensorData.Controls.Add(this.label_SignalType);
-            this.panel_SensorData.Controls.Add(this.label_LRV);
-            this.panel_SensorData.Controls.Add(this.label_MeasureType);
-            this.panel_SensorData.Controls.Add(this.comboBox_SignalType);
-            this.panel_SensorData.Controls.Add(this.maskedTextBox_LRV);
-            this.panel_SensorData.Controls.Add(this.dateTimePicker1);
-            this.panel_SensorData.Controls.Add(this.label_RegDate);
-            this.panel_SensorData.Controls.Add(this.label_URV);
-            this.panel_SensorData.Controls.Add(this.checkBox_Registered);
-            this.panel_SensorData.Controls.Add(this.maskedTextBox_URV);
-            this.panel_SensorData.Controls.Add(this.label_Registered);
-            this.panel_SensorData.Controls.Add(this.label_SerialNumber);
-            this.panel_SensorData.Controls.Add(this.maskedTextBox_SerialNumber);
-            this.panel_SensorData.Controls.Add(this.maskedTextBox_SensorName);
-            this.panel_SensorData.Controls.Add(this.label_SensorName);
-            this.panel_SensorData.Location = new System.Drawing.Point(16, 120);
-            this.panel_SensorData.Margin = new System.Windows.Forms.Padding(0);
-            this.panel_SensorData.Name = "panel_SensorData";
-            this.panel_SensorData.Size = new System.Drawing.Size(624, 392);
-            this.panel_SensorData.TabIndex = 15;
+            panel_SensorData.BackColor = Color.FromArgb(38, 38, 38);
+            panel_SensorData.Controls.Add(richTextBox_options);
+            panel_SensorData.Controls.Add(richTextBox_comments);
+            panel_SensorData.Controls.Add(label_instrumentpanel);
+            panel_SensorData.Controls.Add(button_FromRadio);
+            panel_SensorData.Controls.Add(panel2);
+            panel_SensorData.Controls.Add(label_Comment);
+            panel_SensorData.Controls.Add(label_Options);
+            panel_SensorData.Controls.Add(comboBox_MeasureType);
+            panel_SensorData.Controls.Add(label_SignalType);
+            panel_SensorData.Controls.Add(label_LRV);
+            panel_SensorData.Controls.Add(label_MeasureType);
+            panel_SensorData.Controls.Add(comboBox_SignalType);
+            panel_SensorData.Controls.Add(maskedTextBox_LRV);
+            panel_SensorData.Controls.Add(dateTimePicker1);
+            panel_SensorData.Controls.Add(label_RegDate);
+            panel_SensorData.Controls.Add(label_URV);
+            panel_SensorData.Controls.Add(checkBox_Registered);
+            panel_SensorData.Controls.Add(maskedTextBox_URV);
+            panel_SensorData.Controls.Add(label_Registered);
+            panel_SensorData.Controls.Add(label_SerialNumber);
+            panel_SensorData.Controls.Add(maskedTextBox_SerialNumber);
+            panel_SensorData.Controls.Add(maskedTextBox_SensorName);
+            panel_SensorData.Controls.Add(label_SensorName);
+            panel_SensorData.Location = new Point(16, 120);
+            panel_SensorData.Margin = new Padding(0);
+            panel_SensorData.Name = "panel_SensorData";
+            panel_SensorData.Size = new Size(624, 392);
+            panel_SensorData.TabIndex = 15;
             // 
             // richTextBox_options
             // 
-            this.richTextBox_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.richTextBox_options.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox_options.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox_options.Location = new System.Drawing.Point(120, 240);
-            this.richTextBox_options.Name = "richTextBox_options";
-            this.richTextBox_options.ReadOnly = true;
-            this.richTextBox_options.Size = new System.Drawing.Size(280, 56);
-            this.richTextBox_options.TabIndex = 37;
-            this.richTextBox_options.Text = "Hva skal være her? Står ingen ting i arbeidskravet, men var en del av en av timen" +
-    "e";
+            richTextBox_options.BackColor = Color.FromArgb(56, 56, 56);
+            richTextBox_options.BorderStyle = BorderStyle.FixedSingle;
+            richTextBox_options.ForeColor = Color.WhiteSmoke;
+            richTextBox_options.Location = new Point(120, 240);
+            richTextBox_options.Name = "richTextBox_options";
+            richTextBox_options.Size = new Size(280, 56);
+            richTextBox_options.TabIndex = 37;
+            richTextBox_options.Text = "";
             // 
             // richTextBox_comments
             // 
-            this.richTextBox_comments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.richTextBox_comments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox_comments.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox_comments.Location = new System.Drawing.Point(120, 304);
-            this.richTextBox_comments.Name = "richTextBox_comments";
-            this.richTextBox_comments.ReadOnly = true;
-            this.richTextBox_comments.Size = new System.Drawing.Size(280, 56);
-            this.richTextBox_comments.TabIndex = 36;
-            this.richTextBox_comments.Text = "Samme her også...?\'";
+            richTextBox_comments.BackColor = Color.FromArgb(56, 56, 56);
+            richTextBox_comments.BorderStyle = BorderStyle.FixedSingle;
+            richTextBox_comments.ForeColor = Color.WhiteSmoke;
+            richTextBox_comments.Location = new Point(120, 304);
+            richTextBox_comments.Name = "richTextBox_comments";
+            richTextBox_comments.Size = new Size(280, 56);
+            richTextBox_comments.TabIndex = 36;
+            richTextBox_comments.Text = "";
             // 
             // label_instrumentpanel
             // 
-            this.label_instrumentpanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_instrumentpanel.AutoSize = true;
-            this.label_instrumentpanel.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_instrumentpanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_instrumentpanel.Location = new System.Drawing.Point(192, 8);
-            this.label_instrumentpanel.Name = "label_instrumentpanel";
-            this.label_instrumentpanel.Size = new System.Drawing.Size(245, 28);
-            this.label_instrumentpanel.TabIndex = 34;
-            this.label_instrumentpanel.Text = "Instrument Management:";
+            label_instrumentpanel.Anchor = AnchorStyles.None;
+            label_instrumentpanel.AutoSize = true;
+            label_instrumentpanel.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label_instrumentpanel.ForeColor = Color.FromArgb(214, 214, 214);
+            label_instrumentpanel.Location = new Point(192, 8);
+            label_instrumentpanel.Name = "label_instrumentpanel";
+            label_instrumentpanel.Size = new Size(245, 28);
+            label_instrumentpanel.TabIndex = 34;
+            label_instrumentpanel.Text = "Instrument Management:";
             // 
             // button_FromRadio
             // 
-            this.button_FromRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_FromRadio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_FromRadio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_FromRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_FromRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_FromRadio.Location = new System.Drawing.Point(416, 328);
-            this.button_FromRadio.Name = "button_FromRadio";
-            this.button_FromRadio.Size = new System.Drawing.Size(195, 32);
-            this.button_FromRadio.TabIndex = 31;
-            this.button_FromRadio.Text = "Register New";
-            this.button_FromRadio.UseVisualStyleBackColor = true;
-            this.button_FromRadio.Click += new System.EventHandler(this.button_FromRadio_Click);
+            button_FromRadio.BackgroundImageLayout = ImageLayout.None;
+            button_FromRadio.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_FromRadio.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_FromRadio.FlatStyle = FlatStyle.Flat;
+            button_FromRadio.ForeColor = Color.FromArgb(214, 214, 214);
+            button_FromRadio.Location = new Point(416, 328);
+            button_FromRadio.Name = "button_FromRadio";
+            button_FromRadio.Size = new Size(195, 32);
+            button_FromRadio.TabIndex = 31;
+            button_FromRadio.Text = "Register New";
+            button_FromRadio.UseVisualStyleBackColor = true;
+            button_FromRadio.Click += button_FromRadio_Click;
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.radioButton_Delete);
-            this.panel2.Controls.Add(this.radioButton_SaveChanges);
-            this.panel2.Controls.Add(this.radioButton_RegisterNew);
-            this.panel2.Location = new System.Drawing.Point(416, 200);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(195, 112);
-            this.panel2.TabIndex = 30;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(radioButton_Delete);
+            panel2.Controls.Add(radioButton_SaveChanges);
+            panel2.Controls.Add(radioButton_RegisterNew);
+            panel2.Location = new Point(416, 200);
+            panel2.Margin = new Padding(0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(195, 112);
+            panel2.TabIndex = 30;
             // 
             // radioButton_Delete
             // 
-            this.radioButton_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton_Delete.AutoSize = true;
-            this.radioButton_Delete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.radioButton_Delete.Location = new System.Drawing.Point(48, 80);
-            this.radioButton_Delete.Name = "radioButton_Delete";
-            this.radioButton_Delete.Size = new System.Drawing.Size(66, 23);
-            this.radioButton_Delete.TabIndex = 33;
-            this.radioButton_Delete.TabStop = true;
-            this.radioButton_Delete.Text = "Delete";
-            this.radioButton_Delete.UseVisualStyleBackColor = true;
-            this.radioButton_Delete.CheckedChanged += new System.EventHandler(this.radioButton_Delete_CheckedChanged);
+            radioButton_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButton_Delete.AutoSize = true;
+            radioButton_Delete.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton_Delete.ForeColor = Color.FromArgb(214, 214, 214);
+            radioButton_Delete.Location = new Point(48, 80);
+            radioButton_Delete.Name = "radioButton_Delete";
+            radioButton_Delete.Size = new Size(66, 23);
+            radioButton_Delete.TabIndex = 33;
+            radioButton_Delete.TabStop = true;
+            radioButton_Delete.Text = "Delete";
+            radioButton_Delete.UseVisualStyleBackColor = true;
+            radioButton_Delete.CheckedChanged += radioButton_Delete_CheckedChanged;
             // 
             // radioButton_SaveChanges
             // 
-            this.radioButton_SaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton_SaveChanges.AutoSize = true;
-            this.radioButton_SaveChanges.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton_SaveChanges.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.radioButton_SaveChanges.Location = new System.Drawing.Point(48, 48);
-            this.radioButton_SaveChanges.Name = "radioButton_SaveChanges";
-            this.radioButton_SaveChanges.Size = new System.Drawing.Size(112, 23);
-            this.radioButton_SaveChanges.TabIndex = 32;
-            this.radioButton_SaveChanges.TabStop = true;
-            this.radioButton_SaveChanges.Text = "Save Changes";
-            this.radioButton_SaveChanges.UseVisualStyleBackColor = true;
-            this.radioButton_SaveChanges.CheckedChanged += new System.EventHandler(this.radioButton_SaveChanges_CheckedChanged);
+            radioButton_SaveChanges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButton_SaveChanges.AutoSize = true;
+            radioButton_SaveChanges.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton_SaveChanges.ForeColor = Color.FromArgb(214, 214, 214);
+            radioButton_SaveChanges.Location = new Point(48, 48);
+            radioButton_SaveChanges.Name = "radioButton_SaveChanges";
+            radioButton_SaveChanges.Size = new Size(112, 23);
+            radioButton_SaveChanges.TabIndex = 32;
+            radioButton_SaveChanges.TabStop = true;
+            radioButton_SaveChanges.Text = "Save Changes";
+            radioButton_SaveChanges.UseVisualStyleBackColor = true;
+            radioButton_SaveChanges.CheckedChanged += radioButton_SaveChanges_CheckedChanged;
             // 
             // radioButton_RegisterNew
             // 
-            this.radioButton_RegisterNew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton_RegisterNew.AutoSize = true;
-            this.radioButton_RegisterNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton_RegisterNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.radioButton_RegisterNew.Location = new System.Drawing.Point(48, 16);
-            this.radioButton_RegisterNew.Name = "radioButton_RegisterNew";
-            this.radioButton_RegisterNew.Size = new System.Drawing.Size(107, 23);
-            this.radioButton_RegisterNew.TabIndex = 31;
-            this.radioButton_RegisterNew.TabStop = true;
-            this.radioButton_RegisterNew.Text = "Register New";
-            this.radioButton_RegisterNew.UseVisualStyleBackColor = true;
-            this.radioButton_RegisterNew.CheckedChanged += new System.EventHandler(this.radioButton_RegisterNew_CheckedChanged);
+            radioButton_RegisterNew.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButton_RegisterNew.AutoSize = true;
+            radioButton_RegisterNew.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton_RegisterNew.ForeColor = Color.FromArgb(214, 214, 214);
+            radioButton_RegisterNew.Location = new Point(48, 16);
+            radioButton_RegisterNew.Name = "radioButton_RegisterNew";
+            radioButton_RegisterNew.Size = new Size(107, 23);
+            radioButton_RegisterNew.TabIndex = 31;
+            radioButton_RegisterNew.TabStop = true;
+            radioButton_RegisterNew.Text = "Register New";
+            radioButton_RegisterNew.UseVisualStyleBackColor = true;
+            radioButton_RegisterNew.CheckedChanged += radioButton_RegisterNew_CheckedChanged;
             // 
             // label_Comment
             // 
-            this.label_Comment.AutoSize = true;
-            this.label_Comment.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Comment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_Comment.Location = new System.Drawing.Point(16, 304);
-            this.label_Comment.Name = "label_Comment";
-            this.label_Comment.Size = new System.Drawing.Size(73, 19);
-            this.label_Comment.TabIndex = 23;
-            this.label_Comment.Text = "Comment:";
+            label_Comment.AutoSize = true;
+            label_Comment.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_Comment.ForeColor = Color.FromArgb(214, 214, 214);
+            label_Comment.Location = new Point(16, 304);
+            label_Comment.Name = "label_Comment";
+            label_Comment.Size = new Size(73, 19);
+            label_Comment.TabIndex = 23;
+            label_Comment.Text = "Comment:";
             // 
             // label_Options
             // 
-            this.label_Options.AutoSize = true;
-            this.label_Options.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Options.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_Options.Location = new System.Drawing.Point(16, 240);
-            this.label_Options.Name = "label_Options";
-            this.label_Options.Size = new System.Drawing.Size(61, 19);
-            this.label_Options.TabIndex = 21;
-            this.label_Options.Text = "Options:";
+            label_Options.AutoSize = true;
+            label_Options.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_Options.ForeColor = Color.FromArgb(214, 214, 214);
+            label_Options.Location = new Point(16, 240);
+            label_Options.Name = "label_Options";
+            label_Options.Size = new Size(61, 19);
+            label_Options.TabIndex = 21;
+            label_Options.Text = "Options:";
             // 
             // comboBox_MeasureType
             // 
-            this.comboBox_MeasureType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.comboBox_MeasureType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_MeasureType.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_MeasureType.FormattingEnabled = true;
-            this.comboBox_MeasureType.Items.AddRange(new object[] {
-            "Analog ",
-            "Digital ",
-            "Fieldbus"});
-            this.comboBox_MeasureType.Location = new System.Drawing.Point(120, 200);
-            this.comboBox_MeasureType.Name = "comboBox_MeasureType";
-            this.comboBox_MeasureType.Size = new System.Drawing.Size(280, 23);
-            this.comboBox_MeasureType.TabIndex = 20;
+            comboBox_MeasureType.BackColor = Color.FromArgb(56, 56, 56);
+            comboBox_MeasureType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_MeasureType.ForeColor = Color.WhiteSmoke;
+            comboBox_MeasureType.FormattingEnabled = true;
+            comboBox_MeasureType.Items.AddRange(new object[] { "Analog ", "Digital ", "Fieldbus" });
+            comboBox_MeasureType.Location = new Point(120, 200);
+            comboBox_MeasureType.Name = "comboBox_MeasureType";
+            comboBox_MeasureType.Size = new Size(280, 23);
+            comboBox_MeasureType.TabIndex = 20;
             // 
             // label_SignalType
             // 
-            this.label_SignalType.AutoSize = true;
-            this.label_SignalType.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_SignalType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_SignalType.Location = new System.Drawing.Point(16, 176);
-            this.label_SignalType.Name = "label_SignalType";
-            this.label_SignalType.Size = new System.Drawing.Size(80, 19);
-            this.label_SignalType.TabIndex = 19;
-            this.label_SignalType.Text = "Signal Type:";
-            // 
-            // label_MeasureType
-            // 
-            this.label_MeasureType.AutoSize = true;
-            this.label_MeasureType.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_MeasureType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_MeasureType.Location = new System.Drawing.Point(16, 208);
-            this.label_MeasureType.Name = "label_MeasureType";
-            this.label_MeasureType.Size = new System.Drawing.Size(97, 19);
-            this.label_MeasureType.TabIndex = 18;
-            this.label_MeasureType.Text = "Measure Type:";
-            // 
-            // comboBox_SignalType
-            // 
-            this.comboBox_SignalType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.comboBox_SignalType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_SignalType.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_SignalType.FormattingEnabled = true;
-            this.comboBox_SignalType.Items.AddRange(new object[] {
-            "Analog",
-            "Digital",
-            "Fieldbus"});
-            this.comboBox_SignalType.Location = new System.Drawing.Point(120, 176);
-            this.comboBox_SignalType.Name = "comboBox_SignalType";
-            this.comboBox_SignalType.Size = new System.Drawing.Size(280, 23);
-            this.comboBox_SignalType.TabIndex = 17;
-            this.comboBox_SignalType.SelectedIndexChanged += new System.EventHandler(this.comboBox_SignalType_SelectedIndexChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // label_RegDate
-            // 
-            this.label_RegDate.AutoSize = true;
-            this.label_RegDate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_RegDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_RegDate.Location = new System.Drawing.Point(16, 144);
-            this.label_RegDate.Name = "label_RegDate";
-            this.label_RegDate.Size = new System.Drawing.Size(71, 19);
-            this.label_RegDate.TabIndex = 14;
-            this.label_RegDate.Text = "Reg. Date:";
-            // 
-            // checkBox_Registered
-            // 
-            this.checkBox_Registered.AutoSize = true;
-            this.checkBox_Registered.Location = new System.Drawing.Point(120, 120);
-            this.checkBox_Registered.Name = "checkBox_Registered";
-            this.checkBox_Registered.Size = new System.Drawing.Size(15, 14);
-            this.checkBox_Registered.TabIndex = 13;
-            this.checkBox_Registered.UseVisualStyleBackColor = true;
-            // 
-            // label_Registered
-            // 
-            this.label_Registered.AutoSize = true;
-            this.label_Registered.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Registered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_Registered.Location = new System.Drawing.Point(16, 120);
-            this.label_Registered.Name = "label_Registered";
-            this.label_Registered.Size = new System.Drawing.Size(76, 19);
-            this.label_Registered.TabIndex = 12;
-            this.label_Registered.Text = "Registered:";
-            // 
-            // label_SerialNumber
-            // 
-            this.label_SerialNumber.AutoSize = true;
-            this.label_SerialNumber.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_SerialNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_SerialNumber.Location = new System.Drawing.Point(16, 88);
-            this.label_SerialNumber.Name = "label_SerialNumber";
-            this.label_SerialNumber.Size = new System.Drawing.Size(98, 19);
-            this.label_SerialNumber.TabIndex = 11;
-            this.label_SerialNumber.Text = "Serial Number:";
-            // 
-            // maskedTextBox_SerialNumber
-            // 
-            this.maskedTextBox_SerialNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_SerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox_SerialNumber.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_SerialNumber.Location = new System.Drawing.Point(120, 88);
-            this.maskedTextBox_SerialNumber.Name = "maskedTextBox_SerialNumber";
-            this.maskedTextBox_SerialNumber.Size = new System.Drawing.Size(280, 23);
-            this.maskedTextBox_SerialNumber.TabIndex = 10;
-            // 
-            // maskedTextBox_SensorName
-            // 
-            this.maskedTextBox_SensorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_SensorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox_SensorName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_SensorName.Location = new System.Drawing.Point(120, 56);
-            this.maskedTextBox_SensorName.Name = "maskedTextBox_SensorName";
-            this.maskedTextBox_SensorName.Size = new System.Drawing.Size(280, 23);
-            this.maskedTextBox_SensorName.TabIndex = 9;
-            // 
-            // label_SensorName
-            // 
-            this.label_SensorName.AutoSize = true;
-            this.label_SensorName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_SensorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_SensorName.Location = new System.Drawing.Point(16, 56);
-            this.label_SensorName.Name = "label_SensorName";
-            this.label_SensorName.Size = new System.Drawing.Size(93, 19);
-            this.label_SensorName.TabIndex = 0;
-            this.label_SensorName.Text = "Sensor Name:";
-            // 
-            // panel_TabsConnections
-            // 
-            this.panel_TabsConnections.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel_TabsConnections.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_TabsConnections.Controls.Add(this.label1);
-            this.panel_TabsConnections.Controls.Add(this.comboBox_COMport);
-            this.panel_TabsConnections.Controls.Add(this.buttonConnect_Ino);
-            this.panel_TabsConnections.Controls.Add(this.label_InoComPort);
-            this.panel_TabsConnections.Controls.Add(this.textBox_InoBitRate);
-            this.panel_TabsConnections.Controls.Add(this.textBox_connectionFeedback_Ino);
-            this.panel_TabsConnections.Controls.Add(this.buttonDisconnect_Ino);
-            this.panel_TabsConnections.Controls.Add(this.label_InoBitRate);
-            this.panel_TabsConnections.Location = new System.Drawing.Point(16, 120);
-            this.panel_TabsConnections.Name = "panel_TabsConnections";
-            this.panel_TabsConnections.Size = new System.Drawing.Size(624, 392);
-            this.panel_TabsConnections.TabIndex = 42;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(200, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 28);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Connect to instrument:";
-            // 
-            // comboBox_COMport
-            // 
-            this.comboBox_COMport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.comboBox_COMport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_COMport.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_COMport.FormattingEnabled = true;
-            this.comboBox_COMport.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.comboBox_COMport.Location = new System.Drawing.Point(232, 44);
-            this.comboBox_COMport.Name = "comboBox_COMport";
-            this.comboBox_COMport.Size = new System.Drawing.Size(104, 23);
-            this.comboBox_COMport.TabIndex = 7;
-            this.comboBox_COMport.TextChanged += new System.EventHandler(this.comboBox_COMport_TextChanged);
-            // 
-            // buttonConnect_Ino
-            // 
-            this.buttonConnect_Ino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.buttonConnect_Ino.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonConnect_Ino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.buttonConnect_Ino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConnect_Ino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.buttonConnect_Ino.Location = new System.Drawing.Point(168, 72);
-            this.buttonConnect_Ino.Name = "buttonConnect_Ino";
-            this.buttonConnect_Ino.Size = new System.Drawing.Size(88, 32);
-            this.buttonConnect_Ino.TabIndex = 4;
-            this.buttonConnect_Ino.Text = "Connect";
-            this.buttonConnect_Ino.UseVisualStyleBackColor = false;
-            this.buttonConnect_Ino.Click += new System.EventHandler(this.buttonConnect_Ino_Click);
-            // 
-            // label_InoComPort
-            // 
-            this.label_InoComPort.AutoSize = true;
-            this.label_InoComPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_InoComPort.Location = new System.Drawing.Point(168, 48);
-            this.label_InoComPort.Name = "label_InoComPort";
-            this.label_InoComPort.Size = new System.Drawing.Size(61, 15);
-            this.label_InoComPort.TabIndex = 0;
-            this.label_InoComPort.Text = "Com Port:";
-            // 
-            // textBox_InoBitRate
-            // 
-            this.textBox_InoBitRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_InoBitRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_InoBitRate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_InoBitRate.Location = new System.Drawing.Point(400, 48);
-            this.textBox_InoBitRate.Name = "textBox_InoBitRate";
-            this.textBox_InoBitRate.Size = new System.Drawing.Size(50, 16);
-            this.textBox_InoBitRate.TabIndex = 2;
-            this.textBox_InoBitRate.TextChanged += new System.EventHandler(this.textBox_InoBitRate_TextChanged);
-            // 
-            // textBox_connectionFeedback_Ino
-            // 
-            this.textBox_connectionFeedback_Ino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_connectionFeedback_Ino.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_connectionFeedback_Ino.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_connectionFeedback_Ino.Location = new System.Drawing.Point(168, 112);
-            this.textBox_connectionFeedback_Ino.Name = "textBox_connectionFeedback_Ino";
-            this.textBox_connectionFeedback_Ino.ReadOnly = true;
-            this.textBox_connectionFeedback_Ino.Size = new System.Drawing.Size(280, 96);
-            this.textBox_connectionFeedback_Ino.TabIndex = 6;
-            this.textBox_connectionFeedback_Ino.Text = "";
-            // 
-            // buttonDisconnect_Ino
-            // 
-            this.buttonDisconnect_Ino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.buttonDisconnect_Ino.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonDisconnect_Ino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.buttonDisconnect_Ino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDisconnect_Ino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.buttonDisconnect_Ino.Location = new System.Drawing.Point(264, 72);
-            this.buttonDisconnect_Ino.Name = "buttonDisconnect_Ino";
-            this.buttonDisconnect_Ino.Size = new System.Drawing.Size(88, 32);
-            this.buttonDisconnect_Ino.TabIndex = 5;
-            this.buttonDisconnect_Ino.Text = "Disconnect";
-            this.buttonDisconnect_Ino.UseVisualStyleBackColor = false;
-            this.buttonDisconnect_Ino.Click += new System.EventHandler(this.buttonDisconnect_Ino_Click);
-            // 
-            // label_InoBitRate
-            // 
-            this.label_InoBitRate.AutoSize = true;
-            this.label_InoBitRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_InoBitRate.Location = new System.Drawing.Point(352, 48);
-            this.label_InoBitRate.Name = "label_InoBitRate";
-            this.label_InoBitRate.Size = new System.Drawing.Size(44, 15);
-            this.label_InoBitRate.TabIndex = 3;
-            this.label_InoBitRate.Text = "Bitrate:";
-            this.label_InoBitRate.Click += new System.EventHandler(this.label_InoBitRate_Click);
-            // 
-            // panel_dataVis
-            // 
-            this.panel_dataVis.Controls.Add(this.label_currentReading);
-            this.panel_dataVis.Controls.Add(this.maskedTextBox_currentReading);
-            this.panel_dataVis.Controls.Add(this.maskedTextBox_AverageReading);
-            this.panel_dataVis.Controls.Add(this.label_AverageReading);
-            this.panel_dataVis.Controls.Add(this.label_LowestReading);
-            this.panel_dataVis.Controls.Add(this.maskedTextBox_LowestReading);
-            this.panel_dataVis.Controls.Add(this.label_HighestReading);
-            this.panel_dataVis.Controls.Add(this.maskedTextBox_HighestReading);
-            this.panel_dataVis.Controls.Add(this.button_StopReadscaled);
-            this.panel_dataVis.Controls.Add(this.formsPlot1);
-            this.panel_dataVis.Controls.Add(this.button_readscaled);
-            this.panel_dataVis.Location = new System.Drawing.Point(16, 120);
-            this.panel_dataVis.Name = "panel_dataVis";
-            this.panel_dataVis.Size = new System.Drawing.Size(624, 392);
-            this.panel_dataVis.TabIndex = 38;
-            // 
-            // label_currentReading
-            // 
-            this.label_currentReading.AutoSize = true;
-            this.label_currentReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_currentReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_currentReading.Location = new System.Drawing.Point(272, 320);
-            this.label_currentReading.Name = "label_currentReading";
-            this.label_currentReading.Size = new System.Drawing.Size(109, 19);
-            this.label_currentReading.TabIndex = 44;
-            this.label_currentReading.Text = "Current reading:";
-            // 
-            // maskedTextBox_currentReading
-            // 
-            this.maskedTextBox_currentReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_currentReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_currentReading.Location = new System.Drawing.Point(384, 320);
-            this.maskedTextBox_currentReading.Name = "maskedTextBox_currentReading";
-            this.maskedTextBox_currentReading.Size = new System.Drawing.Size(96, 23);
-            this.maskedTextBox_currentReading.TabIndex = 45;
-            // 
-            // maskedTextBox_AverageReading
-            // 
-            this.maskedTextBox_AverageReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_AverageReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_AverageReading.Location = new System.Drawing.Point(128, 368);
-            this.maskedTextBox_AverageReading.Name = "maskedTextBox_AverageReading";
-            this.maskedTextBox_AverageReading.Size = new System.Drawing.Size(96, 23);
-            this.maskedTextBox_AverageReading.TabIndex = 43;
-            // 
-            // label_AverageReading
-            // 
-            this.label_AverageReading.AutoSize = true;
-            this.label_AverageReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_AverageReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_AverageReading.Location = new System.Drawing.Point(16, 368);
-            this.label_AverageReading.Name = "label_AverageReading";
-            this.label_AverageReading.Size = new System.Drawing.Size(112, 19);
-            this.label_AverageReading.TabIndex = 42;
-            this.label_AverageReading.Text = "Average reading:";
-            // 
-            // label_LowestReading
-            // 
-            this.label_LowestReading.AutoSize = true;
-            this.label_LowestReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_LowestReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_LowestReading.Location = new System.Drawing.Point(16, 344);
-            this.label_LowestReading.Name = "label_LowestReading";
-            this.label_LowestReading.Size = new System.Drawing.Size(105, 19);
-            this.label_LowestReading.TabIndex = 40;
-            this.label_LowestReading.Text = "Lowest reading:";
-            // 
-            // maskedTextBox_LowestReading
-            // 
-            this.maskedTextBox_LowestReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_LowestReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_LowestReading.Location = new System.Drawing.Point(128, 344);
-            this.maskedTextBox_LowestReading.Name = "maskedTextBox_LowestReading";
-            this.maskedTextBox_LowestReading.Size = new System.Drawing.Size(96, 23);
-            this.maskedTextBox_LowestReading.TabIndex = 41;
-            // 
-            // label_HighestReading
-            // 
-            this.label_HighestReading.AutoSize = true;
-            this.label_HighestReading.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_HighestReading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_HighestReading.Location = new System.Drawing.Point(16, 320);
-            this.label_HighestReading.Name = "label_HighestReading";
-            this.label_HighestReading.Size = new System.Drawing.Size(109, 19);
-            this.label_HighestReading.TabIndex = 39;
-            this.label_HighestReading.Text = "Highest reading:";
-            // 
-            // maskedTextBox_HighestReading
-            // 
-            this.maskedTextBox_HighestReading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_HighestReading.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_HighestReading.Location = new System.Drawing.Point(128, 320);
-            this.maskedTextBox_HighestReading.Name = "maskedTextBox_HighestReading";
-            this.maskedTextBox_HighestReading.Size = new System.Drawing.Size(96, 23);
-            this.maskedTextBox_HighestReading.TabIndex = 39;
-            // 
-            // button_StopReadscaled
-            // 
-            this.button_StopReadscaled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button_StopReadscaled.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_StopReadscaled.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_StopReadscaled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_StopReadscaled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_StopReadscaled.Location = new System.Drawing.Point(488, 56);
-            this.button_StopReadscaled.Name = "button_StopReadscaled";
-            this.button_StopReadscaled.Size = new System.Drawing.Size(128, 40);
-            this.button_StopReadscaled.TabIndex = 8;
-            this.button_StopReadscaled.Text = "Stop reading sensor";
-            this.button_StopReadscaled.UseVisualStyleBackColor = false;
-            this.button_StopReadscaled.Click += new System.EventHandler(this.button_StopReadscaled_Click);
-            // 
-            // formsPlot1
-            // 
-            this.formsPlot1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.formsPlot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.formsPlot1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.formsPlot1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.formsPlot1.Location = new System.Drawing.Point(13, 15);
-            this.formsPlot1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(467, 297);
-            this.formsPlot1.TabIndex = 0;
-            // 
-            // button_readscaled
-            // 
-            this.button_readscaled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button_readscaled.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_readscaled.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_readscaled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_readscaled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_readscaled.Location = new System.Drawing.Point(488, 16);
-            this.button_readscaled.Name = "button_readscaled";
-            this.button_readscaled.Size = new System.Drawing.Size(128, 40);
-            this.button_readscaled.TabIndex = 7;
-            this.button_readscaled.Text = "Start reading sensor";
-            this.button_readscaled.UseVisualStyleBackColor = false;
-            this.button_readscaled.Click += new System.EventHandler(this.button_readscaled_Click);
-            // 
-            // maskedTextBox_devicename
-            // 
-            this.maskedTextBox_devicename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_devicename.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_devicename.Location = new System.Drawing.Point(240, 56);
-            this.maskedTextBox_devicename.Name = "maskedTextBox_devicename";
-            this.maskedTextBox_devicename.Size = new System.Drawing.Size(88, 23);
-            this.maskedTextBox_devicename.TabIndex = 28;
-            this.maskedTextBox_devicename.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
-            // 
-            // label_Unit
-            // 
-            this.label_Unit.AutoSize = true;
-            this.label_Unit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_Unit.Location = new System.Drawing.Point(184, 56);
-            this.label_Unit.Name = "label_Unit";
-            this.label_Unit.Size = new System.Drawing.Size(48, 19);
-            this.label_Unit.TabIndex = 29;
-            this.label_Unit.Text = "Name:";
-            this.label_Unit.Click += new System.EventHandler(this.label_Unit_Click);
-            // 
-            // maskedTextBox_URV
-            // 
-            this.maskedTextBox_URV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_URV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_URV.Location = new System.Drawing.Point(456, 88);
-            this.maskedTextBox_URV.Name = "maskedTextBox_URV";
-            this.maskedTextBox_URV.Size = new System.Drawing.Size(88, 23);
-            this.maskedTextBox_URV.TabIndex = 26;
-            this.maskedTextBox_URV.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_URV_MaskInputRejected);
-            // 
-            // label_URV
-            // 
-            this.label_URV.AutoSize = true;
-            this.label_URV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_URV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_URV.Location = new System.Drawing.Point(417, 89);
-            this.label_URV.Name = "label_URV";
-            this.label_URV.Size = new System.Drawing.Size(39, 19);
-            this.label_URV.TabIndex = 27;
-            this.label_URV.Text = "URV:";
-            // 
-            // maskedTextBox_LRV
-            // 
-            this.maskedTextBox_LRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_LRV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_LRV.HidePromptOnLeave = true;
-            this.maskedTextBox_LRV.Location = new System.Drawing.Point(456, 56);
-            this.maskedTextBox_LRV.Name = "maskedTextBox_LRV";
-            this.maskedTextBox_LRV.Size = new System.Drawing.Size(88, 23);
-            this.maskedTextBox_LRV.TabIndex = 25;
+            label_SignalType.AutoSize = true;
+            label_SignalType.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_SignalType.ForeColor = Color.FromArgb(214, 214, 214);
+            label_SignalType.Location = new Point(16, 176);
+            label_SignalType.Name = "label_SignalType";
+            label_SignalType.Size = new Size(80, 19);
+            label_SignalType.TabIndex = 19;
+            label_SignalType.Text = "Signal Type:";
             // 
             // label_LRV
             // 
-            this.label_LRV.AutoSize = true;
-            this.label_LRV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_LRV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_LRV.Location = new System.Drawing.Point(417, 57);
-            this.label_LRV.Name = "label_LRV";
-            this.label_LRV.Size = new System.Drawing.Size(36, 19);
-            this.label_LRV.TabIndex = 25;
-            this.label_LRV.Text = "LRV:";
+            label_LRV.AutoSize = true;
+            label_LRV.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_LRV.ForeColor = Color.FromArgb(214, 214, 214);
+            label_LRV.Location = new Point(417, 57);
+            label_LRV.Name = "label_LRV";
+            label_LRV.Size = new Size(36, 19);
+            label_LRV.TabIndex = 25;
+            label_LRV.Text = "LRV:";
+            // 
+            // label_MeasureType
+            // 
+            label_MeasureType.AutoSize = true;
+            label_MeasureType.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_MeasureType.ForeColor = Color.FromArgb(214, 214, 214);
+            label_MeasureType.Location = new Point(16, 208);
+            label_MeasureType.Name = "label_MeasureType";
+            label_MeasureType.Size = new Size(97, 19);
+            label_MeasureType.TabIndex = 18;
+            label_MeasureType.Text = "Measure Type:";
+            // 
+            // comboBox_SignalType
+            // 
+            comboBox_SignalType.BackColor = Color.FromArgb(56, 56, 56);
+            comboBox_SignalType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_SignalType.ForeColor = Color.WhiteSmoke;
+            comboBox_SignalType.FormattingEnabled = true;
+            comboBox_SignalType.Items.AddRange(new object[] { "Analog", "Digital", "Fieldbus" });
+            comboBox_SignalType.Location = new Point(120, 176);
+            comboBox_SignalType.Name = "comboBox_SignalType";
+            comboBox_SignalType.Size = new Size(280, 23);
+            comboBox_SignalType.TabIndex = 17;
+            comboBox_SignalType.SelectedIndexChanged += comboBox_SignalType_SelectedIndexChanged;
+            // 
+            // maskedTextBox_LRV
+            // 
+            maskedTextBox_LRV.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_LRV.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_LRV.HidePromptOnLeave = true;
+            maskedTextBox_LRV.Location = new Point(456, 56);
+            maskedTextBox_LRV.Name = "maskedTextBox_LRV";
+            maskedTextBox_LRV.Size = new Size(88, 23);
+            maskedTextBox_LRV.TabIndex = 25;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CalendarForeColor = Color.WhiteSmoke;
+            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(56, 56, 56);
+            dateTimePicker1.CalendarTitleBackColor = Color.FromArgb(56, 56, 56);
+            dateTimePicker1.CalendarTitleForeColor = Color.WhiteSmoke;
+            dateTimePicker1.CalendarTrailingForeColor = Color.WhiteSmoke;
+            dateTimePicker1.Location = new Point(120, 144);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 16;
+            // 
+            // label_RegDate
+            // 
+            label_RegDate.AutoSize = true;
+            label_RegDate.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_RegDate.ForeColor = Color.FromArgb(214, 214, 214);
+            label_RegDate.Location = new Point(16, 144);
+            label_RegDate.Name = "label_RegDate";
+            label_RegDate.Size = new Size(71, 19);
+            label_RegDate.TabIndex = 14;
+            label_RegDate.Text = "Reg. Date:";
+            // 
+            // label_URV
+            // 
+            label_URV.AutoSize = true;
+            label_URV.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_URV.ForeColor = Color.FromArgb(214, 214, 214);
+            label_URV.Location = new Point(417, 89);
+            label_URV.Name = "label_URV";
+            label_URV.Size = new Size(39, 19);
+            label_URV.TabIndex = 27;
+            label_URV.Text = "URV:";
+            // 
+            // checkBox_Registered
+            // 
+            checkBox_Registered.AutoSize = true;
+            checkBox_Registered.Location = new Point(120, 120);
+            checkBox_Registered.Name = "checkBox_Registered";
+            checkBox_Registered.Size = new Size(15, 14);
+            checkBox_Registered.TabIndex = 13;
+            checkBox_Registered.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox_URV
+            // 
+            maskedTextBox_URV.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_URV.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_URV.Location = new Point(456, 88);
+            maskedTextBox_URV.Name = "maskedTextBox_URV";
+            maskedTextBox_URV.Size = new Size(88, 23);
+            maskedTextBox_URV.TabIndex = 26;
+            maskedTextBox_URV.MaskInputRejected += maskedTextBox_URV_MaskInputRejected;
+            // 
+            // label_Registered
+            // 
+            label_Registered.AutoSize = true;
+            label_Registered.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_Registered.ForeColor = Color.FromArgb(214, 214, 214);
+            label_Registered.Location = new Point(16, 120);
+            label_Registered.Name = "label_Registered";
+            label_Registered.Size = new Size(76, 19);
+            label_Registered.TabIndex = 12;
+            label_Registered.Text = "Registered:";
+            // 
+            // label_SerialNumber
+            // 
+            label_SerialNumber.AutoSize = true;
+            label_SerialNumber.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_SerialNumber.ForeColor = Color.FromArgb(214, 214, 214);
+            label_SerialNumber.Location = new Point(16, 88);
+            label_SerialNumber.Name = "label_SerialNumber";
+            label_SerialNumber.Size = new Size(98, 19);
+            label_SerialNumber.TabIndex = 11;
+            label_SerialNumber.Text = "Serial Number:";
+            // 
+            // maskedTextBox_SerialNumber
+            // 
+            maskedTextBox_SerialNumber.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_SerialNumber.BorderStyle = BorderStyle.FixedSingle;
+            maskedTextBox_SerialNumber.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_SerialNumber.Location = new Point(120, 88);
+            maskedTextBox_SerialNumber.Name = "maskedTextBox_SerialNumber";
+            maskedTextBox_SerialNumber.Size = new Size(280, 23);
+            maskedTextBox_SerialNumber.TabIndex = 10;
+            // 
+            // maskedTextBox_SensorName
+            // 
+            maskedTextBox_SensorName.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_SensorName.BorderStyle = BorderStyle.FixedSingle;
+            maskedTextBox_SensorName.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_SensorName.Location = new Point(120, 56);
+            maskedTextBox_SensorName.Name = "maskedTextBox_SensorName";
+            maskedTextBox_SensorName.Size = new Size(280, 23);
+            maskedTextBox_SensorName.TabIndex = 9;
+            // 
+            // label_SensorName
+            // 
+            label_SensorName.AutoSize = true;
+            label_SensorName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_SensorName.ForeColor = Color.FromArgb(214, 214, 214);
+            label_SensorName.Location = new Point(16, 56);
+            label_SensorName.Name = "label_SensorName";
+            label_SensorName.Size = new Size(93, 19);
+            label_SensorName.TabIndex = 0;
+            label_SensorName.Text = "Sensor Name:";
+            // 
+            // panel_TabsConnections
+            // 
+            panel_TabsConnections.BackColor = Color.FromArgb(38, 38, 38);
+            panel_TabsConnections.BorderStyle = BorderStyle.FixedSingle;
+            panel_TabsConnections.Controls.Add(label1);
+            panel_TabsConnections.Controls.Add(comboBox_COMport);
+            panel_TabsConnections.Controls.Add(buttonConnect_Ino);
+            panel_TabsConnections.Controls.Add(label_InoComPort);
+            panel_TabsConnections.Controls.Add(textBox_InoBitRate);
+            panel_TabsConnections.Controls.Add(textBox_connectionFeedback_Ino);
+            panel_TabsConnections.Controls.Add(buttonDisconnect_Ino);
+            panel_TabsConnections.Controls.Add(label_InoBitRate);
+            panel_TabsConnections.Location = new Point(16, 120);
+            panel_TabsConnections.Name = "panel_TabsConnections";
+            panel_TabsConnections.Size = new Size(624, 392);
+            panel_TabsConnections.TabIndex = 42;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(214, 214, 214);
+            label1.Location = new Point(200, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(223, 28);
+            label1.TabIndex = 37;
+            label1.Text = "Connect to instrument:";
+            // 
+            // comboBox_COMport
+            // 
+            comboBox_COMport.BackColor = Color.FromArgb(56, 56, 56);
+            comboBox_COMport.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_COMport.ForeColor = Color.WhiteSmoke;
+            comboBox_COMport.FormattingEnabled = true;
+            comboBox_COMport.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            comboBox_COMport.Location = new Point(232, 44);
+            comboBox_COMport.Name = "comboBox_COMport";
+            comboBox_COMport.Size = new Size(104, 23);
+            comboBox_COMport.TabIndex = 7;
+            comboBox_COMport.TextChanged += comboBox_COMport_TextChanged;
+            // 
+            // buttonConnect_Ino
+            // 
+            buttonConnect_Ino.BackColor = Color.FromArgb(31, 31, 31);
+            buttonConnect_Ino.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            buttonConnect_Ino.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            buttonConnect_Ino.FlatStyle = FlatStyle.Flat;
+            buttonConnect_Ino.ForeColor = Color.FromArgb(214, 214, 214);
+            buttonConnect_Ino.Location = new Point(168, 72);
+            buttonConnect_Ino.Name = "buttonConnect_Ino";
+            buttonConnect_Ino.Size = new Size(88, 32);
+            buttonConnect_Ino.TabIndex = 4;
+            buttonConnect_Ino.Text = "Connect";
+            buttonConnect_Ino.UseVisualStyleBackColor = false;
+            buttonConnect_Ino.Click += buttonConnect_Ino_Click;
+            // 
+            // label_InoComPort
+            // 
+            label_InoComPort.AutoSize = true;
+            label_InoComPort.ForeColor = Color.FromArgb(214, 214, 214);
+            label_InoComPort.Location = new Point(168, 48);
+            label_InoComPort.Name = "label_InoComPort";
+            label_InoComPort.Size = new Size(61, 15);
+            label_InoComPort.TabIndex = 0;
+            label_InoComPort.Text = "Com Port:";
+            // 
+            // textBox_InoBitRate
+            // 
+            textBox_InoBitRate.BackColor = Color.FromArgb(56, 56, 56);
+            textBox_InoBitRate.BorderStyle = BorderStyle.None;
+            textBox_InoBitRate.ForeColor = Color.WhiteSmoke;
+            textBox_InoBitRate.Location = new Point(400, 48);
+            textBox_InoBitRate.Name = "textBox_InoBitRate";
+            textBox_InoBitRate.Size = new Size(50, 16);
+            textBox_InoBitRate.TabIndex = 2;
+            textBox_InoBitRate.TextChanged += textBox_InoBitRate_TextChanged;
+            // 
+            // textBox_connectionFeedback_Ino
+            // 
+            textBox_connectionFeedback_Ino.BackColor = Color.FromArgb(56, 56, 56);
+            textBox_connectionFeedback_Ino.BorderStyle = BorderStyle.None;
+            textBox_connectionFeedback_Ino.ForeColor = Color.WhiteSmoke;
+            textBox_connectionFeedback_Ino.Location = new Point(168, 112);
+            textBox_connectionFeedback_Ino.Name = "textBox_connectionFeedback_Ino";
+            textBox_connectionFeedback_Ino.ReadOnly = true;
+            textBox_connectionFeedback_Ino.Size = new Size(280, 96);
+            textBox_connectionFeedback_Ino.TabIndex = 6;
+            textBox_connectionFeedback_Ino.Text = "";
+            // 
+            // buttonDisconnect_Ino
+            // 
+            buttonDisconnect_Ino.BackColor = Color.FromArgb(31, 31, 31);
+            buttonDisconnect_Ino.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            buttonDisconnect_Ino.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            buttonDisconnect_Ino.FlatStyle = FlatStyle.Flat;
+            buttonDisconnect_Ino.ForeColor = Color.FromArgb(214, 214, 214);
+            buttonDisconnect_Ino.Location = new Point(264, 72);
+            buttonDisconnect_Ino.Name = "buttonDisconnect_Ino";
+            buttonDisconnect_Ino.Size = new Size(88, 32);
+            buttonDisconnect_Ino.TabIndex = 5;
+            buttonDisconnect_Ino.Text = "Disconnect";
+            buttonDisconnect_Ino.UseVisualStyleBackColor = false;
+            buttonDisconnect_Ino.Click += buttonDisconnect_Ino_Click;
+            // 
+            // label_InoBitRate
+            // 
+            label_InoBitRate.AutoSize = true;
+            label_InoBitRate.ForeColor = Color.FromArgb(214, 214, 214);
+            label_InoBitRate.Location = new Point(352, 48);
+            label_InoBitRate.Name = "label_InoBitRate";
+            label_InoBitRate.Size = new Size(44, 15);
+            label_InoBitRate.TabIndex = 3;
+            label_InoBitRate.Text = "Bitrate:";
+            label_InoBitRate.Click += label_InoBitRate_Click;
+            // 
+            // panel_dataVis
+            // 
+            panel_dataVis.Controls.Add(label_currentReading);
+            panel_dataVis.Controls.Add(maskedTextBox_currentReading);
+            panel_dataVis.Controls.Add(maskedTextBox_AverageReading);
+            panel_dataVis.Controls.Add(label_AverageReading);
+            panel_dataVis.Controls.Add(label_LowestReading);
+            panel_dataVis.Controls.Add(maskedTextBox_LowestReading);
+            panel_dataVis.Controls.Add(label_HighestReading);
+            panel_dataVis.Controls.Add(maskedTextBox_HighestReading);
+            panel_dataVis.Controls.Add(button_StopReadscaled);
+            panel_dataVis.Controls.Add(formsPlot1);
+            panel_dataVis.Controls.Add(button_readscaled);
+            panel_dataVis.Location = new Point(16, 120);
+            panel_dataVis.Name = "panel_dataVis";
+            panel_dataVis.Size = new Size(624, 392);
+            panel_dataVis.TabIndex = 38;
+            // 
+            // label_currentReading
+            // 
+            label_currentReading.AutoSize = true;
+            label_currentReading.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_currentReading.ForeColor = Color.FromArgb(214, 214, 214);
+            label_currentReading.Location = new Point(272, 320);
+            label_currentReading.Name = "label_currentReading";
+            label_currentReading.Size = new Size(109, 19);
+            label_currentReading.TabIndex = 44;
+            label_currentReading.Text = "Current reading:";
+            // 
+            // maskedTextBox_currentReading
+            // 
+            maskedTextBox_currentReading.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_currentReading.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_currentReading.Location = new Point(384, 320);
+            maskedTextBox_currentReading.Name = "maskedTextBox_currentReading";
+            maskedTextBox_currentReading.Size = new Size(96, 23);
+            maskedTextBox_currentReading.TabIndex = 45;
+            // 
+            // maskedTextBox_AverageReading
+            // 
+            maskedTextBox_AverageReading.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_AverageReading.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_AverageReading.Location = new Point(128, 368);
+            maskedTextBox_AverageReading.Name = "maskedTextBox_AverageReading";
+            maskedTextBox_AverageReading.Size = new Size(96, 23);
+            maskedTextBox_AverageReading.TabIndex = 43;
+            // 
+            // label_AverageReading
+            // 
+            label_AverageReading.AutoSize = true;
+            label_AverageReading.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_AverageReading.ForeColor = Color.FromArgb(214, 214, 214);
+            label_AverageReading.Location = new Point(16, 368);
+            label_AverageReading.Name = "label_AverageReading";
+            label_AverageReading.Size = new Size(112, 19);
+            label_AverageReading.TabIndex = 42;
+            label_AverageReading.Text = "Average reading:";
+            // 
+            // label_LowestReading
+            // 
+            label_LowestReading.AutoSize = true;
+            label_LowestReading.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_LowestReading.ForeColor = Color.FromArgb(214, 214, 214);
+            label_LowestReading.Location = new Point(16, 344);
+            label_LowestReading.Name = "label_LowestReading";
+            label_LowestReading.Size = new Size(105, 19);
+            label_LowestReading.TabIndex = 40;
+            label_LowestReading.Text = "Lowest reading:";
+            // 
+            // maskedTextBox_LowestReading
+            // 
+            maskedTextBox_LowestReading.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_LowestReading.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_LowestReading.Location = new Point(128, 344);
+            maskedTextBox_LowestReading.Name = "maskedTextBox_LowestReading";
+            maskedTextBox_LowestReading.Size = new Size(96, 23);
+            maskedTextBox_LowestReading.TabIndex = 41;
+            // 
+            // label_HighestReading
+            // 
+            label_HighestReading.AutoSize = true;
+            label_HighestReading.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_HighestReading.ForeColor = Color.FromArgb(214, 214, 214);
+            label_HighestReading.Location = new Point(16, 320);
+            label_HighestReading.Name = "label_HighestReading";
+            label_HighestReading.Size = new Size(109, 19);
+            label_HighestReading.TabIndex = 39;
+            label_HighestReading.Text = "Highest reading:";
+            // 
+            // maskedTextBox_HighestReading
+            // 
+            maskedTextBox_HighestReading.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_HighestReading.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_HighestReading.Location = new Point(128, 320);
+            maskedTextBox_HighestReading.Name = "maskedTextBox_HighestReading";
+            maskedTextBox_HighestReading.Size = new Size(96, 23);
+            maskedTextBox_HighestReading.TabIndex = 39;
+            // 
+            // button_StopReadscaled
+            // 
+            button_StopReadscaled.BackColor = Color.FromArgb(38, 38, 38);
+            button_StopReadscaled.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_StopReadscaled.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_StopReadscaled.FlatStyle = FlatStyle.Flat;
+            button_StopReadscaled.ForeColor = Color.FromArgb(214, 214, 214);
+            button_StopReadscaled.Location = new Point(488, 56);
+            button_StopReadscaled.Name = "button_StopReadscaled";
+            button_StopReadscaled.Size = new Size(128, 40);
+            button_StopReadscaled.TabIndex = 8;
+            button_StopReadscaled.Text = "Stop reading sensor";
+            button_StopReadscaled.UseVisualStyleBackColor = false;
+            button_StopReadscaled.Click += button_StopReadscaled_Click;
+            // 
+            // formsPlot1
+            // 
+            formsPlot1.BackColor = Color.FromArgb(64, 64, 64);
+            formsPlot1.BorderStyle = BorderStyle.FixedSingle;
+            formsPlot1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            formsPlot1.ForeColor = SystemColors.ControlText;
+            formsPlot1.Location = new Point(13, 15);
+            formsPlot1.Margin = new Padding(6, 6, 6, 6);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(467, 297);
+            formsPlot1.TabIndex = 0;
+            // 
+            // button_readscaled
+            // 
+            button_readscaled.BackColor = Color.FromArgb(38, 38, 38);
+            button_readscaled.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_readscaled.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_readscaled.FlatStyle = FlatStyle.Flat;
+            button_readscaled.ForeColor = Color.FromArgb(214, 214, 214);
+            button_readscaled.Location = new Point(488, 16);
+            button_readscaled.Name = "button_readscaled";
+            button_readscaled.Size = new Size(128, 40);
+            button_readscaled.TabIndex = 7;
+            button_readscaled.Text = "Start reading sensor";
+            button_readscaled.UseVisualStyleBackColor = false;
+            button_readscaled.Click += button_readscaled_Click;
+            // 
+            // maskedTextBox_devicename
+            // 
+            maskedTextBox_devicename.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_devicename.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_devicename.Location = new Point(240, 56);
+            maskedTextBox_devicename.Name = "maskedTextBox_devicename";
+            maskedTextBox_devicename.Size = new Size(88, 23);
+            maskedTextBox_devicename.TabIndex = 28;
+            maskedTextBox_devicename.MaskInputRejected += maskedTextBox3_MaskInputRejected;
+            // 
+            // label_Unit
+            // 
+            label_Unit.AutoSize = true;
+            label_Unit.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_Unit.ForeColor = Color.FromArgb(214, 214, 214);
+            label_Unit.Location = new Point(184, 56);
+            label_Unit.Name = "label_Unit";
+            label_Unit.Size = new Size(48, 19);
+            label_Unit.TabIndex = 29;
+            label_Unit.Text = "Name:";
+            label_Unit.Click += label_Unit_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.maskedTextBox_readwriteFeedback);
-            this.panel1.Controls.Add(this.label_writePassword);
-            this.panel1.Controls.Add(this.maskedTextBox_writePassword);
-            this.panel1.Controls.Add(this.button_readstatus);
-            this.panel1.Controls.Add(this.label_readwrite);
-            this.panel1.Controls.Add(this.maskedTextBox_alarmh);
-            this.panel1.Controls.Add(this.button_writeconf);
-            this.panel1.Controls.Add(this.label_alarmh);
-            this.panel1.Controls.Add(this.button_readconf);
-            this.panel1.Controls.Add(this.maskedTextBox_alarml);
-            this.panel1.Controls.Add(this.label_alarml);
-            this.panel1.Controls.Add(this.maskedTextBox_devicename);
-            this.panel1.Controls.Add(this.label_Unit);
-            this.panel1.Location = new System.Drawing.Point(656, 256);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 256);
-            this.panel1.TabIndex = 40;
+            panel1.BackColor = Color.FromArgb(38, 38, 38);
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(maskedTextBox_readwriteFeedback);
+            panel1.Controls.Add(label_writePassword);
+            panel1.Controls.Add(maskedTextBox_writePassword);
+            panel1.Controls.Add(button_readstatus);
+            panel1.Controls.Add(label_readwrite);
+            panel1.Controls.Add(maskedTextBox_alarmh);
+            panel1.Controls.Add(button_writeconf);
+            panel1.Controls.Add(label_alarmh);
+            panel1.Controls.Add(button_readconf);
+            panel1.Controls.Add(maskedTextBox_alarml);
+            panel1.Controls.Add(label_alarml);
+            panel1.Controls.Add(maskedTextBox_devicename);
+            panel1.Controls.Add(label_Unit);
+            panel1.Location = new Point(656, 256);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(368, 256);
+            panel1.TabIndex = 40;
             // 
             // maskedTextBox_readwriteFeedback
             // 
-            this.maskedTextBox_readwriteFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_readwriteFeedback.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_readwriteFeedback.Location = new System.Drawing.Point(8, 224);
-            this.maskedTextBox_readwriteFeedback.Name = "maskedTextBox_readwriteFeedback";
-            this.maskedTextBox_readwriteFeedback.Size = new System.Drawing.Size(352, 23);
-            this.maskedTextBox_readwriteFeedback.TabIndex = 38;
+            maskedTextBox_readwriteFeedback.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_readwriteFeedback.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_readwriteFeedback.Location = new Point(8, 224);
+            maskedTextBox_readwriteFeedback.Name = "maskedTextBox_readwriteFeedback";
+            maskedTextBox_readwriteFeedback.Size = new Size(352, 23);
+            maskedTextBox_readwriteFeedback.TabIndex = 38;
             // 
             // label_writePassword
             // 
-            this.label_writePassword.AutoSize = true;
-            this.label_writePassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_writePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_writePassword.Location = new System.Drawing.Point(144, 160);
-            this.label_writePassword.Name = "label_writePassword";
-            this.label_writePassword.Size = new System.Drawing.Size(70, 19);
-            this.label_writePassword.TabIndex = 37;
-            this.label_writePassword.Text = "Password:";
+            label_writePassword.AutoSize = true;
+            label_writePassword.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_writePassword.ForeColor = Color.FromArgb(214, 214, 214);
+            label_writePassword.Location = new Point(144, 160);
+            label_writePassword.Name = "label_writePassword";
+            label_writePassword.Size = new Size(70, 19);
+            label_writePassword.TabIndex = 37;
+            label_writePassword.Text = "Password:";
             // 
             // maskedTextBox_writePassword
             // 
-            this.maskedTextBox_writePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_writePassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_writePassword.Location = new System.Drawing.Point(128, 184);
-            this.maskedTextBox_writePassword.Name = "maskedTextBox_writePassword";
-            this.maskedTextBox_writePassword.PasswordChar = '*';
-            this.maskedTextBox_writePassword.Size = new System.Drawing.Size(96, 23);
-            this.maskedTextBox_writePassword.TabIndex = 36;
-            this.maskedTextBox_writePassword.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            this.maskedTextBox_writePassword.TextChanged += new System.EventHandler(this.maskedTextBox_writePassword_TextChanged);
+            maskedTextBox_writePassword.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_writePassword.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_writePassword.Location = new Point(128, 184);
+            maskedTextBox_writePassword.Name = "maskedTextBox_writePassword";
+            maskedTextBox_writePassword.PasswordChar = '*';
+            maskedTextBox_writePassword.Size = new Size(96, 23);
+            maskedTextBox_writePassword.TabIndex = 36;
+            maskedTextBox_writePassword.MaskInputRejected += maskedTextBox1_MaskInputRejected;
+            maskedTextBox_writePassword.TextChanged += maskedTextBox_writePassword_TextChanged;
             // 
             // button_readstatus
             // 
-            this.button_readstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button_readstatus.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_readstatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_readstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_readstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_readstatus.Location = new System.Drawing.Point(56, 120);
-            this.button_readstatus.Name = "button_readstatus";
-            this.button_readstatus.Size = new System.Drawing.Size(120, 23);
-            this.button_readstatus.TabIndex = 8;
-            this.button_readstatus.Text = "Get status";
-            this.button_readstatus.UseVisualStyleBackColor = false;
-            this.button_readstatus.Click += new System.EventHandler(this.button_readstatus_Click);
+            button_readstatus.BackColor = Color.FromArgb(38, 38, 38);
+            button_readstatus.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_readstatus.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_readstatus.FlatStyle = FlatStyle.Flat;
+            button_readstatus.ForeColor = Color.FromArgb(214, 214, 214);
+            button_readstatus.Location = new Point(56, 120);
+            button_readstatus.Name = "button_readstatus";
+            button_readstatus.Size = new Size(120, 23);
+            button_readstatus.TabIndex = 8;
+            button_readstatus.Text = "Get status";
+            button_readstatus.UseVisualStyleBackColor = false;
+            button_readstatus.Click += button_readstatus_Click;
             // 
             // label_readwrite
             // 
-            this.label_readwrite.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_readwrite.AutoSize = true;
-            this.label_readwrite.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_readwrite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_readwrite.Location = new System.Drawing.Point(72, 12);
-            this.label_readwrite.Name = "label_readwrite";
-            this.label_readwrite.Size = new System.Drawing.Size(244, 28);
-            this.label_readwrite.TabIndex = 35;
-            this.label_readwrite.Text = "Read/Write to instrument";
-            this.label_readwrite.Click += new System.EventHandler(this.label_readwrite_Click);
+            label_readwrite.Anchor = AnchorStyles.None;
+            label_readwrite.AutoSize = true;
+            label_readwrite.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label_readwrite.ForeColor = Color.FromArgb(214, 214, 214);
+            label_readwrite.Location = new Point(72, 12);
+            label_readwrite.Name = "label_readwrite";
+            label_readwrite.Size = new Size(244, 28);
+            label_readwrite.TabIndex = 35;
+            label_readwrite.Text = "Read/Write to instrument";
+            label_readwrite.Click += label_readwrite_Click;
             // 
             // maskedTextBox_alarmh
             // 
-            this.maskedTextBox_alarmh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_alarmh.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_alarmh.Location = new System.Drawing.Point(240, 120);
-            this.maskedTextBox_alarmh.Name = "maskedTextBox_alarmh";
-            this.maskedTextBox_alarmh.Size = new System.Drawing.Size(88, 23);
-            this.maskedTextBox_alarmh.TabIndex = 32;
+            maskedTextBox_alarmh.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_alarmh.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_alarmh.Location = new Point(240, 120);
+            maskedTextBox_alarmh.Name = "maskedTextBox_alarmh";
+            maskedTextBox_alarmh.Size = new Size(88, 23);
+            maskedTextBox_alarmh.TabIndex = 32;
             // 
             // button_writeconf
             // 
-            this.button_writeconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button_writeconf.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_writeconf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_writeconf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_writeconf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_writeconf.Location = new System.Drawing.Point(56, 88);
-            this.button_writeconf.Name = "button_writeconf";
-            this.button_writeconf.Size = new System.Drawing.Size(120, 23);
-            this.button_writeconf.TabIndex = 6;
-            this.button_writeconf.Text = "Write config";
-            this.button_writeconf.UseVisualStyleBackColor = false;
-            this.button_writeconf.Click += new System.EventHandler(this.button_writeconf_Click);
-            this.button_writeconf.MouseHover += new System.EventHandler(this.button_writeconf_MouseHover);
+            button_writeconf.BackColor = Color.FromArgb(38, 38, 38);
+            button_writeconf.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_writeconf.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_writeconf.FlatStyle = FlatStyle.Flat;
+            button_writeconf.ForeColor = Color.FromArgb(214, 214, 214);
+            button_writeconf.Location = new Point(56, 88);
+            button_writeconf.Name = "button_writeconf";
+            button_writeconf.Size = new Size(120, 23);
+            button_writeconf.TabIndex = 6;
+            button_writeconf.Text = "Write config";
+            button_writeconf.UseVisualStyleBackColor = false;
+            button_writeconf.Click += button_writeconf_Click;
+            button_writeconf.MouseHover += button_writeconf_MouseHover;
             // 
             // label_alarmh
             // 
-            this.label_alarmh.AutoSize = true;
-            this.label_alarmh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_alarmh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_alarmh.Location = new System.Drawing.Point(184, 120);
-            this.label_alarmh.Name = "label_alarmh";
-            this.label_alarmh.Size = new System.Drawing.Size(56, 19);
-            this.label_alarmh.TabIndex = 33;
-            this.label_alarmh.Text = "Alarmh:";
+            label_alarmh.AutoSize = true;
+            label_alarmh.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_alarmh.ForeColor = Color.FromArgb(214, 214, 214);
+            label_alarmh.Location = new Point(184, 120);
+            label_alarmh.Name = "label_alarmh";
+            label_alarmh.Size = new Size(56, 19);
+            label_alarmh.TabIndex = 33;
+            label_alarmh.Text = "Alarmh:";
             // 
             // button_readconf
             // 
-            this.button_readconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button_readconf.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_readconf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_readconf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_readconf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_readconf.Location = new System.Drawing.Point(56, 56);
-            this.button_readconf.Name = "button_readconf";
-            this.button_readconf.Size = new System.Drawing.Size(120, 23);
-            this.button_readconf.TabIndex = 5;
-            this.button_readconf.Text = "Read config";
-            this.button_readconf.UseVisualStyleBackColor = false;
-            this.button_readconf.Click += new System.EventHandler(this.button_readconf_Click);
+            button_readconf.BackColor = Color.FromArgb(38, 38, 38);
+            button_readconf.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button_readconf.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 56, 56);
+            button_readconf.FlatStyle = FlatStyle.Flat;
+            button_readconf.ForeColor = Color.FromArgb(214, 214, 214);
+            button_readconf.Location = new Point(56, 56);
+            button_readconf.Name = "button_readconf";
+            button_readconf.Size = new Size(120, 23);
+            button_readconf.TabIndex = 5;
+            button_readconf.Text = "Read config";
+            button_readconf.UseVisualStyleBackColor = false;
+            button_readconf.Click += button_readconf_Click;
             // 
             // maskedTextBox_alarml
             // 
-            this.maskedTextBox_alarml.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.maskedTextBox_alarml.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox_alarml.Location = new System.Drawing.Point(240, 88);
-            this.maskedTextBox_alarml.Name = "maskedTextBox_alarml";
-            this.maskedTextBox_alarml.Size = new System.Drawing.Size(88, 23);
-            this.maskedTextBox_alarml.TabIndex = 30;
+            maskedTextBox_alarml.BackColor = Color.FromArgb(56, 56, 56);
+            maskedTextBox_alarml.ForeColor = Color.WhiteSmoke;
+            maskedTextBox_alarml.Location = new Point(240, 88);
+            maskedTextBox_alarml.Name = "maskedTextBox_alarml";
+            maskedTextBox_alarml.Size = new Size(88, 23);
+            maskedTextBox_alarml.TabIndex = 30;
             // 
             // label_alarml
             // 
-            this.label_alarml.AutoSize = true;
-            this.label_alarml.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_alarml.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_alarml.Location = new System.Drawing.Point(184, 88);
-            this.label_alarml.Name = "label_alarml";
-            this.label_alarml.Size = new System.Drawing.Size(51, 19);
-            this.label_alarml.TabIndex = 31;
-            this.label_alarml.Text = "Alarml:";
+            label_alarml.AutoSize = true;
+            label_alarml.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_alarml.ForeColor = Color.FromArgb(214, 214, 214);
+            label_alarml.Location = new Point(184, 88);
+            label_alarml.Name = "label_alarml";
+            label_alarml.Size = new Size(51, 19);
+            label_alarml.TabIndex = 31;
+            label_alarml.Text = "Alarml:";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.panel3.Controls.Add(this.panel5_Help);
-            this.panel3.Controls.Add(this.button_Help);
-            this.panel3.Controls.Add(this.button_File);
-            this.panel3.Location = new System.Drawing.Point(0, 32);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1040, 32);
-            this.panel3.TabIndex = 43;
+            panel3.BackColor = Color.FromArgb(33, 33, 33);
+            panel3.Controls.Add(panel5_Help);
+            panel3.Controls.Add(button_Help);
+            panel3.Controls.Add(button_File);
+            panel3.Location = new Point(0, 32);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1040, 32);
+            panel3.TabIndex = 43;
             // 
             // button_Help
             // 
-            this.button_Help.FlatAppearance.BorderSize = 0;
-            this.button_Help.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Help.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_Help.Location = new System.Drawing.Point(40, 0);
-            this.button_Help.Name = "button_Help";
-            this.button_Help.Size = new System.Drawing.Size(40, 32);
-            this.button_Help.TabIndex = 40;
-            this.button_Help.Text = "Help";
-            this.button_Help.UseVisualStyleBackColor = true;
-            this.button_Help.Click += new System.EventHandler(this.button1_Click);
+            button_Help.FlatAppearance.BorderSize = 0;
+            button_Help.FlatAppearance.MouseDownBackColor = Color.FromArgb(56, 56, 56);
+            button_Help.FlatStyle = FlatStyle.Flat;
+            button_Help.ForeColor = Color.FromArgb(214, 214, 214);
+            button_Help.Location = new Point(40, 0);
+            button_Help.Name = "button_Help";
+            button_Help.Size = new Size(40, 32);
+            button_Help.TabIndex = 40;
+            button_Help.Text = "Help";
+            button_Help.UseVisualStyleBackColor = true;
+            button_Help.Click += button1_Click;
             // 
             // button_File
             // 
-            this.button_File.FlatAppearance.BorderSize = 0;
-            this.button_File.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_File.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_File.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.button_File.Location = new System.Drawing.Point(0, 0);
-            this.button_File.Name = "button_File";
-            this.button_File.Size = new System.Drawing.Size(40, 32);
-            this.button_File.TabIndex = 39;
-            this.button_File.Text = "File";
-            this.button_File.UseVisualStyleBackColor = true;
+            button_File.FlatAppearance.BorderSize = 0;
+            button_File.FlatAppearance.MouseDownBackColor = Color.FromArgb(56, 56, 56);
+            button_File.FlatStyle = FlatStyle.Flat;
+            button_File.ForeColor = Color.FromArgb(214, 214, 214);
+            button_File.Location = new Point(0, 0);
+            button_File.Name = "button_File";
+            button_File.Size = new Size(40, 32);
+            button_File.TabIndex = 39;
+            button_File.Text = "File";
+            button_File.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.panel5.Controls.Add(this.textBox_currentbitrate);
-            this.panel5.Controls.Add(this.label_currentbitrate);
-            this.panel5.Controls.Add(this.textBox1_currentBEcom);
-            this.panel5.Controls.Add(this.label_currentCOM);
-            this.panel5.Controls.Add(this.textBox_currentCOM);
-            this.panel5.Controls.Add(this.label_BE_currentCOM);
-            this.panel5.Controls.Add(this.textBox_BE_currentTCP);
-            this.panel5.Controls.Add(this.label_BE_currentTCP);
-            this.panel5.Location = new System.Drawing.Point(0, 544);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1040, 32);
-            this.panel5.TabIndex = 45;
+            panel5.BackColor = Color.FromArgb(33, 33, 33);
+            panel5.Controls.Add(textBox_currentbitrate);
+            panel5.Controls.Add(label_currentbitrate);
+            panel5.Controls.Add(textBox1_currentBEcom);
+            panel5.Controls.Add(label_currentCOM);
+            panel5.Controls.Add(textBox_currentCOM);
+            panel5.Controls.Add(label_BE_currentCOM);
+            panel5.Controls.Add(textBox_BE_currentTCP);
+            panel5.Controls.Add(label_BE_currentTCP);
+            panel5.Location = new Point(0, 544);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1040, 32);
+            panel5.TabIndex = 45;
             // 
             // textBox_currentbitrate
             // 
-            this.textBox_currentbitrate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_currentbitrate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_currentbitrate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_currentbitrate.Location = new System.Drawing.Point(960, 8);
-            this.textBox_currentbitrate.Name = "textBox_currentbitrate";
-            this.textBox_currentbitrate.Size = new System.Drawing.Size(50, 16);
-            this.textBox_currentbitrate.TabIndex = 50;
+            textBox_currentbitrate.BackColor = Color.FromArgb(56, 56, 56);
+            textBox_currentbitrate.BorderStyle = BorderStyle.None;
+            textBox_currentbitrate.ForeColor = Color.WhiteSmoke;
+            textBox_currentbitrate.Location = new Point(960, 8);
+            textBox_currentbitrate.Name = "textBox_currentbitrate";
+            textBox_currentbitrate.Size = new Size(50, 16);
+            textBox_currentbitrate.TabIndex = 50;
             // 
             // label_currentbitrate
             // 
-            this.label_currentbitrate.AutoSize = true;
-            this.label_currentbitrate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_currentbitrate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_currentbitrate.Location = new System.Drawing.Point(904, 8);
-            this.label_currentbitrate.Name = "label_currentbitrate";
-            this.label_currentbitrate.Size = new System.Drawing.Size(52, 19);
-            this.label_currentbitrate.TabIndex = 49;
-            this.label_currentbitrate.Text = "Bitrate:";
+            label_currentbitrate.AutoSize = true;
+            label_currentbitrate.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_currentbitrate.ForeColor = Color.FromArgb(214, 214, 214);
+            label_currentbitrate.Location = new Point(904, 8);
+            label_currentbitrate.Name = "label_currentbitrate";
+            label_currentbitrate.Size = new Size(52, 19);
+            label_currentbitrate.TabIndex = 49;
+            label_currentbitrate.Text = "Bitrate:";
             // 
             // textBox1_currentBEcom
             // 
-            this.textBox1_currentBEcom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox1_currentBEcom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1_currentBEcom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1_currentBEcom.Location = new System.Drawing.Point(840, 8);
-            this.textBox1_currentBEcom.Name = "textBox1_currentBEcom";
-            this.textBox1_currentBEcom.Size = new System.Drawing.Size(50, 16);
-            this.textBox1_currentBEcom.TabIndex = 48;
+            textBox1_currentBEcom.BackColor = Color.FromArgb(56, 56, 56);
+            textBox1_currentBEcom.BorderStyle = BorderStyle.None;
+            textBox1_currentBEcom.ForeColor = Color.WhiteSmoke;
+            textBox1_currentBEcom.Location = new Point(840, 8);
+            textBox1_currentBEcom.Name = "textBox1_currentBEcom";
+            textBox1_currentBEcom.Size = new Size(50, 16);
+            textBox1_currentBEcom.TabIndex = 48;
             // 
             // label_currentCOM
             // 
-            this.label_currentCOM.AutoSize = true;
-            this.label_currentCOM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_currentCOM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_currentCOM.Location = new System.Drawing.Point(792, 8);
-            this.label_currentCOM.Name = "label_currentCOM";
-            this.label_currentCOM.Size = new System.Drawing.Size(45, 19);
-            this.label_currentCOM.TabIndex = 47;
-            this.label_currentCOM.Text = "COM:";
+            label_currentCOM.AutoSize = true;
+            label_currentCOM.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_currentCOM.ForeColor = Color.FromArgb(214, 214, 214);
+            label_currentCOM.Location = new Point(792, 8);
+            label_currentCOM.Name = "label_currentCOM";
+            label_currentCOM.Size = new Size(45, 19);
+            label_currentCOM.TabIndex = 47;
+            label_currentCOM.Text = "COM:";
             // 
             // textBox_currentCOM
             // 
-            this.textBox_currentCOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_currentCOM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_currentCOM.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_currentCOM.Location = new System.Drawing.Point(728, 8);
-            this.textBox_currentCOM.Name = "textBox_currentCOM";
-            this.textBox_currentCOM.Size = new System.Drawing.Size(50, 16);
-            this.textBox_currentCOM.TabIndex = 46;
+            textBox_currentCOM.BackColor = Color.FromArgb(56, 56, 56);
+            textBox_currentCOM.BorderStyle = BorderStyle.None;
+            textBox_currentCOM.ForeColor = Color.WhiteSmoke;
+            textBox_currentCOM.Location = new Point(728, 8);
+            textBox_currentCOM.Name = "textBox_currentCOM";
+            textBox_currentCOM.Size = new Size(50, 16);
+            textBox_currentCOM.TabIndex = 46;
             // 
             // label_BE_currentCOM
             // 
-            this.label_BE_currentCOM.AutoSize = true;
-            this.label_BE_currentCOM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_BE_currentCOM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_BE_currentCOM.Location = new System.Drawing.Point(560, 8);
-            this.label_BE_currentCOM.Name = "label_BE_currentCOM";
-            this.label_BE_currentCOM.Size = new System.Drawing.Size(166, 19);
-            this.label_BE_currentCOM.TabIndex = 45;
-            this.label_BE_currentCOM.Text = "Connected to instrument:";
+            label_BE_currentCOM.AutoSize = true;
+            label_BE_currentCOM.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_BE_currentCOM.ForeColor = Color.FromArgb(214, 214, 214);
+            label_BE_currentCOM.Location = new Point(560, 8);
+            label_BE_currentCOM.Name = "label_BE_currentCOM";
+            label_BE_currentCOM.Size = new Size(166, 19);
+            label_BE_currentCOM.TabIndex = 45;
+            label_BE_currentCOM.Text = "Connected to instrument:";
             // 
             // textBox_BE_currentTCP
             // 
-            this.textBox_BE_currentTCP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_BE_currentTCP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_BE_currentTCP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_BE_currentTCP.Location = new System.Drawing.Point(184, 8);
-            this.textBox_BE_currentTCP.Name = "textBox_BE_currentTCP";
-            this.textBox_BE_currentTCP.Size = new System.Drawing.Size(50, 16);
-            this.textBox_BE_currentTCP.TabIndex = 7;
+            textBox_BE_currentTCP.BackColor = Color.FromArgb(56, 56, 56);
+            textBox_BE_currentTCP.BorderStyle = BorderStyle.None;
+            textBox_BE_currentTCP.ForeColor = Color.WhiteSmoke;
+            textBox_BE_currentTCP.Location = new Point(184, 8);
+            textBox_BE_currentTCP.Name = "textBox_BE_currentTCP";
+            textBox_BE_currentTCP.Size = new Size(50, 16);
+            textBox_BE_currentTCP.TabIndex = 7;
             // 
             // label_BE_currentTCP
             // 
-            this.label_BE_currentTCP.AutoSize = true;
-            this.label_BE_currentTCP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_BE_currentTCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.label_BE_currentTCP.Location = new System.Drawing.Point(0, 8);
-            this.label_BE_currentTCP.Name = "label_BE_currentTCP";
-            this.label_BE_currentTCP.Size = new System.Drawing.Size(185, 19);
-            this.label_BE_currentTCP.TabIndex = 44;
-            this.label_BE_currentTCP.Text = "Connected to TCP (backend):";
+            label_BE_currentTCP.AutoSize = true;
+            label_BE_currentTCP.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label_BE_currentTCP.ForeColor = Color.FromArgb(214, 214, 214);
+            label_BE_currentTCP.Location = new Point(0, 8);
+            label_BE_currentTCP.Name = "label_BE_currentTCP";
+            label_BE_currentTCP.Size = new Size(185, 19);
+            label_BE_currentTCP.TabIndex = 44;
+            label_BE_currentTCP.Text = "Connected to TCP (backend):";
             // 
             // timer_readData
             // 
-            this.timer_readData.Interval = 5000;
-            this.timer_readData.Tick += new System.EventHandler(this.timer1_Tick);
+            timer_readData.Interval = 5000;
+            timer_readData.Tick += timer1_Tick;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(1040, 579);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel_TopBar);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel_SensorData);
-            this.Controls.Add(this.panel_dataVis);
-            this.Controls.Add(this.panel_TabsConnections);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SensorData";
-            this.Load += new System.EventHandler(this.app_Load);
-            this.panel_TopBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TopLogo)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel5_Help.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel_SensorData.ResumeLayout(false);
-            this.panel_SensorData.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel_TabsConnections.ResumeLayout(false);
-            this.panel_TabsConnections.PerformLayout();
-            this.panel_dataVis.ResumeLayout(false);
-            this.panel_dataVis.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(31, 31, 31);
+            ClientSize = new Size(1040, 579);
+            Controls.Add(panel5);
+            Controls.Add(panel3);
+            Controls.Add(panel4);
+            Controls.Add(panel1);
+            Controls.Add(panel_TopBar);
+            Controls.Add(panel7);
+            Controls.Add(panel_SensorData);
+            Controls.Add(panel_dataVis);
+            Controls.Add(panel_TabsConnections);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SensorData";
+            Load += app_Load;
+            panel_TopBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)TopLogo).EndInit();
+            panel4.ResumeLayout(false);
+            panel5_Help.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel_SensorData.ResumeLayout(false);
+            panel_SensorData.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel_TabsConnections.ResumeLayout(false);
+            panel_TabsConnections.PerformLayout();
+            panel_dataVis.ResumeLayout(false);
+            panel_dataVis.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
