@@ -308,65 +308,53 @@ namespace instrumentFE_WF
 
         private void button_FromRadio_Click(object sender, EventArgs e)
         {
-            try
+            if (button_FromRadio.Text == "Register New")
             {
-
-                Instrument instrument = new Instrument();
-                instrument.instrumentName = maskedTextBox_SensorName.Text;
-                instrument.serialNumber = maskedTextBox_SerialNumber.Text;
-                instrument.signalType = comboBox_SignalType.Text;
-                instrument.registerDate = DateTime.Now.ToString();
-                instrument.measureType = comboBox_MeasureType.Text;
-                instrument.options = richTextBox_options.Text;
-                instrument.lrv = maskedTextBox_LRV.Text;
-                instrument.urv = maskedTextBox_URV.Text;
-                instrument.comment = richTextBox_comments.Text;
-
-                if (_instrumentManager.Add(instrument))
+                try
                 {
-                    maskedTextBox_SensorName.ResetText();
-                    maskedTextBox_SerialNumber.ResetText();
-                    comboBox_SignalType.ResetText();
-                    comboBox_MeasureType.ResetText();
-                    richTextBox_options.ResetText();
-                    checkBox_Registered.Checked = false;
-                    richTextBox_comments.ResetText();
-                    Console.WriteLine(instrument.instrumentName);
-                    updatecomboBox_InstrumentList();
-                    load_instrumentData();
+
+                    Instrument instrument = new Instrument();
+                    instrument.instrumentName = maskedTextBox_SensorName.Text;
+                    instrument.serialNumber = maskedTextBox_SerialNumber.Text;
+                    instrument.signalType = comboBox_SignalType.Text;
+                    instrument.registerDate = DateTime.Now.ToString();
+                    instrument.measureType = comboBox_MeasureType.Text;
+                    instrument.options = richTextBox_options.Text;
+                    instrument.lrv = maskedTextBox_LRV.Text;
+                    instrument.urv = maskedTextBox_URV.Text;
+                    instrument.comment = richTextBox_comments.Text;
+
+                    if (_instrumentManager.Add(instrument))
+                    {
+                        maskedTextBox_SensorName.ResetText();
+                        maskedTextBox_SerialNumber.ResetText();
+                        comboBox_SignalType.ResetText();
+                        comboBox_MeasureType.ResetText();
+                        richTextBox_options.ResetText();
+                        checkBox_Registered.Checked = false;
+                        richTextBox_comments.ResetText();
+                        Console.WriteLine(instrument.instrumentName);
+                        updatecomboBox_InstrumentList();
+                        load_instrumentData();
 
 
+                    }
                 }
-                /* if _dbContext.SaveChanges(); */
 
-                /*
-                string sensorName = maskedTextBox_SensorName.Text;
-                string serialNumber = maskedTextBox_SerialNumber.Text;
-                string signalType = comboBox_SignalType.Text;
-                string measureType = comboBox_MeasureType.Text;
-                string options = richTextBox_options.Text.ToString();
-                string lrv = maskedTextBox_LRV.Text;
-                string urv = maskedTextBox_URV.Text;
-                string comment = richTextBox_comments.Text;
+                catch (Exception ex)
+                {
+                    maskedTextBox_readwriteFeedback.Text = ex.Message;
+                }
+            }
 
-                _instrumentGen.CreateInstrument(
-                    sensorName,
-                    serialNumber,
-                    signalType,
-                    measureType,
-                    options,
-                    lrv,
-                    urv,
-                    comment
-                    );
-                updatecomboBox_InstrumentList();
-                */
-
+            if (button_FromRadio.Text == "Save Changes") 
+            {
 
             }
-            catch (Exception ex)
-            {
-                maskedTextBox_readwriteFeedback.Text = ex.Message;
+
+            if (button_FromRadio.Text == "delete") 
+            { 
+                
             }
         }
 
