@@ -1307,9 +1307,9 @@
             Controls.Add(panel1);
             Controls.Add(panel_TopBar);
             Controls.Add(panel7);
-            Controls.Add(panel_SensorData);
             Controls.Add(panel_dataVis);
             Controls.Add(panel_TabsConnections);
+            Controls.Add(panel_SensorData);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;

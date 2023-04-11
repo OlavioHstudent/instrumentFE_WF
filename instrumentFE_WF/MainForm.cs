@@ -334,8 +334,8 @@ namespace instrumentFE_WF
                     Console.WriteLine(instrument.instrumentName);
                     updatecomboBox_InstrumentList();
                     load_instrumentData();
-                    
-                    
+
+
                 }
                 /* if _dbContext.SaveChanges(); */
 
